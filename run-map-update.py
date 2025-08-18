@@ -10,7 +10,7 @@ import pycountry
 # Load API key and initialize clients
 load_dotenv()
 API_KEY = os.getenv("GOOGLE_API_KEY")
-translate_client = translate.Client()
+translate_client = translate.Client(target_language='en', credentials=API_KEY)
 
 # --- 1. CONFIGURATION ---
 CITY_LIST_PATH = "curation/city-list.txt"
