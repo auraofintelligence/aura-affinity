@@ -91,21 +91,27 @@ def get_city_country_from_components(address_components):
 def assign_category(types, name):
     """Assigns a custom category based on keywords."""
     name = name.lower()
-    types = " ".join(types).lower()
+    types_string = " ".join(types).lower()
+    full_text = f"{name} {types_string}"
 
-    if any(kw in types or kw in name for kw in ['spa', 'health', 'clinic', 'wellness', 'yoga', 'beauty', 'salon']):
-        return 'Health & Wellbeing'
-    if any(kw in types or kw in name for kw in ['design', 'studio', 'gallery', 'art', 'media', 'productions', 'creative']):
-        return 'Creative Industries'
-    if any(kw in types or kw in name for kw in ['events', 'planning', 'entertainment', 'lounge', 'nightclub']):
-        return 'Event Management'
-    if any(kw in types or kw in name for kw in ['hotel', 'resort', 'apartments', 'accommodation', 'villa', 'guesthouse']):
+    # Check for Accommodation first because it can be more specific
+    if any(kw in full_text for kw in ['hotel', 'resort', 'apartments', 'accommodation', 'villa', 'guesthouse', 'lodging', 'inn', 'suites']):
         return 'Accommodation'
-    if any(kw in types or kw in name for kw in ['real estate', 'properties', 'developments', 'condominium']):
+    # Then check for Health & Wellbeing
+    if any(kw in full_text for kw in ['spa', 'health', 'clinic', 'wellness', 'yoga', 'beauty', 'salon', 'therapies']):
+        return 'Health & Wellbeing'
+    # Then Creative Industries
+    if any(kw in full_text for kw in ['design', 'studio', 'gallery', 'art', 'media', 'productions', 'creative', 'photography', 'fashion']):
+        return 'Creative Industries'
+    if any(kw in full_text for kw in ['events', 'planning', 'entertainment', 'lounge', 'nightclub']):
+        return 'Event Management'
+    # Then Cities & Developments with the new keyword
+    if any(kw in full_text for kw in ['real estate', 'properties', 'developments', 'condominium', 'building', 'display village']):
         return 'Cities & Developments'
-    if any(kw in types or kw in name for kw in ['blockchain', 'crypto', 'web3']):
+    if any(kw in full_text for kw in ['blockchain', 'crypto', 'web3']):
         return 'Blockchain'
-    return 'Other'
+    
+    return 'Other' # Default category
 
 # --- 4. MAIN WORKFLOW ---
 def main():
