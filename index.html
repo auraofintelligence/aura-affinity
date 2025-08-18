@@ -14,21 +14,23 @@
       background-color: #121212;
       color: #fff;
     }
-    #map {
-      height: 90vh;
-      width: 100%;
+    header {
+      background-color: #1f1f1f;
+      padding: 16px;
+      text-align: center;
+      color: #FFD700;
+      font-size: 24px;
+      font-weight: bold;
     }
-    .leaflet-popup-content {
-      color: #000;
-    }
-    .popup-category {
-      font-size: 0.85em;
-      color: #555;
-      background: #f0f0f0;
-      padding: 2px 6px;
-      border-radius: 4px;
-      display: inline-block;
+    .description {
+      text-align: center;
       margin-top: 4px;
+      font-size: 14px;
+      color: #ccc;
+    }
+    #map {
+      height: 60vh;
+      width: 100%;
     }
     #filter {
       background: #1e1e1e;
@@ -38,9 +40,28 @@
       margin: 10px;
       font-size: 16px;
     }
+    #list {
+      padding: 20px;
+      background: #1a1a1a;
+      max-height: 40vh;
+      overflow-y: auto;
+    }
+    .entry {
+      border-bottom: 1px solid #333;
+      padding: 10px 0;
+    }
+    .entry h3 {
+      margin: 0;
+      color: #FFD700;
+    }
+    .entry a {
+      color: #66ccff;
+    }
   </style>
 </head>
 <body>
+  <header>Aura Affinity Map</header>
+  <div class="description">An organic directory of businesses, brands, and places with "Aura" in their name. Filter, explore and grow the global network.</div>
   <select id="filter">
     <option value="all">Show All Categories</option>
     <option value="Health & Wellbeing">Health & Wellbeing</option>
@@ -51,10 +72,12 @@
     <option value="Blockchain">Blockchain</option>
   </select>
   <div id="map"></div>
+  <div id="list"></div>
 
   <script>
     const map = L.map('map').setView([0, 0], 2);
     const markers = [];
+    let globalData = [];
 
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       maxZoom: 18,
@@ -90,11 +113,10 @@
       });
     }
 
-    let globalData = [];
-
     function updateMarkers(categoryFilter = 'all') {
       markers.forEach(m => map.removeLayer(m));
       markers.length = 0;
+      document.getElementById('list').innerHTML = '';
 
       globalData.forEach(entry => {
         const lat = parseFloat(entry.latitude);
@@ -110,6 +132,16 @@
               .addTo(map)
               .bindPopup(popup);
             markers.push(marker);
+
+            const div = document.createElement('div');
+            div.className = 'entry';
+            div.innerHTML = `
+              <h3>${entry.name}</h3>
+              <div><strong>Category:</strong> ${entry.category}</div>
+              <div><strong>Country:</strong> ${entry.country}</div>
+              <div><a href="${entry.website}" target="_blank">Visit Website</a></div>
+            `;
+            document.getElementById('list').appendChild(div);
           }
         }
       });
