@@ -1,0 +1,281 @@
+Algiers, Algeria
+Oran, Algeria
+Luanda, Angola
+Cotonou, Benin
+Gaborone, Botswana
+Maun, Botswana
+Ouagadougou, Burkina Faso
+Bujumbura, Burundi
+Praia, Cabo Verde
+Sal, Cabo Verde
+Yaoundé, Cameroon
+Douala, Cameroon
+Bangui, Central African Republic
+N'Djamena, Chad
+Moroni, Comoros
+Kinshasa, Congo, Dem. Rep. of
+Lubumbashi, Congo, Dem. Rep. of
+Brazzaville, Congo, Republic of the
+Abidjan, Côte d'Ivoire
+Djibouti, Djibouti
+Cairo, Egypt
+Alexandria, Egypt
+Luxor, Egypt
+Malabo, Equatorial Guinea
+Asmara, Eritrea
+Manzini, Eswatini
+Addis Ababa, Ethiopia
+Libreville, Gabon
+Banjul, Gambia
+Accra, Ghana
+Conakry, Guinea
+Bissau, Guinea-Bissau
+Nairobi, Kenya
+Mombasa, Kenya
+Maseru, Lesotho
+Monrovia, Liberia
+Tripoli, Libya
+Benghazi, Libya
+Antananarivo, Madagascar
+Lilongwe, Malawi
+Bamako, Mali
+Nouakchott, Mauritania
+Port Louis, Mauritius
+Rabat, Morocco
+Casablanca, Morocco
+Marrakech, Morocco
+Maputo, Mozambique
+Windhoek, Namibia
+Niamey, Niger
+Abuja, Nigeria
+Lagos, Nigeria
+Kigali, Rwanda
+São Tomé, São Tomé and Príncipe
+Dakar, Senegal
+Victoria, Seychelles
+Freetown, Sierra Leone
+Mogadishu, Somalia
+Pretoria, South Africa
+Cape Town, South Africa
+Johannesburg, South Africa
+Juba, South Sudan
+Khartoum, Sudan
+Dodoma, Tanzania
+Dar es Salaam, Tanzania
+Zanzibar, Tanzania
+Lomé, Togo
+Tunis, Tunisia
+Kampala, Uganda
+Lusaka, Zambia
+Harare, Zimbabwe
+Victoria Falls, Zimbabwe
+Hargeisa, Somaliland
+Laayoune, Western Sahara
+Kabul, Afghanistan
+Yerevan, Armenia
+Baku, Azerbaijan
+Manama, Bahrain
+Dhaka, Bangladesh
+Thimphu, Bhutan
+Bandar Seri Begawan, Brunei
+Phnom Penh, Cambodia
+Siem Reap, Cambodia
+Beijing, China
+Shanghai, China
+Guangzhou, China
+Nicosia, Cyprus
+Tbilisi, Georgia
+New Delhi, India
+Mumbai, India
+Kolkata, India
+Jakarta, Indonesia
+Denpasar (Bali), Indonesia
+Tehran, Iran
+Baghdad, Iraq
+Jerusalem, Israel
+Tel Aviv, Israel
+Tokyo, Japan
+Osaka, Japan
+Kyoto, Japan
+Amman, Jordan
+Astana, Kazakhstan
+Almaty, Kazakhstan
+Kuwait City, Kuwait
+Bishkek, Kyrgyzstan
+Vientiane, Laos
+Beirut, Lebanon
+Kuala Lumpur, Malaysia
+Malé, Maldives
+Ulaanbaatar, Mongolia
+Naypyidaw, Myanmar (Burma)
+Yangon, Myanmar (Burma)
+Kathmandu, Nepal
+Pyongyang, North Korea
+Muscat, Oman
+Islamabad, Pakistan
+Karachi, Pakistan
+Ramallah, Palestine
+Manila, Philippines
+Cebu, Philippines
+Doha, Qatar
+Riyadh, Saudi Arabia
+Jeddah, Saudi Arabia
+Singapore, Singapore
+Seoul, South Korea
+Busan, South Korea
+Colombo, Sri Lanka
+Damascus, Syria
+Taipei, Taiwan
+Dushanbe, Tajikistan
+Bangkok, Thailand
+Phuket, Thailand
+Chiang Mai, Thailand
+Dili, Timor-Leste
+Ankara, Turkey
+Istanbul, Turkey
+Ashgabat, Turkmenistan
+Abu Dhabi, United Arab Emirates
+Dubai, United Arab Emirates
+Tashkent, Uzbekistan
+Hanoi, Vietnam
+Ho Chi Minh City, Vietnam
+Sana'a, Yemen
+Sukhumi, Abkhazia
+Stepanakert, Artsakh (Nagorno-Karabakh)
+Hong Kong, Hong Kong
+Macau, Macau
+North Nicosia, Northern Cyprus
+Tskhinvali, South Ossetia
+Tirana, Albania
+Andorra la Vella, Andorra
+Vienna, Austria
+Minsk, Belarus
+Brussels, Belgium
+Sarajevo, Bosnia and Herzegovina
+Sofia, Bulgaria
+Zagreb, Croatia
+Dubrovnik, Croatia
+Split, Croatia
+Prague, Czech Republic
+Copenhagen, Denmark
+Tallinn, Estonia
+Helsinki, Finland
+Paris, France
+Nice, France
+Lyon, France
+Berlin, Germany
+Munich, Germany
+Frankfurt, Germany
+Athens, Greece
+Thessaloniki, Greece
+Budapest, Hungary
+Reykjavik, Iceland
+Dublin, Ireland
+Rome, Italy
+Milan, Italy
+Venice, Italy
+Riga, Latvia
+Vaduz, Liechtenstein
+Vilnius, Lithuania
+Luxembourg, Luxembourg
+Valletta, Malta
+Chișinău, Moldova
+Monaco, Monaco
+Podgorica, Montenegro
+Amsterdam, Netherlands
+Skopje, North Macedonia
+Oslo, Norway
+Bergen, Norway
+Warsaw, Poland
+Kraków, Poland
+Lisbon, Portugal
+Porto, Portugal
+Bucharest, Romania
+Moscow, Russia
+Saint Petersburg, Russia
+San Marino, San Marino
+Belgrade, Serbia
+Bratislava, Slovakia
+Ljubljana, Slovenia
+Madrid, Spain
+Barcelona, Spain
+Stockholm, Sweden
+Gothenburg, Sweden
+Bern, Switzerland
+Zürich, Switzerland
+Geneva, Switzerland
+Kyiv, Ukraine
+London, United Kingdom
+Edinburgh, United Kingdom
+Manchester, United Kingdom
+Vatican City, Vatican City
+Pristina, Kosovo
+Tiraspol, Transnistria
+St. John's, Antigua and Barbuda
+Nassau, Bahamas
+Bridgetown, Barbados
+Belize City, Belize
+Ottawa, Canada
+Toronto, Canada
+Vancouver, Canada
+San José, Costa Rica
+Havana, Cuba
+Roseau, Dominica
+Santo Domingo, Dominican Republic
+San Salvador, El Salvador
+St. George's, Grenada
+Guatemala City, Guatemala
+Port-au-Prince, Haiti
+Tegucigalpa, Honduras
+Kingston, Jamaica
+Montego Bay, Jamaica
+Mexico City, Mexico
+Cancún, Mexico
+Managua, Nicaragua
+Panama City, Panama
+Basseterre, Saint Kitts and Nevis
+Castries, Saint Lucia
+Kingstown, Saint Vincent & Grenadines
+Port of Spain, Trinidad and Tobago
+Washington D.C., United States
+New York, United States
+Los Angeles, United States
+Nuuk, Greenland
+San Juan, Puerto Rico
+Canberra, Australia
+Sydney, Australia
+Melbourne, Australia
+Brisbane, Australia
+Suva, Fiji
+Nadi, Fiji
+Tarawa, Kiribati
+Majuro, Marshall Islands
+Palikir, Micronesia
+Yaren, Nauru
+Wellington, New Zealand
+Auckland, New Zealand
+Ngerulmud, Palau
+Port Moresby, Papua New Guinea
+Apia, Samoa
+Honiara, Solomon Islands
+Nukuʻalofa, Tonga
+Funafuti, Tuvalu
+Port Vila, Vanuatu
+Avarua, Cook Islands
+Alofi, Niue
+Buenos Aires, Argentina
+Sucre, Bolivia
+La Paz, Bolivia
+Brasília, Brazil
+Rio de Janeiro, Brazil
+São Paulo, Brazil
+Santiago, Chile
+Bogotá, Colombia
+Quito, Ecuador
+Georgetown, Guyana
+Asunción, Paraguay
+Lima, Peru
+Cusco, Peru
+Paramaribo, Suriname
+Montevideo, Uruguay
+Caracas, Venezuela
