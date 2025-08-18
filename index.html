@@ -219,7 +219,7 @@
           if(ev.target.classList.contains('delete')) return;
           const r = rows[idx];
           const m = markers.find(mm=>mm.__row===r);
-          if(m){ map.flyTo(m.getLatLng(), 6, {duration:.6}); m.openPopup(); }
+          if(m){ map.flyTo(m.getLatLng(), 16, {duration:.6}); m.openPopup(); }
         });
       });
 
