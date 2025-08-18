@@ -76,8 +76,9 @@
     <button class="fab map-fab" id="recenter" title="Re-center map">🎯</button>
   </div>
 
-  <div class="toolbar">
-    <div class="container" id="controls" style="display:flex; justify-content:center; flex-wrap:wrap; gap:10px;">
+ <div class="toolbar">
+    <div class="container" id="controls" style="display:flex; justify-content:center; flex-wrap:wrap; gap:10px; align-items:center;">
+      
       <div class="field"><label for="q">Search</label><input id="q" type="text" placeholder="Search by name or website…" /></div>
       <div class="field"><label for="cat">Category</label>
         <select id="cat"><option value="">All</option></select>
@@ -101,6 +102,11 @@
           <option value="verified">Verified first</option>
         </select>
       </div>
+
+      <div class="counter" style="color: #9aa0a6; font-size: 0.9rem; margin-left: 10px;">
+        Showing <strong id="tile-counter" style="color: #e6e6ea;">0</strong> results
+      </div>
+
     </div>
   </div>
 
