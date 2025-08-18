@@ -1,7 +1,1262 @@
-place_id,id,name,category,city,country,latitude,longitude,website,email,phone,social,verified
-ChIJ7a-2-8-uEmsR_gD-s-Ym_8A,1,Aura Wellness Spa,Health & Wellbeing,Melbourne,Australia,-37.8136,144.9631,https://aurawellness.com.au,info@aurawellness.com.au,+61 3 9650 5758,https://instagram.com/aurawellness,true
-ChIJVVVVVVVVVWcR_gD-s-Ym_8B,2,Aura Creative Studio,Creative Industries,London,United Kingdom,51.5072,-0.1276,https://auracreative.co.uk,hello@auracreative.co.uk,+44 20 7946 0958,https://linkedin.com/company/auracreative,false
-ChIJVVVVVVVVVWcR_gD-s-Ym_8C,3,Aura Events & Entertainment,Event Management,Dubai,United Arab Emirates,25.2048,55.2708,https://auraevents.ae,contact@auraevents.ae,+971 4 332 4010,https://facebook.com/auraevents,true
-ChIJVVVVVVVVVWcR_gD-s-Ym_8D,4,Hotel Aura,Accommodation,Prague,Czech Republic,50.0755,14.4378,https://hotelaura.cz,reception@hotelaura.cz,+420 222 532 999,,false
-ChIJVVVVVVVVVWcR_gD-s-Ym_8E,5,Aura Real Estate Developments,Cities & Developments,Toronto,Canada,43.6532,-79.3832,https://auradevelopments.ca,sales@auradevelopments.ca,+1 416-555-0125,,true
-ChIJVVVVVVVVVWcR_gD-s-Ym_8F,6,Aura Blockchain Consortium,Blockchain,Geneva,Switzerland,46.2044,6.1432,https://auraluxuryblockchain.com,,,,false
+id,name,category,city,country,latitude,longitude,website,email,phone,social,verified
+1,Aura Lounge,Event Management,Ouled Fayet,Algeria,36.7422495,2.9457368,,,+213 562 23 57 25,,False
+2,Soulfly algerie,Other,Oran,Algeria,35.7133306,-0.6141592,http://soulflyalgerie.com/,,+213 771 04 35 86,,False
+3,Edifício LK11,Other,Luanda,Angola,-8.8166472,13.2393734,,,,,False
+4,AHOURA,Other,Luanda,Angola,-8.9004047,13.1960141,https://ahoura.ao/,,+244 972 582 100,,False
+5,AURA CONSULTING,Health & Wellbeing,Cotonou,Benin,6.380709899999999,2.370465,https://auraconsultings.org/,,+229 01 94 49 40 44,,False
+6,Aura chemicals,Other,Gaborone,Botswana,-24.6858132,25.8943398,,,+267 74 171 510,,False
+7,Aurostar Diamonds Botswana Pty Ltd,Other,Gaborone,Botswana,-24.5888886,25.912543,http://www.aurostargroup.com/,,+267 316 7364,,False
+8,Aurora Media Group,Creative Industries,Gaborone,Botswana,-24.6282079,25.9231471,https://www.auroramediagroup.org/,,+267 72 320 841,,False
+9,Local Enterprise Authority,Other,Gaborone,Botswana,-24.6784105,25.9285363,http://www.lea.co.bw/,,+267 364 4000,,False
+10,Protea Hotel Gaborone Masa Square,Accommodation,Gaborone,Botswana,-24.6525343,25.90381,https://www.marriott.com/en-us/hotels/gbepg-protea-hotel-gaborone-masa-square/overview/?scid=f2ae0541-1279-4f24-b197-a979c79310b0,,+267 315 9954,,False
+11,FORTUNE BUSINESS & COMPANY sarl,Other,Ouagadougou,Burkina Faso,12.3669395,-1.512769,http://www.fortunebusiness.bf/,,+226 25 45 24 74,,False
+12,Aura Café,Other,Bujumbura,Burundi,-3.384526,29.362477,,,+257 68 88 68 86,,False
+13,TUI BLUE Cabo Verde - Adults Only,Other,Santa Maria,Cabo Verde,16.6140769,-22.9244981,https://www.tui.co.uk/destinations/africa/cape-verde/cape-verde-islands/santa-maria-cape-verde-isl/hotels/tui-blue-cabo-verde.html,,+238 242 23 70,,False
+14,Agua hotels Sal Vila Verde,Accommodation,Santa Maria,Cabo Verde,16.614662,-22.9182238,http://www.aguahotels.pt/index.php/pt/hoteis-builder/sal-vila-verde,,+238 242 18 00,,False
+15,Aura,Other,Yaoundé,Cameroon,3.8287635,11.4794491,http://www.auracameroon.com/,,+237 2 22 30 32 89,,False
+16,Aura,Other,Yaoundé,Cameroon,3.8682271,11.5171823,http://www.auracameroon.com/,,+237 2 22 66 57 44,,False
+17,AURA CAMEROUN MVOG-MBI,Other,Yaoundé,Cameroon,3.8485193,11.5208405,,,,,False
+18,Aura - Agence Tsinga,Other,Yaoundé,Cameroon,3.8854897,11.5026163,,,+237 2 43 84 82 68,,False
+19,Aura cameroun,Other,Douala,Cameroon,4.0472722,9.6995031,http://auracameroon.com/,,+237 6 50 64 61 56,,False
+20,Ndara Ti Beafrika,Other,Bangui,Central African Republic,4.3608178,18.5764239,http://www.ndaratibeafrika.com/,,+236 72 42 89 48,,False
+21,Hotel Aurora,Accommodation,N'Djamena,Chad,12.0955983,15.068264,,,,,False
+22,Aura Beauty,Health & Wellbeing,Kinshasa,Democratic Republic of the Congo,-4.3016759,15.3089253,https://aurabeautycongo.com/,,+243 900 233 337,,False
+23,Aurora shop Kinshasa,Other,Kinshasa,Democratic Republic of the Congo,-4.3066806,15.2924592,,,+243 999 905 780,,False
+24,Luano International Airport,Other,Lubumbashi,Democratic Republic of the Congo,-11.5888131,27.5314761,http://www.rva.cd/,,+243 972 244 415,,False
+25,Centre des Impôts de Lubumbashi,Other,Lubumbashi,Democratic Republic of the Congo,-11.6712185,27.4829235,,,,,False
+26,Aura Assinie,Other,Assinie,Côte d'Ivoire,5.1598195,-3.4743294,,,+225 07 97 70 9201,,False
+27,Aura imprimerie,Other,Abidjan,Côte d'Ivoire,5.396591600000001,-3.9925529,,,+225 07 87 86 1743,,False
+28,Aurore Company,Other,Abidjan,Côte d'Ivoire,5.406151299999999,-3.9933041,,,+225 07 08 09 8524,,False
+29,Voodoo Group,Other,Abidjan,Côte d'Ivoire,5.3539737,-3.9805542,,,+225 27 22 4 37530,,False
+30,AURORE SERVICES,Other,Abidjan,Côte d'Ivoire,5.3599517,-4.0082563,,,+225 07 98 32 6974,,False
+31,Golden Africa Djibouti,Other,Balbala,Djibouti,11.5779889,43.0763392,,,+253 77 85 32 36,,False
+32,Djibouti Ayla Grand Hotel,Accommodation,Djibouti,Djibouti,11.5944787,43.1301513,https://www.aylahotels.com/,,+253 21 31 81 11,,False
+33,Aura,Other,,Egypt,30.024084,31.2168882,https://www.fourseasons.com/cairofr/dining/restaurants/aura/?utm_source=google&utm_medium=organicsearch&utm_campaign=tor-caf-fab-mid-seo-na&utm_content=na-na&utm_term=na,,+20 2 35672111,,False
+34,Aura Systems,Other,,Egypt,30.1102497,31.37743159999999,https://aura.llc/,,+20 12 23771884,,False
+35,Aura Cafe,Other,,Egypt,30.0650341,31.4245354,,,+20 12 82277696,,False
+36,Aura,Other,,Egypt,30.10281179999999,31.3687372,,,+20 2 22688708,,False
+37,Aura Air-Conditioner Egypt,Other,,Egypt,30.0635474,31.2198432,https://www.aura-egypt.com/,,+20 12 11971855,,False
+38,Aura Real Estate,Cities & Developments,,Egypt,31.1981468,29.9108094,https://www.aura-org.com/,,+20 11 03930555,,False
+39,Aura Health Solutions,Health & Wellbeing,,Egypt,31.2248281,29.9388757,https://www.aurahealth.ae/,,+20 3 5444468,,False
+40,Asmara,Other,Asmara,Eritrea,15.3317304,38.9300394,,,,,False
+41,AuraHut Co.,Other,Manzini,Eswatini,-26.4956988,31.3824814,,,+268 7622 3903,,False
+42,Manzini Lifestyle Center,Other,Manzini,Eswatini,-26.4939753,31.38539,,,+268 2505 7498,,False
+43,Aarohim investments Pty Ltd.,Other,Manzini,Eswatini,-26.495652,31.3817247,,,+268 7970 0058,,False
+44,Aura አውራ,Other,Addis Ababa,Ethiopia,8.990827099999999,38.7940982,,,+251 91 007 6069,,False
+45,Aurora Coworking,Other,Addis Ababa,Ethiopia,8.9914008,38.7731967,https://auroraaddis.com/,,+251 97 094 5940,,False
+46,AURADORO CROSS-CULTURAL FASHION,Other,አዲስ አበባ,Ethiopia,8.998871399999999,38.7399464,,,+251 94 662 6435,,False
+47,Aura Clubhouse - Restaurant Lounge & Events Space,Health & Wellbeing,Accra,Ghana,5.6016453,-0.1428903,http://www.aura233.com/,,+233 53 046 3043,,False
+48,Aura Interior Ghana,Other,Atico,Ghana,5.5806844,-0.24551,,,+233 26 758 8288,,False
+49,Aura Cantonments,Other,Accra,Ghana,5.5780631,-0.1629426,http://www.cornerstonedevelopmentsgh.com/,,+233 55 858 0000,,False
+50,Aura Design Studio,Creative Industries,Accra,Ghana,5.635004700000001,-0.1450502,http://www.auragh.studio/,,+233 59 770 2468,,False
+51,Auratress Hair & Beauty,Health & Wellbeing,Accra,Ghana,5.611587600000001,-0.2938772,https://wighub19.wixsite.com/auratresshairnbeauty,,+233 55 108 7556,,False
+52,AFRIAURA,Other,Tema,Ghana,5.736274799999999,0.0359807,https://www.afriaura.shop/,,+233 59 282 4705,,False
+53,Aurora Ghana Sea Food,Other,Accra,Ghana,5.5570309,-0.1762077,http://auroragh.com/,,+233 30 278 9799,,False
+54,The Aura Restaurant,Other,Nairobi,Kenya,-1.29314,36.7899019,,,+254 112 015180,,False
+55,Aura Publishers,Other,Nairobi,Kenya,-1.286515,36.825748,,,+254 722 405729,,False
+56,Aura Trading Limited,Other,Nairobi,Kenya,-1.3061561,36.8387596,http://www.auratrading.co.ke/,,+254 712 814730,,False
+57,Aura Apartments,Creative Industries,Nairobi,Kenya,-1.2650677,36.8194097,,,,,False
+58,AURA HOMES DESIGN,Creative Industries,Nairobi,Kenya,-1.2283472,36.8037317,https://aurahomes.org/,,+254 707 515151,,False
+59,Aura Safira Consulting Limited,Other,Nairobi,Kenya,-1.3003869,36.8196524,http://aurasafira.co.ke/,,+254 20 4402973,,False
+60,Auradi Empire Studio,Creative Industries,Mombasa,Kenya,-4.0510317,39.685301,https://www.behance.net/Auradiempire,,+254 708 818887,,False
+61,A Plus ( A+ ) Boutique & Home Appliances .,Other,Monrovia,Liberia,6.271729,-10.7410887,,,+231 77 511 7799,,False
+62,ERA Supermarket,Other,Monrovia,Liberia,6.283360399999999,-10.7680979,,,+231 55 517 1699,,False
+63,AURA Restaurant - Lounge Bar,Event Management,Antananarivo,Madagascar,-18.8759006,47.5201315,,,,,False
+64,Wathu Group Ltd,Other,Lilongwe,Malawi,-13.977563,33.7739908,http://wathugroup.com/,,,,False
+65,Latitude 13 Degrees,Health & Wellbeing,Lilongwe,Malawi,-13.9298061,33.7966444,http://www.13.thelatitudehotels.com/,,+265 999 97 59 59,,False
+66,ORABANK Mauritanie,Other,Nouakchott,Mauritania,18.0899995,-15.9775987,http://www.orabank.net/fr/filiale/mauritanie,,+222 45 29 19 00,,False
+67,Aura Institute Of Business And Hospitality,Other,Quatre Bornes,Mauritius,-20.2418916,57.4895998,,,+230 5889 9000,,False
+68,Aura Beauty & Spa,Health & Wellbeing,Casablanca,Morocco,33.59254,-7.640368499999999,,,+212 643-472347,,False
+69,Aura,Other,Dar-el-Beida,Morocco,33.543286,-7.639724,,,+212 5222-13475,,False
+70,aura beauty centre,Health & Wellbeing,Casablanca,Morocco,33.6004897,-7.5775887,,,+212 711-183488,,False
+71,Riad L'Heure d'Eté,Other,Marrakech,Morocco,31.6239691,-7.9882655,https://www.lheure-dete.com/?utm_source=local&utm_medium=organic&utm_campaign=GMB,,+212 525-614327,,False
+72,La Sultana,Health & Wellbeing,Marrakesh,Morocco,31.6168679,-7.9891879,http://www.lasultanahotels.com/,,+212 5243-88008,,False
+73,AnaYela,Other,Marrakesh,Morocco,31.6408832,-7.9891315,https://www.anayela.com/,,+212 5243-86969,,False
+74,Riad Luciano Hotel & SPA,Health & Wellbeing,Marrakesh,Morocco,31.6323023,-7.991936399999999,https://www.riadluciano.com/,,+212 637-226060,,False
+75,AURA Group,Other,Maputo,Mozambique,-25.9642498,32.5870086,https://www.auragroup.co.mz/,,+258 87 600 1101,,False
+76,"Water Regulatory Authority, Public Institute",Other,Maputo,Mozambique,-25.9668394,32.5834078,http://aura.org.mz/,,+258 21 312 825,,False
+77,Pestana Rovuma,Health & Wellbeing,Maputo,Mozambique,-25.968671,32.575287,https://www.pestana.com/en/hotel/pestana-rovuma?utm_campaign=pestana-rovuma-partoo&utm_medium=organicsearch,,+258 21 305 000,,False
+78,Aura Lounge,Event Management,Abuja,Nigeria,9.073492500000002,7.415990799999999,http://www.auraabuja.com/,,+234 810 931 9393,,False
+79,Aura by Transcorp Hotels,Accommodation,Abuja,Nigeria,9.0777326,7.4958524,http://aura.transcorphotels.com/,,+234 201 343 4499,,False
+80,Aura Clothing Nigeria,Other,Abuja,Nigeria,8.9900121,7.4596454,,,+234 815 300 4558,,False
+81,Aura,Other,Lagos,Nigeria,6.6039012,3.3829222,https://aura.ng/,,+234 814 625 7163,,False
+82,Aura Agro Allied Limited,Other,Lagos,Nigeria,6.4788967,3.32527,,,,,False
+83,AURA FROZEN FOODS,Other,WAREWA AREPO,Nigeria,6.6782661,3.4164494,,,+234 802 838 5532,,False
+84,Thyaura,Other,Lagos,Nigeria,6.561433399999999,3.3683648,,,,,False
+85,Aura Cosmetics,Other,Lekki,Nigeria,6.4685912,3.585096899999999,,,,,False
+86,Arravo,Other,Lagos,Nigeria,6.440947299999999,3.4498844,https://www.arravo.co/,,+234 803 227 9851,,False
+87,Aura Cosmetics,Other,Lagos,Nigeria,6.4537229,3.389714,,,+234 817 752 0987,,False
+88,Protea Hotel Lagos Kuramo Waters,Accommodation,Lagos,Nigeria,6.4247087,3.4388805,https://www.marriott.com/en-us/hotels/lospk-protea-hotel-lagos-kuramo-waters/overview/?scid=f2ae0541-1279-4f24-b197-a979c79310b0,,+234 705 301 0436,,False
+89,Aura Lounge and Espresso Bar,Event Management,Kigali,Rwanda,-1.9515491,30.0691703,,,+250 791 689 996,,False
+90,Aura Cosmetics rwanda,Other,Kigali,Rwanda,-1.9460701,30.0588529,,,+250 787 687 140,,False
+91,Omali São Tomé,Other,São Tomé,São Tomé and Príncipe,0.3611826,6.714131399999999,https://www.principecollection.com/en/hotels/omali,,+239 980 2595,,False
+92,AURATECH Sénégal SARL,Other,Dakar,Senegal,14.7220123,-17.4690685,https://www.linkedin.com/company/auratechsenegal,,+221 77 792 00 55,,False
+93,AGORA Dakar,Other,Dakar,Senegal,14.7017534,-17.468919,http://www.agora-center.com/,,+221 33 824 46 89,,False
+94,Pillay R Group,Other,Victoria,Seychelles,-4.651187500000001,55.4856875,https://pillayrgroup.com/,,+248 2 800 041,,False
+95,Empower Africa Business Center,Other,Freetown,Sierra Leone,8.490985499999999,-13.2348555,http://www.empowerafrica.com/,,+232 76 599201,,False
+96,Aurora Foundation,Other,Freetown,Sierra Leone,8.4861086,-13.2657577,http://www.aurorafoundation.is/,,+232 79 728574,,False
+97,AURA,Other,Johannesburg,South Africa,-26.1317345,28.0692453,https://aura.services/,,+27 11 568 4268,,False
+98,AuraVera South Africa,Other,Pretoria,South Africa,-25.6958705,28.2183871,,,+27 82 386 4157,,False
+99,Aura Host,Other,Cape Town,South Africa,-33.9070041,18.4225974,https://aurahost.co.za/,,+27 28 316 1973,,False
+100,Aura Group Business Solutions (Pty) Ltd,Other,Cape Town,South Africa,-33.88057610000001,18.5055186,http://auragroup.co.za/,,+27 71 468 0955,,False
+101,Aura Link Building,Other,Cape Town,South Africa,-33.9069743,18.4186257,https://www.auralinkbuilding.com/,,+27 79 243 2177,,False
+102,Aura Building and Design Concepts,Creative Industries,Cape Town,South Africa,-34.1041849,18.8563216,http://www.aurabdc.co.za/,,+27 79 934 4743,,False
+103,Aura Host,Other,Vermont,South Africa,-34.4129288,19.1532083,http://www.aurahost.co.za/,,+27 28 316 1973,,False
+104,Aura,Other,Cape Town,South Africa,-33.9182723,18.4185418,,,,,False
+105,Aura Wellness SA,Health & Wellbeing,Cape Town,South Africa,-34.0783714,18.86115,,,+27 82 492 2351,,False
+106,Aura Design,Creative Industries,Vermont,South Africa,-34.4129288,19.1532083,http://www.auradesign.co.za/,,+27 28 316 1973,,False
+107,Aurras Group,Other,Cape Town,South Africa,-33.8150308,18.5524498,,,+27 21 555 3959,,False
+108,Aurora Wellbeing,Other,Cape Town,South Africa,-33.9373341,18.4091726,http://www.aurorawellbeing.co.za/,,+27 71 602 3486,,False
+109,Aura Water,Other,Cape Town,South Africa,-34.0015494,18.5220574,,,+27 78 802 1980,,False
+110,Africa Aura,Other,Johannesburg,South Africa,-26.0915691,28.1277662,https://www.africaaura.co.za/,,+27 69 521 5212,,False
+111,The Aura,Other,Roodepoort,South Africa,-26.0550755,27.9489863,https://reeflords.co.za/developments/the-aura/,,+27 11 363 7858,,False
+112,Aura & Growth,Health & Wellbeing,Randburg,South Africa,-26.0912709,28.0071037,https://654cc210980a6.site123.me/,,+27 81 416 0221,,False
+113,Aura At Caviar Corner,Health & Wellbeing,Johannesburg,South Africa,-26.1499549,28.0261767,http://www.auraskincare.co.za/,,+27 71 889 8572,,False
+114,Aura Aluminium and Glass,Other,Johannesburg,South Africa,-26.2163619,28.0494529,http://www.auraaluminium.co.za/,,+27 11 334 2251,,False
+115,Aura Motors,Other,Johannesburg,South Africa,-26.0915576,28.1278109,https://www.auramotors.co.za/,,+27 69 521 5212,,False
+116,AURUM Restaurant,Other,Sandton,South Africa,-26.1042338,28.0555375,http://www.aurumrestaurant.co.za/,,+27 76 471 1489,,False
+117,AURORA,Other,Johannesburg,South Africa,-26.200699,28.04338,,,+27 11 616 1000,,False
+118,ARUA SECURITY GUARDS DODOMA,Other,Dodoma,Tanzania,-6.177687499999999,35.7519375,http://aruasecurityguards.co.tz/,,+255 656 829 904,,False
+119,+255,Other,Dodoma,Tanzania,-6.177971,35.764835,,,,,False
+120,Aura Suites,Other,Dar es Salaam,Tanzania,-6.814035100000001,39.2773796,https://www.aurasuites.co.tz/,,+255 746 941 889,,False
+121,Aura Gems And Jewellery,Other,Dar es Salaam,Tanzania,-6.8193785,39.2836346,https://www.instagram.com/auragemsjewellery?igsh=MWY1dmo5Z2tzZncwdg==,,+255 713 285 330,,False
+122,Aura Space,Health & Wellbeing,Nyamanzi,Tanzania,-6.2764663,39.252512,http://book.aura-space.com/,,+255 654 828 976,,False
+123,Vijana Mall,Other,Dar es Salaam,Tanzania,-6.8140301,39.2776165,https://m.facebook.com/AuraMallTanzania/?ref=page_internal&mt_nav=1,,+255 22 277 4253,,False
+124,Zanzibar Auras Tours,Other,Zanzibar,Tanzania,-6.218592399999999,39.2203799,http://www.zaurastour.com/,,+255 773 800 022,,False
+125,Aurora Boutique Hotel Jambiani,Accommodation,Jambiani,Tanzania,-6.3337841,39.5498806,https://www.aurorazanzibar.com/,,+255 777 230 948,,False
+126,Aura Ra - MB Homes,Other,Paje,Tanzania,-6.248937499999999,39.5341875,https://mbhomes.tz/,,+255 775 500 227,,False
+127,Aurora Boutique Hotel & Restaurant,Accommodation,ZANZIBAR,Tanzania,-6.334094299999999,39.5500255,http://www.aurorazanzibar.com/,,+255 777 230 948,,False
+128,AURA HOUSE ZANZIBAR,Other,Zanzibar,Tanzania,-6.2401377,39.2204477,,,,,False
+129,Aurora Hotel Nungwi,Accommodation,Zanzibar,Tanzania,-5.7232702,39.2987563,http://www.aurorahotelnungwi.com/,,+255 715 970 176,,False
+130,Villa Aura,Accommodation,Paje,Tanzania,-6.256562499999999,39.5278125,https://www.airbnb.com/rooms/1307015282634070372?source_impression_id=p3_1740501109_P3i4J9MEWyKzKGNK,,,,False
+131,Hotel Aurore / Restaurant / Bar,Accommodation,Lomé,Togo,6.1332444,1.2498504,,,+228 22 21 05 17,,False
+132,OURA Shop,Other,Lomé,Togo,6.196727399999999,1.1827697,,,+228 93 37 19 26,,False
+133,Aura Café Tunis,Other,Tunis,Tunisia,36.8016819,10.1827856,,,,,False
+134,By Aura,Other,Marsa,Tunisia,36.8795289,10.3327183,https://byaurartw.com/,,+216 71 775 434,,False
+135,Aura electronic,Other,,Tunisia,36.8423007,10.0096964,http://www.aura-electronic.com/,,+216 98 332 568,,False
+136,"Aura by Nadia Othmani, Personal branding strategist & Consultante en communication",Health & Wellbeing,Tunis 1053,Tunisia,36.836525,10.2335072,http://nadiaothmani.com/,,+216 54 442 844,,False
+137,L'AURA,Other,Tunis,Tunisia,36.742285,10.1997442,https://vetemements.tijarati.tn/product/3653/t-shirt-coton-pour-femme/,,+216 51 051 271,,False
+138,Aura pastryshop,Other,Marsa,Tunisia,36.877091,10.3164438,https://www.facebook.com/profile.php?id=61553309956240,,+216 25 665 877,,False
+139,Aura Cosmetics tn,Other,Sousse,Tunisia,35.8380306,10.6288605,https://www.facebook.com/groups/844399455743032,,+216 54 447 006,,False
+140,AURA Cafe Lounge,Event Management,Monastir,Tunisia,35.7658933,10.8277778,,,+216 55 284 629,,False
+141,Aurum Dates | Deglet Nour Exporter | Tunisian Dates,Other,Tunis,Tunisia,36.8468541,10.195838,,,+216 28 330 301,,False
+142,Aura Lounge,Event Management,Kampala,Uganda,0.3329098,32.5868314,,,+256 708 901993,,False
+143,Aura Uganda,Other,Kampala,Uganda,0.3082499,32.5601969,,,+256 706 115045,,False
+144,AURA APARTMENTS,Creative Industries,Kampala,Uganda,0.3340159,32.5900442,,,,,False
+145,AURA_SHOPUG,Other,Kampala,Uganda,0.3230768,32.5750353,,,+256 754 798635,,False
+146,AUROUS,Other,Kampala,Uganda,0.328668,32.6021647,,,+256 777 353347,,False
+147,AURORA BAR,Other,Kampala,Uganda,0.3583041,32.6168248,,,+256 704 308031,,False
+148,Aura Innovation ltd,Other,Lusaka,Zambia,-15.3947152,28.3083832,https://aurainnovationltd.com/,,+260 97 4018157,,False
+149,AURA Group (Pvt) Ltd,Other,Harare,Zimbabwe,-17.7823759,31.1191705,http://www.auragroup.co.zw/,,+263 24 2444601,,False
+150,AURA’S CLOSET,Other,Harare,Zimbabwe,-17.821769,31.0449499,,,+263 71 627 5145,,False
+151,Aura Paints,Other,Harare,Zimbabwe,-17.867269,31.0180951,http://www.aurazim.com/,,+263 78 728 7287,,False
+152,Brainwest Investments t/a Aurora Energy,Other,Harare,Zimbabwe,-17.7890949,31.0628337,http://www.auroraenergy.co.zw/,,+263 77 168 3662,,False
+153,Pure Africa,Other,Victoria Falls,Zimbabwe,-17.9272411,25.8375271,http://pure.africa/,,+263 77 789 2937,,False
+154,Somproperty Construction & Real Estate,Cities & Developments,Hargeysa,Somalia,9.5549689,44.0463662,http://www.somproperty.com/,,+252 63 6000092,,False
+155,ALI GOBANIMO BUSINESS CENTER,Other,Hargeisa,Somalia,9.5630934,44.0588403,,,+252 63 3050522,,False
+156,Al Nuur Furniture,Other,Hargeisa,Somalia,9.5718781,44.059289,,,+252 63 4834900,,False
+157,Oriental general trading enterprise . Hargeisa somaliland,Other,Hargeisa,Somalia,9.5631255,44.0688459,,,+252 63 4160114,,False
+158,BARAAR HOTEL,Accommodation,Hargeisa,Somalia,9.564663999999999,44.041247,http://www.baraarhotel.com/,,+252 63 6000052,,False
+159,AURA Wellness Yerevan,Health & Wellbeing,Yerevan,Armenia,40.1844344,44.5126684,http://facebook.com/AURAinYerevan,,+374 98 897575,,False
+160,Aurora Baréalisse Marketing & Branding,Other,Yerevan,Armenia,40.204118,44.49366610000001,https://www.behance.net/aurorabarealisse,,+374 96 901177,,False
+161,AVRA,Other,Yerevan,Armenia,40.1818859,44.5165209,,,+374 41 777740,,False
+162,Aura Azərbaycan MMC,Other,Bakı,Azerbaijan,40.3943194,49.8403684,,,+994 55 779 68 94,,False
+163,AURA INSHAAT,Other,Baku,Azerbaijan,40.405815,49.8660408,https://aurainshaat.az/,,+994 12 465 05 48,,False
+164,AURA INSHAAT,Other,Bakı,Azerbaijan,40.4255526,49.8787648,https://aurainshaat.az/,,+994 12 514 38 84,,False
+165,Luxe Aura,Health & Wellbeing,Bakı,Azerbaijan,40.3891576,49.8540145,,,,,False
+166,Aura Arts Centre,Health & Wellbeing,Manama,Bahrain,26.2188458,50.5826039,http://www.auraartscentre.com/,,+973 3310 5511,,False
+167,Aura Massage & Spa - Arch Hotel,Health & Wellbeing,Manama,Bahrain,26.2198624,50.6100643,https://auraspa.bh/,,+973 3652 0655,,False
+168,Aurora,Other,المنامة,Bahrain,26.215884,50.5987573,https://aurorabh.net/,,+973 3446 7432,,False
+169,Aura Spa - Crystal Palace,Health & Wellbeing,Manama,Bahrain,26.221152,50.6090979,https://auraspa.bh/,,+973 3872 2722,,False
+170,Aurora,Other,Manama,Bahrain,26.2321781,50.5358964,,,+973 3446 7432,,False
+171,Aura IT,Other,ঢাকা,Bangladesh,23.7778738,90.4117129,,,+880 1400-335356,,False
+172,Aura Beauty Lounge ~ Shiddheshwari,Health & Wellbeing,Dhaka,Bangladesh,23.7419634,90.4099778,http://www.aurabd.com/,,+880 1799-255555,,False
+173,Aura,Other,Dhaka,Bangladesh,23.7814048,90.4173903,,,+880 9678-777454,,False
+174,Aura Thai Saloon & Beauty Care,Health & Wellbeing,Dhaka,Bangladesh,23.7631316,90.43064609999999,http://aurasaloon.com/,,+880 1400-335354,,False
+175,AURA SOLUTIONS BD,Other,Dhaka,Bangladesh,23.828248,90.36455,http://www.aurasolutionsbd.com/,,+880 1709-871891,,False
+176,Aura architects,Other,ঢাকা,Bangladesh,23.7556425,90.3726746,,,+880 1671-057766,,False
+177,ORA Event,Other,Thimphu,Bhutan,27.4788016,89.63206799999999,http://www.oraevent.com/,,+975 77 30 18 43,,False
+178,Asura Hotel,Accommodation,Simtokha,Bhutan,27.4408651,89.662922,http://www.asurahotel.com/,,+975 77 41 64 55,,False
+179,THE PEMA BY REALM,Health & Wellbeing,Thimphu,Bhutan,27.4756708,89.6270973,http://www.realmbhutan.com/,,+975 2 338 888,,False
+180,Aura by TienSing,Other,Bandar Seri Begawan,Brunei,4.9109767,114.9243443,https://linktr.ee/aura.plantbased,,+673 823 5454,,False
+181,Rawatan Tradisional Nur Aura,Health & Wellbeing,Bandar Seri Begawan,Brunei,4.9394024,114.9381374,https://m.facebook.com/ESTABLISMEN.KECANTIKAN.KESIHATAN.NURAURA.SDN.BHD/,,+673 884 1199,,False
+182,AURA - Phnom Penh,Other,Phnom Penh,Cambodia,11.5531246,104.9297785,https://aura-phnompenh.weeblysite.com/,,+855 98 663 389,,False
+183,Aura Condominium,Cities & Developments,Phnom Penh,Cambodia,11.5653393,104.9215207,http://www.auracondominium.com/,,+855 61 721 552,,False
+184,AURA Hostel & Bar Siem Reap,Other,Krong Siem Reap,Cambodia,13.3571068,103.8479282,,,+855 92 648 462,,False
+185,Angkor Aurora,Other,Krong Siem Reap,Cambodia,13.3527802,103.8593274,https://angkoraurora.com/,,+855 61 766 755,,False
+186,Royal Angkor Resort,Accommodation,Krong Siem Reap,Cambodia,13.3802875,103.8296441,http://www.royalangkorresort.com/,,+855 63 767 555,,False
+187,Aura,Other,,China,39.929761,116.447259,,,,,False
+188,Aura,Other,,China,31.2369025,121.5013398,,,+86 21 2020 1888,,False
+189,AURA Lounge and Jazz Bar,Event Management,,China,31.234577,121.507687,,,+86 21 2020 1717,,False
+190,Aura,Other,,China,31.226956,121.44386,,,+86 21 6253 2779,,False
+191,AURA,Other,,China,31.2114815,121.4543201,,,+86 21 3461 7159,,False
+192,"Shanghai AURORA Furniture Co.,Ltd.",Other,,China,31.1884592,121.4397016,https://www.aurora.com.cn/of/,,,,False
+193,"Shanghai Aurora International Trading Co.,Ltd.",Other,,China,31.2280679,121.4543503,,,,,False
+194,AURORA,Other,,China,31.218842,121.464224,,,,,False
+195,Aura,Other,Guang Zhou Shi,China,23.091127,113.263162,,,,,False
+196,Aura Wellness Studio,Health & Wellbeing,Lefkoşa,Cyprus,35.140081,33.3357764,https://www.facebook.com/aurastudiocy,,+357 99 385875,,False
+197,Aura-Soma Cyprus,Health & Wellbeing,BL2,Cyprus,35.15143279999999,33.4126644,https://seedoflife.cy/,,+357 99 013243,,False
+198,AURA,Health & Wellbeing,Nicosia,Cyprus,35.1622165,33.3738134,,,,,False
+199,"Hotel Aura, Tbilisi, Georgia - Didi Dighomi",Accommodation,T'bilisi,Georgia,41.7871706,44.7566797,,,+995 511 10 10 21,,False
+200,აურა - Aura Restaurant,Other,T'bilisi,Georgia,41.7872526,44.7566692,https://www.facebook.com/%E1%83%90%E1%83%A3%E1%83%A0%E1%83%90-%E1%83%93%E1%83%98%E1%83%A6%E1%83%9D%E1%83%9B%E1%83%A8%E1%83%98-Aura-in-Dighomi-102985561450455,,+995 511 10 10 20,,False
+201,Aura Plaza Hotel,Accommodation,T'bilisi,Georgia,41.6880242,44.8132753,,,+995 558 76 27 72,,False
+202,Hotel Aura,Accommodation,T'bilisi,Georgia,41.7559711,44.7889112,,,+995 551 96 66 66,,False
+203,AURA Tbilisi Living,Other,T'bilisi,Georgia,41.7319673,44.7690916,,,+995 555 10 60 20,,False
+204,Sheen•Aura,Creative Industries,T'bilisi,Georgia,41.7262747,44.7239848,https://www.facebook.com/shinaura.ge/,,+995 599 16 95 95,,False
+205,Aura Plus,Health & Wellbeing,T'bilisi,Georgia,41.7074566,44.7668999,http://www.auraplus.ge/,,+995 557 16 79 43,,False
+206,Aura Nails & Beauty • აურა ნეილს & ბიუთი,Health & Wellbeing,T'bilisi,Georgia,41.7104797,44.7571539,,,+995 595 44 33 43,,False
+207,Aura commerce and industries pvt ltd,Other,New Delhi,India,28.7128687,77.03407469999999,http://aura-fmcg.com/,,+91 83838 53884,,False
+208,AURA HERBAL PVT. LTD. -Third Party Cosmetics Manufacturers In India | Skincare & Personal Care Cosmetics Manufacturers,Creative Industries,Delhi,India,28.6385822,77.0738355,https://www.auraherbal.in/,,+91 99995 18235,,False
+209,AURA INDIA,Other,Delhi,India,28.7346664,77.0505477,,,,,False
+210,Aura Synergy India Pvt Ltd (GridSquare),Other,New Delhi,India,28.6650888,77.15850879999999,https://www.aurasynergyindia.com/,,+91 11 4141 0003,,False
+211,Aura Ideas Private Limited,Other,New Delhi,India,28.5251333,77.2834821,https://auraideas.co.in/,,+91 98111 19034,,False
+212,AURA FASHION,Other,New Delhi,India,28.648185,77.164014,https://qliqo.in/AURA-FASHION,,,,False
+213,Hotel Aura IP Grand Karkardooma,Accommodation,New Delhi,India,28.6505011,77.30580210000001,https://iproyal.in/,,,,False
+214,Hotel Aura Paharganj,Accommodation,New Delhi,India,28.6461685,77.2147244,,,+91 11 4308 0550,,False
+215,Auradecor Pvt Ltd. ( Showroom ),Health & Wellbeing,Delhi,India,28.706093,77.1379582,https://www.auradecor.co.in/,,+91 80 4603 8155,,False
+216,Aura Trading Co.,Other,Delhi,India,28.74691139999999,77.1072027,,,+91 98100 21934,,False
+217,ASIAN AURA,Other,Delhi,India,28.7874023,77.0601812,http://www.asianaura.in/,,+91 99115 65588,,False
+218,Aura Global Group,Health & Wellbeing,New Delhi,India,28.6123624,77.0671383,http://auraglobalgroup.com/,,+91 89264 48000,,False
+219,Hotel De Aura Delhi Airport -T 3 (Under Kuber International),Accommodation,New Delhi,India,28.5490684,77.1299228,https://hotel-de-aura-delhi-airport-t-3.myjoonweb.com/,,,,False
+220,Aura recruiters Pvt ltd,Other,Ghaziabad,India,28.6449193,77.3329809,https://aurarecruiters.com/,,+91 93110 27601,,False
+221,Aura By Gautam Vedi,Other,New Delhi,India,28.4667054,77.1497381,,,+91 99112 27700,,False
+222,Aura Bar,Other,New Delhi,India,28.600678,77.216166,https://claridges.com/new-delhi/dining-old/,,+91 11 3955 5000,,False
+223,AURA,Other,Delhi,India,28.7172943,77.2647795,,,,,False
+224,Aurafe,Other,New Delhi,India,28.6311713,77.2179183,http://aurafe.com/,,+91 99906 88550,,False
+225,Aurora,Other,New Delhi,India,28.5555909,77.21583989999999,,,+91 95999 42053,,False
+226,Aura,Other,New Delhi,India,28.4779345,77.1719648,http://auraisl.com/,,+91 18772872462,,False
+227,AURA India,Other,New Delhi,India,28.5594601,77.267275,,,+91 98100 69960,,False
+228,Aura Jewels,Other,Mumbai,India,19.1961847,72.858778,http://aurajewels.co.in/,,+91 86570 01588,,False
+229,Aura,Other,Mumbai,India,19.2485061,72.84866319999999,,,,,False
+230,Auraa Brand Consultants (Registered office),Other,Mumbai,India,19.1921909,72.8337093,https://auraa.co.in/,,+91 77200 18700,,False
+231,AURA- Facility Management Services & Housekeeping Services in Mumbai,Other,Andheri,India,19.1483643,72.8284303,https://aurafacilitiesmanagement.com/,,+91 98204 03068,,False
+232,Aura International Pvt. Ltd.,Other,नवी मुंबई,India,19.0490057,73.0256919,,,+91 98200 80603,,False
+233,Aura Diamonds,Other,Mumbai,India,19.0644147,72.8641304,,,+91 22 2627 8685,,False
+234,Aura,Other,Mumbai,India,19.0668522,72.8238614,,,,,False
+235,AURA AROUND U (DEEPA AGARWAL - FASHION DESIGNER),Creative Industries,Mumbai,India,19.0632931,72.83280789999999,,,,,False
+236,Aura Jewels,Other,Mumbai,India,19.1196325,72.8755848,https://aurajewels.co.in/,,+91 22 4027 5000,,False
+237,Auraa Brand Consultants (Head Office),Other,Mumbai,India,19.1181972,72.8715011,https://auraa.co.in/,,+91 70300 91866,,False
+238,Aura,Other,Mumbai,India,19.0953083,72.8412716,,,,,False
+239,Aura Art Gallery,Creative Industries,Mumbai,India,19.0082821,72.8208377,http://www.auraart.in/,,+91 93288 77000,,False
+240,Aura International,Other,Mumbai,India,19.187482,72.8356555,https://aura-international.ueniweb.com/?utm_campaign=gmb,,+91 77389 89164,,False
+241,"Hotel Aura, Malad West",Accommodation,Mumbai,India,19.191394,72.8347337,http://hotelauramalad.com/,,+91 91368 12929,,False
+242,Aura Appliances LLP,Other,Mumbai,India,19.1545692,72.9325063,,,+91 93241 70120,,False
+243,Aura Gems,Other,Mumbai,India,18.9579218,72.8214222,,,+91 98200 82838,,False
+244,World Trade Center Mumbai,Other,Mumbai,India,18.9145662,72.81794409999999,https://www.wtcmumbai.org/,,+91 22 6638 7272,,False
+245,Aura Art,Creative Industries,Mumbai,India,19.0082821,72.8208377,https://www.artinfrasolutions.com/,,,,False
+246,Aura Incense,Other,Mumbai,India,18.9388605,72.8371585,http://auraincense.com/,,+91 22 2269 3940,,False
+247,Aura,Other,Kolkata,India,22.5346275,88.3493055,,,+91 96747 42428,,False
+248,Aura Agencies,Other,Kolkata,India,22.5464876,88.3908158,,,+91 62890 33282,,False
+249,Aura Events | Weddings & Events Experiences,Event Management,Kolkata,India,22.608439,88.4088591,https://auraevents.co/,,+91 80 6218 1340,,False
+250,Sunrise Aura,Other,Kolkata,India,22.3921428,88.41722469999999,http://www.sunriseaura.com/,,,,False
+251,Hotel Aura,Accommodation,Kolkata,India,22.5621811,88.35523119999999,https://www.hotelaura.in/,,+91 33 2265 1083,,False
+252,Og Aura,Other,Kolkata,India,22.6894369,88.4457125,http://ogaura.ooulet.com/,,,,False
+253,Aura by the Lake,Other,Kolkata,India,22.5651116,88.40339499999999,,,,,False
+254,The Aura Salon Bangur,Health & Wellbeing,Kolkata,India,22.6075491,88.41058989999999,,,+91 76040 91399,,False
+255,Aura Indie,Other,Narenrapur,India,22.5871586,88.364848,https://www.auraindie.in/?utm_source=google&utm_medium=wix_google_business_profile&utm_campaign=11291505965961204497,,+91 70034 19640,,False
+256,Aura India,Other,Kolkata,India,22.5687004,88.3488443,,,+91 98309 43777,,False
+257,Auro India Financial Services,Other,Kolkata,India,22.5705041,88.35934680000001,http://aurofinn.com,,+91 33 2225 8412,,False
+258,PT. AURALUXE INDONESIA Sunter (Aura Cantik),Other,,Indonesia,-6.143598300000001,106.8582013,,,,,False
+259,Pt. Aura Universal Rasi,Other,,Indonesia,-6.2001693,106.8971045,https://ptaura.com/,,,,False
+260,PT.Aura CANTIK,Other,,Indonesia,-6.161156,106.8366834,,,,,False
+261,"Aura Essentials Sency (PHYTO, THALGO, MAVALA, & KORRES)",Other,,Indonesia,-6.2277937,106.7966248,,,+62 21 72781132,,False
+262,AURA DESIGN,Creative Industries,,Indonesia,-6.1713906,106.9739342,http://theauradesign.com/,,+62 21 29566768,,False
+263,Aura Esport,Other,,Indonesia,-6.2715394,106.8123275,,,,,False
+264,Aura Jaya - Alumunium dan kaca,Other,,Indonesia,-6.206970600000001,106.7855075,https://linktr.ee/aurajaya.id,,+62 878-8888-3103,,False
+265,Aura Design Studio,Creative Industries,,Indonesia,-6.210249,106.8112551,,,,,False
+266,Aura,Other,,Indonesia,-6.188805299999999,106.8118987,,,,,False
+267,Aura House Bali,Other,,Indonesia,-8.5739401,115.2140458,https://aurahouse-bali.com/,,+62 811-3922-254,,False
+268,Aura Property Group Indonesia,Other,,Indonesia,-8.7895118,115.1869672,https://www.aurakreasindo.com/,,+62 812-2233-3656,,False
+269,Aura Boutique & Spa center,Health & Wellbeing,,Indonesia,-8.335064,115.6417148,https://www.aura-spa-center.com/,,+62 812-6712-3636,,False
+270,Aura Bali Trans,Other,,Indonesia,-8.624719100000002,115.1966232,http://www.aurabalitrans.com/,,,,False
+271,Aura Art Gallery indonesia,Creative Industries,,Indonesia,-8.683952399999999,115.1874682,,,,,False
+272,PT. Aura Bali Craft,Other,,Indonesia,-8.6054133,115.1711322,http://www.aurabalicraft.com/,,+62 813-3828-5434,,False
+273,Paper Bag Sanur,Other,,Indonesia,-8.688537799999999,115.2561097,http://www.instagram.com/aurabaligrafika,,+62 895-3825-98847,,False
+274,Aura Sauna,Health & Wellbeing,,Indonesia,-8.8269299,115.1886194,https://www.instagram.com/aura_sauna_bali/,,+62 859-5535-6280,,False
+275,AURA apartments,Creative Industries,,Indonesia,-8.4992953,115.2694434,https://aura-bali.com/,,+62 821-4750-8441,,False
+276,Auraku Cabang Bali,Other,,Indonesia,-8.6300329,115.2181834,,,+62 819-3608-2286,,False
+277,Aura Bali,Other,,Indonesia,-8.682512,115.226226,,,+62 361 223109,,False
+278,Cafe AURA,Other,Tehran,Iran,35.7504821,51.3980116,,,,,False
+279,کافه آئورا,Other,Tehran,Iran,35.7056422,51.3460117,,,,,False
+280,Aura Coffee,Other,Baghdad,Iraq,33.3113691,44.3065082,https://www.instagram.com/auracoffee.iq?igsh=MXc2aHdzMXIxOTJvdA==,,,,False
+281,Rawnaq Al-Dur Company,Other,Baghdad,Iraq,33.3118524,44.4197425,https://www.ra.iq/,,+964 773 344 6688,,False
+282,ORA IRAQ HQ,Other,Baghdad,Iraq,33.3097876,44.342369,,,,,False
+283,Aura Israel - Entrepreneurship and Investments Ltd.,Other,Tel Aviv-Jaffa,Israel,32.07406400000001,34.791789,http://www.auraisrael.co.il/he/,,+972 3-718-1910,,False
+284,Aura Rabayoff Interior Design- אורה רביוף | תכנון ועיצוב פנים,Creative Industries,Jerusalem,Israel,31.7500781,35.20052829999999,https://idaurarabayoff.wixsite.com/aura-rabayoff,,+972 54-353-2740,,False
+285,Aura Air,Other,Tel Aviv-Yafo,Israel,32.0666299,34.793175,,,+972 54-729-7997,,False
+286,משרד מכירות AURA,Other,Ramat Hasharon,Israel,32.1301952,34.8523731,https://www.auraisrael.co.il/,,+972 3-718-1920,,False
+287,AURA JAPON TOKYO,Other,Shibuya,Japan,35.6719688,139.7093112,https://www.aurajapon.com/,,+81 3-5843-0215,,False
+288,AURA表参道,Other,Shibuya,Japan,35.6684864,139.7086729,,,,,False
+289,Aura,Other,Shinjuku City,Japan,35.7044556,139.7321721,http://www.aura-net.jp/index2.html,,+81 3-3269-8361,,False
+290,Aura omotesando,Other,Shibuya,Japan,35.6692768,139.7135774,https://beauty.hotpepper.jp/slnH000751541/,,+81 3-4400-7643,,False
+291,Aura,Other,Chiyoda City,Japan,35.6920908,139.7418314,https://auracosme.net/aboutus.html,,+81 3-3512-3731,,False
+292,Whisky & Wine Bar aura,Other,Shinjuku City,Japan,35.70197539999999,139.7391999,https://aura1001.com/,,+81 3-3528-9931,,False
+293,Aura,Other,Shinjuku City,Japan,35.6904564,139.7084305,,,+81 3-6432-5175,,False
+294,㈱オーロラ（AURORA）,Other,Taito City,Japan,35.7063493,139.7733151,http://www.aurora.jp/,,+81 3-3836-5678,,False
+295,Aura,Other,Osaka,Japan,34.7067502,135.5030592,https://www.aurajapon.com/,,+81 6-6450-8344,,False
+296,AURA,Other,Osaka,Japan,34.6698584,135.4980815,http://aurajapon.com/,,+81 6-6210-2850,,False
+297,FDS AURA FDS オーラ,Other,Osaka,Japan,34.6784889,135.5088985,https://bijousuites.jp/facility/aura/,,+81 6-4394-7222,,False
+298,Aura.,Other,Osaka,Japan,34.7151269,135.5560963,https://aura-hairsalon-official.com/?utm_source=GBP&utm_medium=GBP&utm_term=GBP&utm_content=GBP&utm_campaign=GBP,,+81 80-8314-0510,,False
+299,AURA LONDON VINTAGE,Other,Osaka,Japan,34.6694988,135.4973172,https://www.aurajapon.com/,,+81 6-4708-3909,,False
+300,AURA MILANO VINTAGE,Other,Osaka,Japan,34.6698654,135.4983003,https://www.aurajapon.com/store.html#milano,,+81 6-6484-5422,,False
+301,Aura,Other,Osaka,Japan,34.6721886,135.4800109,https://www.aurainc.jp/,,+81 6-7507-2356,,False
+302,ＡＵＲＡ,Other,Osaka,Japan,34.697251,135.500243,,,+81 6-6343-5552,,False
+303,Aura,Other,大阪市北区,Japan,34.7086919,135.5105002,https://www.aura-office.co.jp/,,+81 6-6292-8577,,False
+304,AURA NY VINTAGE,Other,Osaka,Japan,34.6694988,135.4973172,https://www.aurajapon.com/index.php,,+81 6-4708-3878,,False
+305,（株）ａｕｒａ,Other,Osaka,Japan,34.6765239,135.5045477,,,+81 6-6125-1906,,False
+306,AURA,Health & Wellbeing,Osaka,Japan,34.6763241,135.4988195,,,+81 6-6251-1460,,False
+307,ＡＵＲＡ（弁護士法人）,Other,Osaka,Japan,34.678531,135.496277,,,+81 120-775-108,,False
+308,Stationery Aura,Other,Osaka,Japan,34.7335066,135.5003035,https://www.arde-shinosaka.jp/shopguide/detail/15,,+81 6-6303-8517,,False
+309,Oura,Other,Osaka,Japan,34.6986824,135.4991804,http://jisyushitsutakadanobaba.com/,,+81 6-6225-8976,,False
+310,AURORA,Other,Osaka,Japan,34.6790476,135.5023918,,,,,False
+311,AURA Kyoto,Other,Kyoto,Japan,35.0059287,135.7662788,https://www.aurajapon.com/,,+81 75-708-6443,,False
+312,Aura Nail House & Spa,Health & Wellbeing,Amman,Jordan,31.9646666,35.8437793,http://www.instagram.com/aura.nailhouse,,+962 7 9912 5080,,False
+313,AURA HAIR HOUSE,Other,Amman,Jordan,31.9589861,35.8686397,https://aurahairhouse.com/,,+962 7 9815 0974,,False
+314,Aurora for Intelligent Systems,Other,Amman,Jordan,31.9916686,35.8490262,http://aurora-jo.com/,,+962 6 437 7038,,False
+315,Aura Art Space,Health & Wellbeing,Amman,Jordan,31.9370702,35.8657446,,,+962 7 9990 9983,,False
+316,Aura boutique,Other,Amman,Jordan,31.9973289,35.8300129,,,+962 7 8131 3720,,False
+317,W Amman,Other,Amman,Jordan,31.9642141,35.90288049999999,https://www.marriott.com/en-us/hotels/ammwi-w-amman/overview/?scid=f2ae0541-1279-4f24-b197-a979c79310b0,,+962 6 510 8888,,False
+318,ORA+ Nutrition &Wellbeing Center-Ola Asaad,Health & Wellbeing,Amman,Jordan,31.9463194,35.8603952,http://www.oraplus.me/,,+962 7 9745 3226,,False
+319,Aura Shop,Other,عمّان,Jordan,31.9543786,35.9105776,,,+962 7 7608 0392,,False
+320,Aura Group,Other,Lusail,Qatar,25.3842878,51.5224832,https://auragroup-intl.com/,,+974 4429 2222,,False
+321,Amman Marriott Hotel,Accommodation,Amman,Jordan,31.9730247,35.905796,https://www.marriott.com/en-us/hotels/ammjr-amman-marriott-hotel/overview/?scid=f2ae0541-1279-4f24-b197-a979c79310b0,,+962 6 560 7607,,False
+322,Nur,Other,Amman,Jordan,31.95988139999999,35.8811532,https://www.fairmont.com/en/hotels/amman/fairmont-amman/dining/nur-lebanese.restaurant.html?utm_source=google+Maps&utm_medium=seo+maps&utm_campaign=seo+maps,,+962 6 510 6000,,False
+323,aurashopjo,Health & Wellbeing,Amman,Jordan,31.9656298,35.8793343,,,+962 7 9999 6065,,False
+324,Aura,Other,Astana,Kazakhstan,51.0902877,71.42342599999999,,,+7 7172 62 56 25,,False
+325,Aura ресторан,Other,Astana,Kazakhstan,51.095825,71.42048729999999,https://instagram.com/aura.nursultan?igshid=e5qstjg8jukw,,+7 771 165 6666,,False
+326,Aura Kazakhstan | Roboclean | Cebilon,Other,Astana,Kazakhstan,51.143842,71.4623871,"http://www.cebilon.kz/,%20http://www.roboclean.kz/",,+7 701 006 3300,,False
+327,AURA SU,Other,Astana,Kazakhstan,51.1722785,71.4320987,https://aurasu.kz/,,+7 702 000 0033,,False
+328,Ресторан AURA Verdant,Other,Astana,Kazakhstan,51.1080432,71.43074709999999,,,,,False
+329,Aura Hotel Almaty,Accommodation,Almaty,Kazakhstan,43.3067466,76.9307259,,,+7 705 673 5803,,False
+330,Aura of Kazakhstan,Other,Almaty,Kazakhstan,43.2473102,76.9341137,http://www.aurakaz.com/,,+7 771 412 1144,,False
+331,Aura Kazakhstan | Roboclean | Cebilon,Other,Алматы,Kazakhstan,43.2166688,76.85059179999999,http://www.roboclean.kz/.%20http://www.cebilon.kz/,,+7 701 006 3300,,False
+332,AURA DESIGN,Creative Industries,Almaty,Kazakhstan,43.256477,76.9107275,,,+7 778 122 6809,,False
+333,AURA | Kuwait,Other,مدينة الكويت,Kuwait,29.3767858,47.9850426,https://www.aura-kuwait.com/,,+965 2240 2688,,False
+334,Aura Restaurant,Other,Kuwait City,Kuwait,29.37827769999999,47.99031910000001,,,+965 2232 0566,,False
+335,ORA Japanese Tapas,Other,Kuwait City,Kuwait,29.3803608,47.9836732,,,+965 2227 5090,,False
+336,OURA,Other,Al Kuwayt,Kuwait,29.3749811,47.989271,https://ouraevents.com/,,+965 410 00098,,False
+337,AURA | آورا,Other,مدينة الكويت,Kuwait,29.3633301,47.9666737,https://bianca-nera.com/,,+965 2299 6559,,False
+338,AURA,Other,Bishkek,Kyrgyzstan,42.8238083,74.6060711,,,+996 555 770 097,,False
+339,Aura Kyrgyzstan | Roboclean | Cebilon,Other,Bishkek,Kyrgyzstan,42.8564985,74.608829,"https://www.cebilon.kg/,%20https://www.roboclean.kg/",,+996 771 596 065,,False
+340,Aura Kyrgyzstan | Roboclean | Cebilon,Other,Bishkek,Kyrgyzstan,42.8556292,74.60222929999999,"https://www.cebilon.kg/,%20https://www.roboclean.kg/",,+996 771 596 065,,False
+341,Aura-Cosmetics,Other,Bishkek,Kyrgyzstan,42.8760714,74.6145913,https://aura-cosmetics.kg/,,+996 558 570 741,,False
+342,Avrora Plyus,Other,Bishkek,Kyrgyzstan,42.8611187,74.602302,http://www.auroraplus.kg/,,+996 550 002 257,,False
+343,Olaa Shop,Other,Vientiane,Laos,17.9654049,102.6422992,https://www.olaa.la/#/,,+856 20 91 511 123,,False
+344,ADRA Laos,Other,Vientiane,Laos,17.9613965,102.6307923,http://www.adralaos.org/,,+856 21 264 611,,False
+345,Adventist Relief and Development Agency,Other,Vientiane,Laos,17.9580842,102.6285181,http://www.adralaos.org,,+856 21 264 611,,False
+346,Aura Gems & Minerals,Other,Bayrut,Lebanon,33.8953794,35.4822289,http://www.instagram.com/auragemsco,,+961 70 403 210,,False
+347,Aura Beirut,Other,Beirut,Lebanon,33.8774878,35.5351237,,,+961 3 501 080,,False
+348,AURA Headpieces,Other,Bayrut,Lebanon,33.8974815,35.5245677,http://www.auraheadpieces.com/,,+961 1 570 356,,False
+349,Aura beauty lounge,Health & Wellbeing,Bayrut,Lebanon,33.8829393,35.5183645,,,+961 3 244 073,,False
+350,Aura-Fit Personal Training Center,Health & Wellbeing,Baabda,Lebanon,33.8943611,35.4755438,,,+961 70 312 140,,False
+351,Aura,Other,Kuala Lumpur,Malaysia,3.1560227,101.7085209,,,+60 11-7245 8070,,False
+352,Aura Regenerative Wellness Clinic,Health & Wellbeing,Kuala Lumpur,Malaysia,3.1418863,101.7189665,https://www.aura-regen.com/,,+60 12-886 6948,,False
+353,Aura-Soma Mansion,Other,Kuala Lumpur,Malaysia,3.0620773,101.6758768,https://aura-soma.com.my/,,+60 17-772 8362,,False
+354,Aura Security Services Sdn Bhd (Main Office),Other,Kuala Lumpur,Malaysia,3.0677206,101.6569269,https://www.aurasecurity.com.my/,,+60 3-7772 3831,,False
+355,"Aura, Aura Aromatic, Aura Malaysia",Health & Wellbeing,Kuala Lumpur,Malaysia,3.1807194,101.6767592,https://shop.bf-1.com/,,+60 3-6257 6048,,False
+356,Aura Rezeki Malaysia,Other,Kajang,Malaysia,2.8875395,101.7965268,https://www.aurarezeki.com.my/,,+60 10-334 3423,,False
+357,Aura Marketing Sdn Bhd,Other,Shah Alam,Malaysia,3.0808172,101.5593436,,,+60 3-5569 4420,,False
+358,Aura,Other,Petaling Jaya,Malaysia,3.1407921,101.6295082,,,,,False
+359,Aura Clean Maintenance & Services,Other,Petaling Jaya,Malaysia,3.1762306,101.6190665,https://auraclean.my/,,+60 11-5535 5775,,False
+360,AuRu.Co Studio,Creative Industries,Kuala Lumpur,Malaysia,3.1622262,101.742064,https://me-page.org/ExVGLcU,,+60 12-889 0834,,False
+361,Aura Aromatic (M) Sdn Bhd,Health & Wellbeing,Kuala Lumpur,Malaysia,3.2086116,101.6187491,,,+60 3-6272 8388,,False
+362,Aura Pool Bar & Cocktail Lab,Other,Malé,Maldives,4.248320800000001,73.36536989999999,https://www.hilton.com/en/hotels/mleaihi-hilton-maldives-amingiri-resort-and-spa/dining/aura-pool-bar-cocktail-lab/,,,,False
+363,Aura Hair Beauty Studio,Health & Wellbeing,Malé,Maldives,4.1722795,73.51416329999999,,,+960 941-6340,,False
+364,Aurora Hotel,Accommodation,Ulaanbaatar,Mongolia,47.9125709,106.8577575,http://aurorahotel.mn/,,+976 7007 0808,,False
+365,Aurora Business Tower,Other,Yangon,Myanmar (Burma),16.8245884,96.16004269999999,http://www.aurorabusinesstower.com/,,+95 9 796 338900,,False
+366,My Aura Aesthetic Clinic (Parami Branch),Health & Wellbeing,Yangon,Myanmar (Burma),16.8517168,96.1506606,https://www.myauraaesthetic.com/,,+95 9 777 998838,,False
+367,My Aura Aesthetic Clinic (St. John Branch),Health & Wellbeing,Yangon,Myanmar (Burma),16.782697,96.14045589999999,http://www.myauraaesthetic.com/,,+95 9 770 333319,,False
+368,Aura plus Distributor,Other,Yangon,Myanmar (Burma),16.7582169,96.1441497,,,+95 9 772 193129,,False
+369,AURA,Other,Yangon,Myanmar (Burma),16.8244379,96.1575144,,,,,False
+370,Radiant Aurora Marketing,Other,Yangon,Myanmar (Burma),16.8512285,96.1850798,https://radiantauroramarketing.asia/,,+95 9 958 624942,,False
+371,AURA NEPAL,Other,Budhanilkantha,Nepal,27.7473132,85.3377069,,,,,False
+372,Aura Engineering LLC الهالة للهندسة,Other,Muscat,Oman,23.5816898,58.3391935,https://www.auraoman.com/,,+968 9516 1676,,False
+373,Aura De Arabia Perfume,Other,Muscat,Oman,23.6392854,58.2430489,https://www.auradearabia.com/,,+968 9980 2345,,False
+374,Aura Beauty Station,Health & Wellbeing,Seeb,Oman,23.6230193,58.2602835,,,+968 9556 9696,,False
+375,AURA CAFÉ,Other,Bidiyah,Oman,22.4450932,58.80547199999999,https://instagram.com/auracafe.om,,+968 9959 5656,,False
+376,Aura Divers - Scuba Diving Courses Center in Muscat Oman,Other,Sib,Oman,23.6303525,58.2678234,https://www.auradivers.com/,,+968 9334 5252,,False
+377,UBAR conferences & events,Event Management,مسقط,Oman,23.5881651,58.4132461,http://www.ubarconferences.com/,,+968 24 398767,,False
+378,Aura Properties,Cities & Developments,Islamabad,Pakistan,33.7227407,73.08162709999999,https://www.aurabizz.com/,,+92 336 4000641,,False
+379,Aura Apparel,Other,Islamabad,Pakistan,33.6671266,73.0736234,https://wa.me/c/923140855651,,+92 314 0855651,,False
+380,AURA GOLD,Other,Islamabad,Pakistan,33.7208142,73.05748559999999,http://www.auragolds.com/,,+92 335 4727278,,False
+381,Aura Grande Event Complex,Other,Islamabad,Pakistan,33.6962767,72.9885731,http://www.auragrande.com/,,+92 320 6668899,,False
+382,Aura Square,Other,Islamabad,Pakistan,33.68314489999999,72.9907518,,,+92 334 5353757,,False
+383,Aura Grande Enclave,Other,Islamabad,Pakistan,33.6933683,72.9858698,https://auragrande.com/,,+92 300 8966724,,False
+384,Aura Consultant,Other,Islamabad,Pakistan,33.6678513,73.0780273,https://auraconsultant.com/,,+92 333 1777701,,False
+385,Aura Premium Tea,Other,Islamabad,Pakistan,33.699038,72.9867175,https://aurapremiumtea.com/,,+92 334 1232555,,False
+386,Aura Enterprise,Other,Islamabad,Pakistan,33.6667432,73.07388,http://auraenterprises.pk/,,+92 300 5363989,,False
+387,AURORA PAKISTAN (Pvt.) Ltd,Other,Islamabad,Pakistan,33.5250921,73.1422779,https://aurorapakistan.com/,,+92 300 5008786,,False
+388,Auraq Publications,Other,Rawalpindi,Pakistan,33.6515395,73.0722234,https://auraqpublications.com/,,+92 300 0571530,,False
+389,Aura Land Marketing,Other,Islamabad,Pakistan,33.6154682,73.1386485,https://www.facebook.com/auralandcompany/,,+92 311 1777718,,False
+390,Aura Grande Arena,Other,Rawalpindi,Pakistan,33.5330625,73.1104375,http://www.instgram.com/auragrandearena,,+92 320 6660140,,False
+391,Aura Marketing,Other,Islamabad,Pakistan,33.6693215,72.9999393,http://www.auramarketing.pk/,,+92 334 5034761,,False
+392,Aura Studio,Creative Industries,Karachi,Pakistan,24.9077913,67.08253859999999,,,+92 314 6583645,,False
+393,SEVEN AURA Events,Event Management,Karachi,Pakistan,24.9098081,67.13619840000001,https://www.sevenauraevents.com/,,+92 339 2872777,,False
+394,Aura Centre,Other,Karachi,Pakistan,24.9187058,67.13456579999999,https://www.facebook.com/SirAurangzeb.AuraCentre/,,+92 300 2628330,,False
+395,Aura Solutions,Other,Karachi,Pakistan,24.9092214,67.0548948,,,+92 303 2661103,,False
+396,Aura Engineering (Private) Limited,Other,Karachi,Pakistan,24.8422782,67.1064036,http://auraengineering.pk/,,+92 347 0919196,,False
+397,Aura Furnish,Other,Karachi,Pakistan,24.7931591,67.066029,,,+92 300 9289989,,False
+398,AURA Interiors,Other,کراچی,Pakistan,24.8148244,67.0713968,http://www.aurainteriors.pk/,,+92 300 2444377,,False
+399,Aura Official Pk,Other,Karachi,Pakistan,24.8018124,67.0752896,https://auraofficialpk.com/,,+92 330 8270677,,False
+400,Aura Concept Creator,Other,Karachi,Pakistan,25.0190481,67.1291222,http://auraconceptcreator.com/,,+92 315 2100030,,False
+401,Aura International,Other,Karachi,Pakistan,24.8550011,67.1281381,https://www.aura.com.pk/,,,,False
+402,Aura Travel & Tours,Other,Karachi,Pakistan,24.8512797,67.0292386,http://khazimatravelsandtours.online/,,+92 316 3334012,,False
+403,AU Aurora Events Management,Event Management,Karachi,Pakistan,24.8282888,67.05964,,,+92 320 2881124,,False
+404,Aura Fashion,Other,Karachi,Pakistan,24.8997801,66.99560319999999,http://www.aurafashionpk.com/,,+92 334 2226760,,False
+405,Aura Pakistan,Other,Karachi,Pakistan,24.9057109,67.0292153,,,+92 327 2128518,,False
+406,Aura.pk,Other,Lahore,Pakistan,31.45164699999999,74.295309,http://www.aura.pk/,,+92 321 3322113,,False
+407,The Aura School,Other,Karachi,Pakistan,24.9183804,67.134219,http://theauraschool.com/,,+92 21 34010850,,False
+408,AURA Salon,Health & Wellbeing,Karachi,Pakistan,24.9112606,67.1294056,,,+92 335 3554191,,False
+409,Al Umeed Rehabilitation Association (AURA),Other,Karachi,Pakistan,24.9275146,67.1250084,http://www.alumeed.org/,,+92 335 3555246,,False
+410,ORA Digital,Other,کراچی,Pakistan,24.8709683,67.0857037,,,+92 300 9315626,,False
+411,AURA Handwash,Other,Karachi,Pakistan,24.971345,66.9511076,,,,,False
+412,SM Aura Premier,Other,Taguig,Philippines,14.546001,121.053927,https://www.smsupermalls.com/mall-directory/sm-aura-premier/information/?utm_source=GMB&utm_medium=directory&utm_campaign=mall_hours,,,,False
+413,Aura Thai,Health & Wellbeing,Cebu City,Philippines,10.312788,123.916393,,,,,False
+414,Great Aura Spa Salon,Health & Wellbeing,Cebu City,Philippines,10.3067146,123.893664,,,+63 32 254 8593,,False
+415,Ayala Center Cebu,Health & Wellbeing,Cebu City,Philippines,10.318237,123.9052295,https://www.ayalamalls.com/explore/ayala-center-cebu,,+63 32 888 3777,,False
+416,SM Seaside City Cebu,Other,Cebu City,Philippines,10.2817312,123.8806068,https://www.smsupermalls.com/mall-directory/sm-seaside-city-cebu/information/?utm_source=GMB&utm_medium=directory&utm_campaign=mall_hours,,,,False
+417,SM City Cebu,Other,Cebu City,Philippines,10.3114191,123.9178164,https://www.smsupermalls.com/mall-locator/sm-city-cebu/information/,,+63 32 231 0557,,False
+418,Oakridge Business Park,Other,Mandaue,Philippines,10.3428639,123.9190946,http://www.oakridge.com.ph/,,+63 917 811 6862,,False
+419,Ayala Malls Central Bloc,Other,Cebu City,Philippines,10.3306811,123.9073198,https://www.ayalamalls.com/main/malls/ayala-malls-central-bloc,,+63 32 410 8800,,False
+420,Seda Central Bloc Cebu,Other,Cebu City,Philippines,10.3303975,123.9066683,https://centralbloccebu.sedahotels.com/?utm_source=google&utm_medium=organic&utm_campaign=gmb,,+63 32 410 8899,,False
+421,Unitop - Cebu City,Creative Industries,Cebu City,Philippines,10.2969323,123.8977776,,,+63 32 255 1489,,False
+422,Robinsons Cybergate Cebu,Other,Cebu City,Philippines,10.310201,123.8920317,http://robinsonsmalls.com/,,+63 32 505 8955,,False
+423,SM Seaside City - Cube Wing,Other,Cebu City,Philippines,10.2818796,123.8827949,,,,,False
+424,Gaisano Capital South,Other,Cebu City,Philippines,10.2959691,123.896604,http://www.gaisanocapital.com/,,+63 32 260 7888,,False
+425,Elizabeth Mall,Other,Cebu City,Philippines,10.2983587,123.8953188,http://www.elizabethmall-cebu.com/,,+63 32 380 0090,,False
+426,Onodera User Run Philippines-Cebu Center,Other,Cebu City,Philippines,10.3215617,123.9096377,https://web.facebook.com/OnoderaUserRunPhilippines.CebuCenter,,+63 926 416 2071,,False
+427,Aura Qatar,Other,Doha,Qatar,25.2798957,51.5106174,https://www.auraqatar.com/,,+974 5060 2802,,False
+428,Aura Retail,Other,Doha,Qatar,25.2874256,51.5463227,http://www.aura-retail.com/,,+974 4429 2220,,False
+429,Aura Hospitality Head Office,Other,لوسيل,Qatar,25.3886489,51.5232956,,,,,False
+430,Aura Hospitality,Other,Lusail,Qatar,25.3843659,51.52230059999999,https://auragroup-intl.com/,,+974 4429 2222,,False
+431,Aura,Other,Riyadh,Saudi Arabia,24.6911875,46.6693125,http://www.auraliving.com/,,+966 11 281 3502,,False
+432,Aura Production & Event Management,Other,Riyadh,Saudi Arabia,24.7104677,46.6723059,http://www.aurapro.me/,,+966 50 215 5637,,False
+433,Aura Warehouse,Other,الرياض,Saudi Arabia,24.6086873,46.8471371,https://www.auraliving.com/sa,,+966 800 100 0263,,False
+434,AURA,Health & Wellbeing,الرياض,Saudi Arabia,24.7432925,46.64496459999999,https://www.aurasaudi.com/,,+966 55 120 8211,,False
+435,Aura Interactive,Other,Riyadh,Saudi Arabia,24.6979797,46.7812159,https://www.aurainteractive.sa/,,+966 55 077 1313,,False
+436,auraarabia,Other,الرياض,Saudi Arabia,24.8661534,46.6627194,https://www.auraarabia.sa/?utm_source=google&utm_medium=wix_google_business_profile&utm_campaign=13846496737059344232,,+966 50 819 3862,,False
+437,Aurora,Other,Riyadh,Saudi Arabia,24.6933279,46.6707342,,,+966 11 281 1888,,False
+438,Aura Luxury Ladies Gym,Health & Wellbeing,Jeddah,Saudi Arabia,21.7715426,39.0985395,https://www.auracenters.com/,,+966 9200 16179,,False
+439,Aura Elite Ladies Fitness Gym,Health & Wellbeing,Jeddah,Saudi Arabia,21.5825381,39.110211,,,+966 9200 16179,,False
+440,Aura Concept Store | اورا كونسبت ستور,Creative Industries,Jeddah,Saudi Arabia,21.5584247,39.1456838,,,+966 56 600 4972,,False
+441,Aura,Other,Jeddah,Saudi Arabia,21.6282017,39.11152269999999,,,+966 12 215 1362,,False
+442,Aura Junior Luxury,Other,Jeddah,Saudi Arabia,21.7714138,39.0984678,,,+966 50 622 4228,,False
+443,Aura.,Other,جدة,Saudi Arabia,21.5605961,39.1406539,,,,,False
+444,Aura Group,Other,Singapore,Singapore,1.2850214,103.8500341,http://www.aura.co/,,+65 6202 9602,,False
+445,Aura Partners (Singapore) Pte Ltd,Creative Industries,Singapore,Singapore,1.2849805,103.8500479,https://aurapartners.com.sg/,,+65 8113 5989,,False
+446,The AuraChakra Company,Other,Singapore,Singapore,1.3124678,103.9232359,http://theaurachakracompany.com/,,+65 6449 9959,,False
+447,Company Registration Singapore - Aura Partners Singapore,Creative Industries,Singapore,Singapore,1.2850214,103.8500341,https://aurapartners.com.sg/company-registration/,,+65 8113 5989,,False
+448,Aura,Other,Singapore,Singapore,1.2801473,103.8539926,,,+65 9225 1405,,False
+449,AURA Clinic (Orchard) Ultherapy | Thermage | Fillers | Botulinum Toxin | Skin Boosters | Hydrafacial,Health & Wellbeing,Singapore,Singapore,1.3066492,103.8295057,https://auramedical.sg/,,+65 8666 6306,,False
+450,AURAS SPACE PTE LTD,Health & Wellbeing,Singapore,Singapore,1.3376502,103.9486247,http://www.auras2space.com.sg/,,+65 6284 3822,,False
+451,Aura World Pte. Ltd.,Other,Singapore,Singapore,1.2814095,103.8510185,https://www.auraworld.com.sg/,,+65 6011 9728,,False
+452,Aura Prestige Pte. Ltd.,Other,Singapore,Singapore,1.2852668,103.81157,http://aura-prestige.com/,,+65 6493 0001,,False
+453,Club AURA,Other,Singapore,Singapore,1.3075862,103.8279836,,,,,False
+454,AURA Medical Aesthetics,Health & Wellbeing,Singapore,Singapore,1.3114782,103.7937223,https://auramedical.sg/,,+65 8666 6306,,False
+455,Aura Tea Singapore,Other,Singapore,Singapore,1.3207285,103.7474023,,,+65 8884 3129,,False
+456,3D AURA Pte Ltd,Other,Singapore,Singapore,1.3775135,103.875933,http://www.3daura.com.sg/,,+65 8290 4413,,False
+457,Studio Aura Design Pte Ltd,Creative Industries,Singapore,Singapore,1.2817731,103.8211993,https://www.studioaura.com.sg/,,+65 9777 0459,,False
+458,Aura Studio,Creative Industries,Singapore,Singapore,1.3108941,103.8538647,https://www.aurastudiosg.com/,,+65 8613 1490,,False
+459,Kang Li Mineral Kingdom Pte Ltd 康丽风水,Other,Singapore,Singapore,1.3017128,103.8546024,http://www.kangli.asia/,,+65 6337 7732,,False
+460,Aura Nur Aesthetic,Health & Wellbeing,Singapore,Singapore,1.3137975,103.7714733,http://www.auranur.com/,,+65 9640 5153,,False
+461,AURA Clinic (Holland Village) Skin Boosters | Ultherapy | Pico Laser | RF Microneedling | Derma Fillers | Hydrafacial,Health & Wellbeing,Singapore,Singapore,1.3114782,103.7937223,https://auramedical.sg/,,+65 8666 6306,,False
+462,Aurora Asia Pacific Pte Ltd,Other,Singapore,Singapore,1.3176923,103.8942719,https://auroraap.com.sg/,,+65 6817 9640,,False
+463,Aura International Pte Ltd,Other,Singapore,Singapore,1.3459866,103.9530864,,,+65 6783 7733,,False
+464,Aurora International (Singapore) Pte Ltd,Other,Singapore,Singapore,1.3276131,103.8737143,https://www.aurora.com.sg/,,+65 6841 6641,,False
+465,True Aura,Health & Wellbeing,Singapore,Singapore,1.2923407,103.8508826,https://true-aura.asia/,,+65 9761 4198,,False
+466,Aura Codings,Other,Singapore,Singapore,1.343245,103.886262,http://auracodings.com/,,+65 9682 4124,,False
+467,AURASTONE PTE LTD,Other,Singapore,Singapore,1.4412434,103.7828822,http://aurastone.com.sg/,,+65 6363 0998,,False
+468,Aurablush Wedding Gallery,Creative Industries,Singapore,Singapore,1.4351696,103.8048721,,,+65 9324 6797,,False
+469,Hongdae Club Aura,Other,,South Korea,37.5523115,126.9219166,https://www.facebook.com/Clubaura2016,,+82 10-6667-6460,,False
+470,AURA,Other,,South Korea,37.53687439999999,126.8556867,,,,,False
+471,Club Aura 2,Other,,South Korea,37.5508919,126.9216173,,,,,False
+472,AURA,Other,,South Korea,37.5147541,126.8989475,,,+82 10-8031-6677,,False
+473,AURA,Other,,South Korea,37.558086,126.9454493,,,+82 2-312-9064,,False
+474,AURA,Other,,South Korea,37.5056486,127.0031257,,,+82 2-536-4151,,False
+475,aura,Other,Gimhae-si,South Korea,35.1853366,128.7982742,,,,,False
+476,Aura Solutions (Pvt) Ltd,Other,Colombo,Sri Lanka,6.8797991,79.8818174,http://www.aura.lk/,,+94 112 810 822,,False
+477,Aura Insights (Pvt) Ltd,Other,Colombo,Sri Lanka,6.936521,79.8448875,https://aurainst.com/,,+94 77 700 4417,,False
+478,Aura Lanka Security Solutions,Other,Malabe,Sri Lanka,6.896990199999999,79.94844309999999,,,+94 112 072 844,,False
+479,Aura Integrated (Pvt) Ltd,Other,Sri Jayawardenepura Kotte,Sri Lanka,6.907864600000001,79.8960085,,,+94 77 630 3044,,False
+480,Aura Holdings (Pvt) Ltd - Head Office,Other,Colombo,Sri Lanka,6.8922054,79.9938112,,,+94 112 488 785,,False
+481,Aura Online Store,Other,Dehiwala-Mount Lavinia,Sri Lanka,6.8665059,79.8669555,,,+94 76 247 4933,,False
+482,Aura tech solutions,Other,Dehiwala-Mount Lavinia,Sri Lanka,6.8685404,79.88341659999999,http://www.aura.lk/,,+94 112 827 216,,False
+483,Alokadahara,Health & Wellbeing,Kohuwala,Sri Lanka,6.868388299999999,79.88238539999999,https://www.alokadahara.lk/,,+94 77 455 4791,,False
+484,Aura - The Beauty Salon,Health & Wellbeing,Colombo,Sri Lanka,6.8892653,79.87291549999999,,,+94 71 530 5753,,False
+485,Aurora Gallery,Creative Industries,Damascus,Syria,33.5207268,36.3163484,,,+963 992 609 682,,False
+486,Aurabydina,Other,Damascus,Syria,33.5165875,36.2791719,,,+963 958 888 313,,False
+487,"Auras Technology Co., Ltd.",Other,,Taiwan,25.0622692,121.4516829,http://www.auras.com.tw/,,+886 2 8990 1653,,False
+488,S.aura Hotel & Banquet,Accommodation,,Taiwan,25.0839847,121.5603662,http://www.saurahotel.com.tw/,,+886 2 8502 3955,,False
+489,Aura Estate,Other,Dushanbe,Tajikistan,38.5632157,68.79097639999999,https://aura.tj/,,+992 94 531 3131,,False
+490,Aura,Other,Dushanbe,Tajikistan,38.58022649999999,68.79399839999999,,,+992 93 446 2222,,False
+491,Aura Health Complex,Health & Wellbeing,Dushanbe,Tajikistan,38.55768610000001,68.7881252,https://dushanbe.rg.tj/massage/232417,,+992 88 877 6667,,False
+492,Aura Bangkok Clinic Sathon สาทร,Health & Wellbeing,,Thailand,13.7231421,100.5300877,http://aurabangkokclinic.com/,,+66 2 026 5681,,False
+493,Aura Bangkok Clinic Siam สยาม,Health & Wellbeing,,Thailand,13.7452121,100.5338857,https://www.aurabangkokclinic.com/,,+66 2 024 2222,,False
+494,Aura Productions (Thailand),Creative Industries,,Thailand,13.7171133,100.5792321,http://www.auramgmt.com/,,+66 96 830 0007,,False
+495,Aura Bangkok Clinic Thonglor ทองหล่อ,Health & Wellbeing,,Thailand,13.7307595,100.5857906,https://www.aurabangkokclinic.com/,,+66 2 026 5686,,False
+496,Aura Wellness,Health & Wellbeing,,Thailand,13.7226218,100.5303696,https://arwn.co/,,+66 2 024 2222,,False
+497,"Aura Group International Co., Ltd. (AGI)",Other,,Thailand,13.7109461,100.5362334,http://auramedia.com/,,+66 2 115 3111,,False
+498,Aura Bangkok Clinic Bangkae บางแค,Health & Wellbeing,,Thailand,13.7112189,100.4086834,http://facebook.com/aurabangkokclinic,,+66 2 026 5683,,False
+499,AURASOL Wellness & Spa - Thai Massage,Health & Wellbeing,,Thailand,13.7230333,100.5302122,http://aurasol.co/,,+66 2 026 3888,,False
+500,บริษัท ออโรร่า ดีไซน์ จำกัด,Other,,Thailand,13.6788737,100.6202553,https://www.aurora.co.th/,,+66 2 749 4949,,False
+501,Aura Solution Company Limited,Other,ตำบล รัษฎา,Thailand,7.8833344,98.3681373,https://www.aura.co.th/,,+66 80 421 2345,,False
+502,Aurapedia,Other,,Thailand,7.867960800000001,98.36114549999999,https://www.aurapedia.org/,,+66 80 421 2345,,False
+503,Aura Nimman,Other,,Thailand,18.7983066,98.9684882,https://www.facebook.com/AuraNimman?mibextid=LQQJ4d,,,,False
+504,Aura Herb,Other,,Thailand,18.7862342,98.9903856,https://www.instagram.com/auraherb14,,+66 92 623 2326,,False
+505,D'Ritz Table,Other,Dili,Timor-Leste,-8.5510037,125.5886819,https://instagram.com/dritztable?igshid=YmMyMTA2M2Y=,,+670 7510 0000,,False
+506,Aura SAHNE,Other,,Türkiye,39.9782757,32.6856916,,,+90 543 171 25 40,,False
+507,Aura Evleri,Other,,Türkiye,39.9028835,32.8088435,,,,,False
+508,Aura,Other,,Türkiye,39.9468074,32.768105,https://crowneplazaankarahotel.com/restaurant,,+90 312 320 00 77,,False
+509,AURA WELLNESS GÜZELLİK MERKEZİ,Health & Wellbeing,,Türkiye,39.9196839,32.851588,https://www.auraguzelliksalonu.com/,,+90 533 529 29 08,,False
+510,Aura Design Studio Mimarlık,Creative Industries,,Türkiye,39.8868501,32.704308,https://www.aurads.com/,,+90 312 235 45 88,,False
+511,Aura Uniques,Other,,Türkiye,39.9019638,32.8671666,,,+90 506 830 98 48,,False
+512,Aura endüstriyel,Other,,Türkiye,39.97649,32.745213,,,,,False
+513,AURA İletisim Sanatları,Other,,Türkiye,39.924341,32.8510007,,,+90 533 682 01 00,,False
+514,Aura Medya,Other,,Türkiye,39.894754,32.8576089,http://www.auramedya.com/,,+90 538 541 33 14,,False
+515,Aura Belgelendirme Doğrulama Sera Gazı Doğrulayıcı Kuruluş,Other,,Türkiye,39.8859225,32.8177827,http://www.seragazidogrulama.com/,,+90 312 473 78 73,,False
+516,X Aura Global Sıhhiye,Health & Wellbeing,,Türkiye,39.927642,32.8527171,,,+90 850 466 2872,,False
+517,AURA İstanbul,Other,,Türkiye,41.0431502,29.0061898,http://aura-istanbul.com/,,+90 212 261 41 00,,False
+518,AURA,Other,,Türkiye,41.0838701,28.984163,,,+90 533 523 83 32,,False
+519,Aura Sağlık Hizmetleri Tic. Ltd. Şti.,Other,,Türkiye,41.0610927,28.9708782,http://www.involipo.com/,,+90 212 220 67 47,,False
+520,Propa Aura,Other,,Türkiye,40.91206589999999,29.1972529,,,,,False
+521,Aura Coffee & Bakery,Other,,Türkiye,41.0486356,28.9212461,https://aura-coffee.com/,,+90 531 778 00 38,,False
+522,AURA DIŞ TİCARET VE DANIŞMANLIK,Other,,Türkiye,41.0331369,28.9129082,,,+90 212 612 32 88,,False
+523,Aura Portföy Yönetimi A.Ş.,Other,,Türkiye,41.080805,29.010371,http://www.auraportfoy.com.tr/,,+90 212 909 12 70,,False
+524,Aura Restoran,Other,,Türkiye,41.04210399999999,29.0776209,https://aurarestoran.com/,,+90 506 382 28 72,,False
+525,Aura Pırlanta,Other,,Türkiye,41.0102207,28.9742386,http://aurapirlanta.com/,,+90 533 230 35 97,,False
+526,Aura Turizm İnşaat Ltd. Şti.,Other,,Türkiye,41.0060189,28.86248389999999,http://www.aura-tour.com/,,+90 212 516 95 00,,False
+527,Blue Aura Gift Shop,Other,,Türkiye,41.0048466,28.9707646,,,+90 532 789 60 94,,False
+528,Aura Design,Creative Industries,,Türkiye,41.0780249,29.027106,,,+90 533 512 25 40,,False
+529,Aura Mimarlık,Other,,Türkiye,41.016769,28.8042857,https://auramimarlik.com.tr/,,+90 535 521 73 39,,False
+530,Aura Mimarlık,Other,,Türkiye,41.0136865,28.9026375,,,+90 544 249 77 23,,False
+531,Aura Balat,Other,,Türkiye,41.026789,28.957657,,,+90 530 129 37 21,,False
+532,AURA INNOVATION,Other,,Türkiye,41.0775225,29.0215485,https://aurain.com.tr/,,+90 505 904 59 97,,False
+533,Vasıf Özsoy,Other,,Türkiye,40.9675809,29.0929063,,,,,False
+534,Aura Invest Group,Other,,Türkiye,41.0813148,29.0862832,,,+90 216 465 60 55,,False
+535,My Aura Beauty,Health & Wellbeing,,Türkiye,40.9955696,28.8862861,https://www.myaurabeauty.com/,,+90 541 510 22 52,,False
+536,EURORA İÇ VE DIŞ TİC.LTD.ŞTİ.,Other,,Türkiye,40.9095991,29.21050169999999,http://eurora.com.tr/,,+90 544 112 13 12,,False
+537,Aura Kozmetik Anonim Şirketi,Other,,Türkiye,41.041023,28.8657622,,,,,False
+538,AURA marketing,Other,Abu Dhabi,United Arab Emirates,24.4563007,54.33858859999999,,,+971 50 269 4243,,False
+539,Aura Wellness - Studio & Cafe,Health & Wellbeing,Abu Dhabi,United Arab Emirates,24.4969263,54.4076961,https://aurawellness.ae/,,+971 58 590 3048,,False
+540,AURO Cafe at Warehouse421,Other,Abu Dhabi,United Arab Emirates,24.5178005,54.3704021,http://www.aurocoffee.com/,,+971 50 126 6793,,False
+541,AURA GENERAL CONTRACTING LLC,Other,Abu Dhabi,United Arab Emirates,24.3404327,54.5356775,https://www.auramanpower.com/,,+971 2 621 0077,,False
+542,Aura Health Solutions,Health & Wellbeing,دبي,United Arab Emirates,25.069954,55.13708099999999,https://www.aurahealth.ae/,,+971 58 589 9211,,False
+543,Aura Business Services | Business Setup Consultants,Other,دبي,United Arab Emirates,25.251648,55.3087831,https://www.aurabusinessservices.com/,,+971 58 599 3769,,False
+544,AURA GROUP,Other,Dubai,United Arab Emirates,25.1920303,55.2663995,,,+971 55 552 7103,,False
+545,AURA HOSPITALITY,Other,Dubai,United Arab Emirates,25.2089141,55.27153,http://aurahospitalitys.com/,,+971 56 544 2111,,False
+546,Aurora Events,Event Management,Abu Dhabi,United Arab Emirates,24.4353946,54.4528159,https://auroraevents.org/,,+971 50 486 6909,,False
+547,شركة اورا لتنظيم المعارض و الفعاليات,Other,Abu Dhabi,United Arab Emirates,24.490761,54.3624304,,,+971 2 666 2225,,False
+548,Aurora Events,Event Management,أبو ظبي,United Arab Emirates,24.498242,54.37052,,,,,False
+549,AURA SKYPOOL Dubai,Other,Dubai,United Arab Emirates,25.114025,55.14028829999999,https://www.auraskypool.com/,,+971 4 566 2121,,False
+550,Aura Events,Event Management,Dubai,United Arab Emirates,25.1594378,55.25232330000001,https://www.instagram.com/auraevents.ae/,,+971 58 975 8971,,False
+551,Aura Interiors LLC,Other,دبي,United Arab Emirates,24.9913813,55.0985691,http://aurainteriors.ae/,,+971 55 789 4612,,False
+552,aura,Other,Dubai,United Arab Emirates,25.1073285,55.22472579999999,https://auraliving.com/,,+971 4 346 0877,,False
+553,Aura Ventures Consultancy,Other,Dubai,United Arab Emirates,25.1855274,55.26518009999999,https://auraventures.ae/,,+971 50 284 3509,,False
+554,Aura Capital Real Estate,Cities & Developments,Dubai,United Arab Emirates,25.2217798,55.2808347,https://auracapital.ae/,,+971 4 884 2933,,False
+555,Aura Collection,Other,دبي,United Arab Emirates,25.0965351,55.169236,https://auradubai.com/,,+971 58 510 1466,,False
+556,Aura Interior Decoration,Other,Dubai,United Arab Emirates,25.1883909,55.2715329,http://www.aurainteriordecoration.com/,,+971 54 544 0504,,False
+557,Aura Energy Technical Services LLC.,Other,دبي,United Arab Emirates,25.1853458,55.3612714,https://www.auraenergytechnical.com/,,+971 55 924 3898,,False
+558,Aura Group,Other,Dubai,United Arab Emirates,25.2562202,55.3017248,https://auragroup.ae/,,+971 4 272 4561,,False
+559,Aura Systems LLC,Other,دبي,United Arab Emirates,25.2532465,55.3287747,http://www.aurasystem.net/,,+971 4 354 5402,,False
+560,AURA 919,Other,Dubai,United Arab Emirates,25.1887202,55.2666118,https://aura919.com/,,+971 55 335 4766,,False
+561,AURA by Grovy,Other,دبي,United Arab Emirates,25.0504635,55.2061966,http://www.grovy.ae/,,+971 4 232 3224,,False
+562,AURA ELEGANCE,Other,Dubai,United Arab Emirates,25.1089177,55.3820604,http://www.aurainfinite.ae/,,+971 4 452 5764,,False
+563,aura,Other,Dubai,United Arab Emirates,25.1969533,55.2783478,https://auraliving.com/,,+971 58 995 6393,,False
+564,Auratech LLC,Other,Dubai,United Arab Emirates,25.1116592,55.2059625,http://www.auratech.ae/,,+971 4 575 4948,,False
+565,Aura Tourism Dubai,Other,دبي,United Arab Emirates,25.2787504,55.3309556,https://www.auratourismdubai.com/,,+971 56 431 3931,,False
+566,Aura Ventures Real Estate LLC,Cities & Developments,Dubai,United Arab Emirates,25.1855286,55.2651587,https://auraventures.ae/,,+971 50 284 3509,,False
+567,Aura Designs Dubai,Creative Industries,Dubai,United Arab Emirates,25.1279484,55.3862638,https://www.behance.net/auradesigns5,,+971 55 572 6484,,False
+568,Aura Technologies Ltd,Other,Dubai,United Arab Emirates,25.2144801,55.2762118,https://aurainsure.tech/,,,,False
+569,VIBGYOR Turnkey Projects Cont. LLC - Aura Aroma,Other,Dubai,United Arab Emirates,25.2659619,55.3827229,http://www.auraaer.com/,,+971 56 928 0281,,False
+570,Future Aura,Other,Dubai,United Arab Emirates,25.1815668,55.27151019999999,,,+971 55 974 7831,,False
+571,Aurora Tower,Other,Dubai,United Arab Emirates,25.0906985,55.1528333,https://auroradxb.com/,,+971 4 427 8129,,False
+572,Aura International FZ LLC,Other,Dubai,United Arab Emirates,25.091079,55.15351399999999,,,+971 4 368 1825,,False
+573,Blue Aura Enterprise LLC,Other,Dubai,United Arab Emirates,25.099663,55.1772512,https://www.blueauraenterprise.com/,,+971 50 451 5769,,False
+574,Aura,Other,Dubai,United Arab Emirates,25.0270913,55.2278454,,,+971 52 532 8538,,False
+575,Aura Elite,Other,Dubai,United Arab Emirates,25.1235291,55.3757387,,,,,False
+576,Aura Solution Company Limited,Other,Dubai,United Arab Emirates,25.2244785,55.2877192,http://www.aurasolutioncompanylimited.com/,,+971 50 772 0618,,False
+577,Company Aura Uzbekistan,Other,Tashkent,Uzbekistan,41.35565070000001,69.30689439999999,http://roboclean.uz/,,+998 55 503 44 66,,False
+578,AURA,Other,Тоshkent,Uzbekistan,41.2952219,69.2889641,,,+998 71 205 00 16,,False
+579,Aura,Health & Wellbeing,Tashkent,Uzbekistan,41.34349520000001,69.2728813,,,+998 71 226 71 18,,False
+580,Aura Elite Salon,Health & Wellbeing,Тоshkent,Uzbekistan,41.2988828,69.2696095,,,+998 71 252 55 44,,False
+581,AURA Tashkent Service,Other,Тоshkent,Uzbekistan,41.3557361,69.3072595,,,+998 99 087 84 82,,False
+582,Aura Consulting Uzbekistan,Other,Тоshkent,Uzbekistan,41.3556077,69.28786579999999,http://t.me/auraconsulting_admin,,+998 90 990 25 90,,False
+583,Aura cafe,Other,Tashkent,Uzbekistan,41.2988692,69.2695445,,,,,False
+584,Aura Lighting,Other,Тоshkent,Uzbekistan,41.3362715,69.3234019,http://www.auralighting.uz/,,+998 95 901 40 40,,False
+585,Aura Korean Salon,Health & Wellbeing,Тоshkent,Uzbekistan,41.2964428,69.2679814,,,,,False
+586,Aura Cocktail Bar,Other,,Vietnam,21.0284627,105.8495985,https://www.facebook.com/theaura.cocktailbar?mibextid=LQQJ4d,,+84 948 010 121,,False
+587,Công ty cổ phần tập đoàn thương mại aura,Other,,Vietnam,21.0374035,105.8738245,https://sun-group.info/,,+84 921 519 999,,False
+588,Aura,Health & Wellbeing,,Vietnam,20.9752462,105.8121925,https://auraclub.vn/,,+84 24 7778 6866,,False
+589,Aurora Premium - A Lifestyle Hotel,Health & Wellbeing,,Vietnam,21.0324187,105.8538952,https://aurorahotels.vn/premium-hangbe,,+84 24 3936 2345,,False
+590,Aura Capital JSC,Other,,Vietnam,10.7687059,106.7019031,https://aura.vn/,,+84 904 203 868,,False
+591,Aura Media,Creative Industries,,Vietnam,21.0166506,105.8239313,,,+84 985 384 495,,False
+592,Aurora Vietnam,Other,,Vietnam,21.0055615,105.8037011,http://auroravietnam.co/,,+84 964 831 239,,False
+593,Aurora Travel & DMC,Other,,Vietnam,21.0236748,105.8415921,http://auroratravel.asia/,,+84 24 3747 2597,,False
+594,Aura Clinic Q1,Health & Wellbeing,,Vietnam,10.7911852,106.6968906,https://auraclinic.vn/,,+84 1900 633323,,False
+595,Aura Clinic Q7,Health & Wellbeing,,Vietnam,10.7331836,106.7082737,https://auraclinic.vn/dich-vu-kr/,,+84 1900 633323,,False
+596,Aura Network,Other,,Vietnam,10.7765795,106.7490636,https://aura.network/,,+84 869 579 588,,False
+597,Công Ty Cổ Phần Aura Capital,Other,,Vietnam,10.7449908,106.6978285,,,,,False
+598,Aurora Saigon,Other,,Vietnam,10.8037163,106.7349952,https://www.aurorasaigon.com/,,+84 344 700 879,,False
+599,AURA Vietnam,Other,,Vietnam,10.8550391,106.6164839,,,,,False
+600,AURA Beauty - Natural & Organic,Health & Wellbeing,,Hong Kong,22.3088856,114.225174,https://www.aura.com.hk/,,+852 9011 0773,,False
+601,Aurra Collection HK,Other,,Hong Kong,22.3031456,114.1730338,http://www.aurra.hk/,,+852 6178 3542,,False
+602,Aura Labs,Other,,Hong Kong,22.4248015,114.211659,https://www.auralabs.com.hk/,,+852 3422 8808,,False
+603,Aura Employment Agency,Other,,Hong Kong,22.2779916,114.1710832,,,+852 2573 6463,,False
+604,AURA Skin & Beauty Center HK,Health & Wellbeing,,Hong Kong,22.2837975,114.1924124,https://aurabeauty.hk/,,+852 9696 3627,,False
+605,Aura Art,Creative Industries,,Hong Kong,22.2811382,114.1541329,http://www.auraart.hk/,,+852 2886 2359,,False
+606,Health Aura,Health & Wellbeing,,Hong Kong,22.278644,114.186537,https://oir.centanet.com/new-property/health-aura/6bdd837a-ec5d-4c7e-9a00-ed294ccf1a1c/,,,,False
+607,Aura Physiotherapy and Wellness Centre,Health & Wellbeing,,Hong Kong,22.2785991,114.1864868,http://www.auraphysiogroup.com/,,+852 2889 2261,,False
+608,Aurora,Other,,Macao,22.1618034,113.5549753,https://www.altiramacau.com/tc/dining/aurora#All,,+853 2886 8868,,False
+609,Altira Macau,Health & Wellbeing,,Macao,22.161886,113.5550964,https://www.altiramacau.com/?utm_source=google_GMB&utm_medium=organic&utm_campaign=GMB,,+853 2886 8888,,False
+610,38 Lounge 38酒廊,Event Management,,Macao,22.1615346,113.5548928,https://www.altiramacau.com/tc/dining/38-Lounge#All,,+853 2886 8868,,False
+611,Macau Lifestyle Media Ltd.,Creative Industries,,Macao,22.1914432,113.5393305,http://www.macaulifestyle.com/,,,,False
+612,YOHO Treasure Island Resorts World Hotel,Accommodation,,Macao,22.1872659,113.5427892,https://www.treasureislandresortsworld.com/,,+853 2899 3300,,False
+613,The Ritz-Carlton Bar & Lounge,Event Management,,Macao,22.1463913,113.5547083,https://www.ritzcarltonbarandloungemacau.com/,,+853 8886 6712,,False
+614,Aura Roboclean Albania,Health & Wellbeing,Tiranë,Albania,41.328755,19.8151473,https://aura.al/,,+355 69 207 7222,,False
+615,AURA COMPLEX,Other,Tiranë,Albania,41.3369205,19.7952372,,,+355 68 585 5221,,False
+616,Aura Medical Clinic,Health & Wellbeing,Tiranë,Albania,41.3362981,19.7901819,https://auramedicalclinic.al/,,+355 69 216 0148,,False
+617,AURA Beauty Lab,Health & Wellbeing,Tiranë,Albania,41.3376019,19.8036286,,,+355 69 788 8242,,False
+618,Aura Beauty Center,Health & Wellbeing,Tiranë,Albania,41.3211233,19.8244884,,,+355 69 516 9420,,False
+619,AURA LUXE CREATIONS ALBANIA (LIGHTS & SOUND),Other,Tiranë,Albania,41.3299258,19.8586196,,,+355 68 402 0111,,False
+620,Aura Espai,Health & Wellbeing,Andorra la Vella,Andorra,42.5076169,1.5331856,http://www.auraespai.com/,,+376 846 141,,False
+621,Aura Café Vienna,Other,Wien,Austria,48.1737901,16.3783152,https://www.instagram.com/auravienna/,,+43 660 1540196,,False
+622,Aura Beauty Space,Health & Wellbeing,Wien,Austria,48.22096029999999,16.3820022,https://www.instagram.com/auraspacevienna?igsh=YWtuODVpeHUwbG81&utm_source=qr,,+43 677 62409757,,False
+623,Aurora Rooftop Bar,Other,Wien,Austria,48.1852166,16.3833195,https://www.bar-aurora.at/?utm_source=gmb&utm_medium=organic&utm_campaign=website,,+43 1 20577444901,,False
+624,AURA Liegenschafts- und Objektverwertung GesmbH,Other,Wien,Austria,48.1948628,16.3582679,,,+43 1 58798670,,False
+625,Aura Wedding Hochzeitsfotografin,Other,Wien,Austria,48.2113206,16.377647,http://www.aurawedding.studio/,,,,False
+626,Hairstudio AURA,Creative Industries,Wien,Austria,48.1719659,16.3788598,https://www.tiktok.com/@hairstudio.aura?_t=8sSvyNxVIxs&_r=1,,+43 664 1311581,,False
+627,Aurora.Elisabeta Fitness&Beauty,Health & Wellbeing,Wien,Austria,48.2013711,16.309417,https://www.aurora.wien/,,+43 664 2379946,,False
+628,AURA-AGENCY,Other,Wien,Austria,48.1704655,16.4179783,,,,,False
+629,Aura,Other,Minsk,Belarus,53.8922649,27.5856796,,,+375 44 526-00-00,,False
+630,"Yuridicheskiye Uslugi - Yuridicheskaya Kompaniya ""Avrora""",Other,Minsk,Belarus,53.89823999999999,27.5456036,https://avrora-group.by/,,+375 29 632-27-20,,False
+631,Shkola Zvozd Aura,Other,Minsk,Belarus,53.9254599,27.6153299,http://aura.by/,,+375 29 888-85-05,,False
+632,Аура дома,Other,Minsk,Belarus,53.9263428,27.517552,http://auradoma.by/,,+375 29 614-44-00,,False
+633,AURA SALON-PARIKMAHERSKAJA OOO MIHELEN,Health & Wellbeing,Minsk,Belarus,53.9298613,27.5467613,,,+375 29 199-08-32,,False
+634,Studiya Krasoty Aura,Other,Minsk,Belarus,53.8945399,27.653709,https://www.instagram.com/aura_.beauty,,+375 29 350-20-51,,False
+635,Aura Business,Other,Grimbergen,Belgium,50.9025955,4.3402086,https://aura.be/,,+32 2 462 32 01,,False
+636,Aura,Other,Bruxelles,Belgium,50.8337924,4.3665966,https://www.instagram.com/auraclothesoflight,,+32 499 11 24 47,,False
+637,AURA Nekretnine,Other,Sarajevo,Bosnia and Herzegovina,43.8627552,18.4051013,https://auranekretnine.ba/,,+387 61 560 888,,False
+638,Aura apartman Sarajevo,Creative Industries,Sarajevo,Bosnia and Herzegovina,43.8438779,18.3415116,,,+387 61 095 105,,False
+639,Aura osiguranje a. d.,Other,Sarajevo,Bosnia and Herzegovina,43.8500147,18.3559401,,,+387 33 456-456,,False
+640,Frizerski salon Aura,Health & Wellbeing,Sarajevo,Bosnia and Herzegovina,43.8578026,18.4102372,,,+387 61 080 220,,False
+641,Aura,Other,Banja Luka,Bosnia and Herzegovina,44.7713618,17.2202051,http://www.auraosiguranje.com/,,+387 51 490-490,,False
+642,Aurora psihološko savjetovalište,Health & Wellbeing,Sarajevo,Bosnia and Herzegovina,43.856061,18.4323415,,,+387 61 351 740,,False
+643,AURA by Bamboo RestoClub,Other,Sofia,Bulgaria,42.685423,23.3183611,https://aura.bambooclubs.bg/,,+359 89 844 5566,,False
+644,Aura,Other,Sofia,Bulgaria,42.6891955,23.3203418,http://aura.bg/,,+359 2 980 5526,,False
+645,AURA,Other,Sofia,Bulgaria,42.6473687,23.3150263,https://www.aura-complex.com/,,+359 87 630 0036,,False
+646,Aurora Sofia,Other,Sofia,Bulgaria,42.6997489,23.3062442,http://www.aurora-sofia-hotel.eu/,,+359 2 423 2129,,False
+647,"Магазин за подаръци ""Aurora Pens, Gifts & Decoration""",Other,Sofia,Bulgaria,42.6866363,23.3226918,http://www.aurora-gifts.com/,,+359 89 987 8900,,False
+648,Aura Agency Ltd,Other,Sofia,Bulgaria,42.6890515,23.3324688,https://www.auraagency.it/,,+359 87 684 2537,,False
+649,AURA,Other,Sofia,Bulgaria,42.63523319999999,23.3416781,https://matchmore.eu/,,,,False
+650,Restaurant Aura Ресторант Аура,Other,Sofia,Bulgaria,42.6698298,23.3121714,,,+359 89 268 2887,,False
+651,"Аура България ООД - Roboclean, Cebilon, Air Sense",Other,Sofia,Bulgaria,42.6762266,23.3598448,http://roboclean.bg/,,+359 87 886 0816,,False
+652,AURORA BULGARIA,Other,Sofia,Bulgaria,42.6715672,23.3299734,,,+359 2 962 7909,,False
+653,Aura Health,Health & Wellbeing,Zagreb,Croatia,45.802031,15.9636677,https://www.aurahealth.ch/,,+385 99 558 8800,,False
+654,Aura consulting,Other,Zagreb,Croatia,45.7977121,15.9437812,http://www.auraconsulting.hr/,,+385 98 138 2346,,False
+655,Aura beauty studio,Health & Wellbeing,Zagreb,Croatia,45.8167012,15.9964814,,,+385 99 370 2939,,False
+656,"Distillery ""Aura""",Other,Buzet,Croatia,45.409104,13.966594,https://www.aura.hr/,,+385 91 269 4251,,False
+657,AURA FAMILY DISTILLERY,Other,Novigrad,Croatia,45.3159956,13.5587201,https://www.aura.hr/en/,,,,False
+658,Aura Consulting,Other,Zagreb,Croatia,45.8296523,15.8990127,https://auraconsulting.hr/,,+385 98 138 2346,,False
+659,AURA D.O.O.,Other,Zagreb,Croatia,45.7938114,15.9982156,,,,,False
+660,Aura - Hookah and Cocktail Bar,Other,Dubrovnik,Croatia,42.65415549999999,18.071757,,,,,False
+661,Apartments Villa Aura,Creative Industries,Dubrovnik,Croatia,42.653022,18.090873,http://www.villaauradubrovnik.com/,,+385 99 212 3759,,False
+662,Apartments aura,Creative Industries,Dubrovnik,Croatia,42.6508605,18.094321,,,,,False
+663,"Aura, prod. Split",Other,Split,Croatia,43.5089982,16.4367928,,,+385 91 269 4251,,False
+664,Studio Aura,Creative Industries,Split,Croatia,43.5056243,16.4621825,http://www.studioaura.hr/,,+385 21 785 387,,False
+665,AURA LT D.O.O.,Other,Split,Croatia,43.5026553,16.4524646,,,+385 91 223 2270,,False
+666,"AURA, s.r.o.",Other,,Czechia,49.196821,16.5944487,https://www.aura.cz/,,+420 544 508 111,,False
+667,Hotel Aura Praha design&garden pool,Creative Industries,,Czechia,50.1512872,14.5034406,http://www.hotelaura.cz/,,+420 607 111 444,,False
+668,AURA a.s.,Other,,Czechia,50.10740939999999,14.5029618,http://www.auranet.cz/,,+420 240 243 043,,False
+669,AURA Medical s.r.o.,Health & Wellbeing,,Czechia,50.0103187,14.460102,https://www.auramedical.cz/,,+420 244 910 200,,False
+670,AURA a.s.,Other,,Czechia,49.4509,14.357648,http://www.auranet.cz/,,+420 382 524 224,,False
+671,Aura Invest Group s.r.o.,Other,,Czechia,50.077301,14.4539268,,,,,False
+672,Aura-Pont s.r.o.,Other,,Czechia,50.0540703,14.416432,http://www.aura-pont.cz/,,,,False
+673,AURA,Other,Vedbæk,Denmark,55.8395308,12.5335962,,,,,False
+674,Klinik AURA,Other,København,Denmark,55.7082378,12.569402,http://www.klinikaura.dk/?utm_source=GMB&utm_medium=medium&utm_id=organisk,,+45 53 53 99 22,,False
+675,Aura-wellness,Health & Wellbeing,Frederiksberg,Denmark,55.6759743,12.5197006,,,+45 91 96 44 28,,False
+676,Aura Foreningen,Other,København,Denmark,55.6670919,12.5050107,,,+45 20 62 89 03,,False
+677,Aura-Soma,Other,København,Denmark,55.6840634,12.585559,,,+45 40 83 60 22,,False
+678,Aura Soma,Other,København,Denmark,55.679601,12.574218,http://www.aura-soma.se/utbildning/aurasoma_teacher.html,,+45 33 14 90 60,,False
+679,Aurora Financial ApS,Other,København,Denmark,55.67073000000001,12.5839678,,,+45 78 76 85 28,,False
+680,L-aura OÜ,Health & Wellbeing,Tallinn,Estonia,59.4327577,24.7642817,https://www.facebook.com/share/16Kmu3Un1X/?mibextid=wwXIfr,,+372 5834 0177,,False
+681,Aurea Media MTÜ,Health & Wellbeing,Tallinn,Estonia,59.4371893,24.8079379,https://aureamedia.ee/,,+372 5817 1884,,False
+682,Aura Vision OÜ,Health & Wellbeing,Tallinn,Estonia,59.43268,24.747189,http://www.auravision.eu/,,+372 5451 1141,,False
+683,Aura Waterpark,Other,Tartu,Estonia,58.3753592,26.7350064,http://aurakeskus.ee/,,+372 730 0280,,False
+684,Trükikoda Auratrükk,Other,Tallinn,Estonia,59.42152850000001,24.6796386,http://www.aura.ee/,,+372 672 0811,,False
+685,Aura Allure,Other,Tallinn,Estonia,59.4368738,24.7576822,http://www.auravision.eu/,,,,False
+686,Aura Capital Oy,Other,Helsinki,Finland,60.16923310000001,24.9475918,http://www.auratum.com/aura-capital,,+358 2 65166600,,False
+687,Aura Beauty Studio|Helsinki,Health & Wellbeing,Helsinki,Finland,60.2496853,25.0036059,,,+358 41 3181139,,False
+688,Kasvuly,Other,Helsinki,Finland,60.166794,24.9224632,http://www.kasvuly.com/,,+358 45 1256929,,False
+689,HS Aura Sohvakeskus,Other,Helsinki,Finland,60.21636339999999,24.8747948,https://sohvakeskus.fi/,,+358 50 3062654,,False
+690,Aura,Other,Aura,Finland,60.64664750000001,22.5912395,http://www.aura.fi/,,,,False
+691,Aura Rakennus Uusimaa Oy,Other,Vantaa,Finland,60.293761,24.966881,https://www.aurarakennus.fi/,,+358 50 4631325,,False
+692,"Ravintola Akseli, Ilmalan Aura",Other,Helsinki,Finland,60.20638770000001,24.9200211,https://www.ninankeittio.fi/helsinki-ilmala-akseli/,,+358 50 4772574,,False
+693,Oura Health Oy,Health & Wellbeing,Helsinki,Finland,60.16785600000001,24.9443736,http://www.ouraring.com/,,,,False
+694,Aurora Studios Oy,Creative Industries,Helsinki,Finland,60.15906409999999,24.9332251,http://aurorastudios.fi/,,,,False
+695,Aurora Digital,Other,Helsinki,Finland,60.23043209999999,24.9001259,,,+358 45 78720246,,False
+696,Aura Invalides (entrée place Vauban),Other,Paris,France,48.8539569,2.3123313,http://aura-invalides.com/,,,,False
+697,Aura Événements,Other,Paris,France,48.8765211,2.3481163,https://www.aura-evenements.com/,,+33 6 25 95 84 62,,False
+698,AURA,Other,Paris,France,48.8637738,2.3556081,https://www.instagram.com/aurajuiceparis/,,+33 6 80 78 07 87,,False
+699,AURA Paris - Siège social & Centre de formation (FID),Health & Wellbeing,Ivry-sur-Seine,France,48.8171535,2.3675363,https://auraparis.org/fr/,,+33 1 81 69 60 00,,False
+700,Aurae,Other,Paris,France,48.8640019,2.3348204,https://www.linkedin.com/company/aurae-impact/,,,,False
+701,Aura Equipements,Other,Paris,France,48.8353927,2.3055409,http://www.easycom-aura.com/,,+33 1 56 81 28 70,,False
+702,Aura,Other,Paris,France,48.8783465,2.3211686,http://aura.paris/,,+33 1 72 06 08 11,,False
+703,Aura,Health & Wellbeing,Paris,France,48.8310052,2.3061096,,,+33 1 48 28 00 70,,False
+704,Aura,Other,Paris,France,48.886654,2.3128686,http://www.aura-proprete.fr/,,+33 1 42 12 08 38,,False
+705,Aura International School Of Management,Other,Lyon,France,45.757985,4.8617741,https://aura-group.com/,,+33 4 78 54 61 13,,False
+706,aura,Health & Wellbeing,Paris,France,48.8644102,2.3439872,,,+33 6 85 64 42 21,,False
+707,Aura RP,Other,Paris,France,48.8697278,2.3394278,https://www.aurarp.fr/?utm_source=google&utm_medium=wix_google_business_profile&utm_campaign=4918560002201910076,,+33 6 48 15 94 16,,False
+708,Aura Studio,Creative Industries,Paris,France,48.8690882,2.352782,http://www.aurastudio.fr/,,+33 1 42 41 26 60,,False
+709,AURA FRANCE,Other,Cagnes-sur-Mer,France,43.6707949,7.131560599999999,,,+33 4 93 08 84 12,,False
+710,Auris AURA,Other,Limonest,France,45.8129579,4.772247,http://www.auris-aura.com/,,+33 1 49 09 99 00,,False
+711,Aura Digital,Other,Lyon,France,45.749106,4.8415741,https://aura-digital.fr/?utm_source=google&utm_medium=gmb,,+33 4 81 69 57 11,,False
+712,Aura Sécurité Système,Other,Saint-Fons,France,45.7130507,4.8643851,http://www.aura2s.fr/,,+33 4 72 48 61 72,,False
+713,Aura International School of Management,Other,Villeurbanne,France,45.762878,4.8928147,https://aura-lyon.com/contact-us/,,+33 4 69 96 55 60,,False
+714,Auradata,Other,Lyon,France,45.75783,4.862908,https://auradata.fr/,,+33 4 37 72 93 59,,False
+715,Aurae,Other,Lyon,France,45.7544942,4.8769306,https://linktr.ee/Weareaurae,,,,False
+716,Aura Grand Lyon,Other,Lyon,France,45.7649286,4.8534019,,,+33 4 72 75 71 27,,False
+717,AURA BERLIN,Other,Berlin,Germany,52.492424,13.4267293,http://www.auraberlin.com/,,+49 178 1484444,,False
+718,AURA Marketing GmbH,Other,Berlin,Germany,52.50479499999999,13.3336195,http://www.getyouraura.de/,,+49 176 22371347,,False
+719,Aura Berlin Studio,Health & Wellbeing,Berlin,Germany,52.5051536,13.3420471,http://auraberlinstudio.de/,,+49 176 86912233,,False
+720,Aurora Deutschland GmbH,Health & Wellbeing,Berlin,Germany,52.4756899,13.3410743,https://www.auroramedicine.com/de,,+49 30 983216010,,False
+721,Aura Daytime Restaurant,Other,Berlin,Germany,52.505668,13.321282,,,,,False
+722,Aura Cocktail lounge,Event Management,Berlin,Germany,52.4771622,13.3298826,,,+49 30 89742237,,False
+723,Aura GmbH & Co. KG,Other,Germersheim,Germany,49.2359197,8.3708084,http://www.auragmbh.com/,,+49 7274 70060,,False
+724,Praxis für Aurafotografie und Reiki,Health & Wellbeing,Berlin,Germany,52.54559709999999,13.4131281,http://www.alexandraendler.de/,,+49 30 40574090,,False
+725,The Aura,Other,London,United Kingdom,51.55499390000001,-0.3157717,http://www.theaura.co.uk/,,+44 20 3951 8540,,False
+726,Aurora Energy Research,Other,Berlin,Germany,52.4896223,13.423728,https://www.auroraer.com/,,+49 30 12084969,,False
+727,"Kosmetikstudio Aura Aesthetics - dauerhafte Haarentfernung in München, Gesichtsbehandlungen, Sugaring, Waxing, Pediküre",Health & Wellbeing,München,Germany,48.1321026,11.5798176,https://www.aura-aesthetics.de/,,+49 15510 160804,,False
+728,Aura Lounge Frankfurt,Event Management,Frankfurt am Main,Germany,50.12786759999999,8.696085499999999,https://m.facebook.com/AuraLoungeFrankfurt,,+49 69 21008282,,False
+729,Aura Escort Frankfurt,Other,Frankfurt am Main,Germany,50.0828094,8.629175199999999,https://www.aura-escort.de/?utm_source=google&utm_medium=organic&utm_campaign=GMB-FRA,,+49 176 83464929,,False
+730,Aura-Kosmetik-Wellness-Beauty,Health & Wellbeing,Frankfurt am Main,Germany,50.1286863,8.6954117,https://wellness-aura.de/,,+49 69 27137001,,False
+731,Aura Light GmbH,Other,Frankfurt am Main,Germany,50.1844901,8.668262499999999,https://www.auralight.com/de/,,+49 69 95059247,,False
+732,Aura Pflegedienste GmbH,Health & Wellbeing,Frankfurt am Main,Germany,50.107733,8.541508199999999,http://www.aura-pflegedienste.de/,,+49 69 24248488,,False
+733,Aura Homes,Other,Athina,Greece,37.9817786,23.7345682,https://aurahomes.co/,,+30 697 484 4914,,False
+734,A.U.R.A.Acropolis Unique Residence Apartments,Creative Industries,Athina,Greece,37.9758633,23.7169211,https://www.facebook.com/auraathens.gr,,+30 694 646 0741,,False
+735,Aura Vintage,Other,Athina,Greece,37.9651946,23.7494141,,,+30 21 1008 4940,,False
+736,aura. the beauty room,Health & Wellbeing,Athina,Greece,37.9865732,23.6623479,,,+30 697 775 3188,,False
+737,The Aura Studio,Creative Industries,Agios Dimitrios,Greece,37.9285417,23.7336189,https://www.aura.photography/space-overview,,+30 694 347 4351,,False
+738,Aura Concept Store - Υποκατάστημα Αττικής,Other,Nea Filadelfia,Greece,38.0436947,23.7361276,https://gruppomd.gr/,,+30 21 0277 0050,,False
+739,"Momo Suites, Acropolis by Aura Homes",Other,Athina,Greece,37.9751086,23.7280234,https://aurahomes.co/homes/contemporary-studio-in-plaka-a1/,,+30 697 484 4914,,False
+740,Aura Media Lab,Creative Industries,Αμπελόκηποι,Greece,37.9926637,23.7673502,,,,,False
+741,Aura Concept Store,Other,Thessaloniki,Greece,40.57284500000001,22.9941829,https://www.auraconceptstore.com/,,+30 231 027 3451,,False
+742,AURA laser,Health & Wellbeing,Thessaloniki,Greece,40.6321279,22.9425543,http://www.auralaser.gr/,,+30 231 182 0831,,False
+743,Aura Luxury Apartments,Health & Wellbeing,Ierissos,Greece,40.3989111,23.876493,http://www.auraluxury.gr/,,+30 697 570 3484,,False
+744,#Aura Studios by halu! Apartments,Creative Industries,Thessaloniki,Greece,40.6362826,22.9389963,https://aurastudios.gr/,,+30 694 848 2857,,False
+745,Aura Fitness Studio,Health & Wellbeing,Thessaloniki,Greece,40.6412682,23.0248931,https://www.aurafitnessstudio.gr/co/aura-fitness-studio-thessaloniki/?wl=true,,+30 694 786 7106,,False
+746,Aura Budapest Perfumery,Other,Budapest,Hungary,47.5014942,19.0388641,https://aurabudapest.com/,,+36 20 960 9240,,False
+747,Aurea Ana Palace Hotel,Accommodation,Budapest,Hungary,47.5040079,19.0463852,https://www.aureaanapalacehotel.com/?referer_code=lb0gg00yx&utm_source=google&utm_medium=business&utm_campaign=lb0gg00yx,,+36 20 254 0279,,False
+748,Aura By Hanami,Other,Budapest,Hungary,47.47085939999999,19.0841762,,,,,False
+749,Auróra,Other,Budapest,Hungary,47.4940733,19.076054,http://auroraonline.hu/,,,,False
+750,Aura Food Kft.,Other,Budapest,Hungary,47.4861717,19.1717224,http://www.aura-food.hu/,,+36 1 260 0037,,False
+751,Aura Natura,Other,Budaörs,Hungary,47.4576933,18.9515087,https://auranatura.hu/,,+36 70 423 8714,,False
+752,Auraboost Jógastúdió,Health & Wellbeing,Budapest,Hungary,47.4816911,19.0811739,http://auraboostyoga.com/,,+36 30 412 4160,,False
+753,AURA style,Other,Budapest,Hungary,47.486552,19.0617432,http://www.aurastyle.hu/,,+36 30 494 7781,,False
+754,Aurora Reykjavík - The Northern Lights Center,Creative Industries,Reykjavík,Iceland,64.1563568,-21.9446635,https://aurorareykjavik.is/,,+354 780 4500,,False
+755,Aurora Experts - Iceland,Other,Reykjavík,Iceland,64.1271531,-21.7563412,http://www.auroraexperts.is/,,+354 888 8181,,False
+756,Aurora Luxury Iceland,Other,Reykjavík,Iceland,64.1015389,-21.7657705,https://auroraluxuryiceland.com/,,+354 850 1230,,False
+757,Aurora Globe (Globe ehf.),Other,Reykjavík,Iceland,64.13322509999999,-21.8793043,https://auroraglobe.is/,,+354 839 6912,,False
+758,AURA FOODS LTD,Other,,Ireland,53.4426985,-6.386035,http://www.aurafoods.ie/,,+353 87 651 4440,,False
+759,Aurora Accounting and Business Services,Other,,Ireland,53.323324,-6.370063999999999,http://www.auroragroup.ie/,,+353 1 460 8090,,False
+760,Aura Internet Services Ltd,Other,Carrickmacross,Ireland,53.97542989999999,-6.715862500000001,https://www.aura.ie/,,+353 42 966 4833,,False
+761,Golden Aura Europe,Health & Wellbeing,Dublin,Ireland,53.2834571,-6.1401771,https://goldenaura.eu/,,+353 85 805 4533,,False
+762,Auralia,Health & Wellbeing,,Ireland,53.3314065,-6.3710871,https://www.auralia.ie/,,+353 1 612 0551,,False
+763,Aura Space,Health & Wellbeing,Dublin,Ireland,53.3577667,-6.227460799999999,https://auraspace.es/,,+34 657 43 75 00,,False
+764,Centro Commerciale Aura,Other,Roma,Italy,41.9021051,12.4384975,https://www.centrocommercialeaura.it/?utm_source=google&utm_medium=button&utm_campaign=Google-My-Business,,+39 06 3975 1750,,False
+765,Aura B,Other,Roma,Italy,41.8789867,12.4763056,,,,,False
+766,Valle Aurelia,Other,Roma,Italy,41.9019045,12.4378981,,,,,False
+767,AURA SOLUTIONS SRLS,Other,Roma,Italy,41.8241318,12.4873846,,,+39 340 938 6699,,False
+768,Gruppo Aura - Agenzia Vodafone Business Milano,Other,Milano,Italy,45.4485819,9.1689436,http://www.gruppoaura.it/,,+39 800 810 797,,False
+769,Aura S.R.L. - Eventi - Congressi E Viaggi,Other,Milano,Italy,45.4755104,9.2263375,,,+39 02 546 9912,,False
+770,AURA Milano - Hair Love Experience,Health & Wellbeing,Milano,Italy,45.47833019999999,9.2197098,https://www.aurahairmilano.com/,,+39 331 222 6135,,False
+771,Aura,Other,Milano,Italy,45.426523,9.266658999999999,http://auraisl.com/,,+91 18772872462,,False
+772,"Aura Photo Agency - Photo Studio, Production, Artists' management",Creative Industries,Milano,Italy,45.4509689,9.1514022,http://www.auraphotoagency.com/,,,,False
+773,Aura Srl,Other,Rovido Industriale,Italy,45.4142605,9.0892968,http://www.auraimm.it/,,+39 02 4846 3008,,False
+774,Aurea Srls,Other,Milano,Italy,45.4887108,9.2096603,,,+39 351 901 0752,,False
+775,AURAREE Italia,Other,Milano,Italy,45.46315200000001,9.182819199999999,https://www.auraree.com/,,,,False
+776,Aura Yoga & Centro Olistico,Health & Wellbeing,Milano,Italy,45.4856179,9.1577024,https://www.aurayoga.it/,,+39 320 800 7738,,False
+777,Aura Apartments in Venice Florida,Creative Industries,Nokomis,United States,27.1582353,-82.42351579999999,https://liveauraapartments.com/,,+1 941-352-1459,,False
+778,Aura Teika,Other,Rīga,Latvia,56.9679405,24.1801143,,,+371 22 445 530,,False
+779,VCA poliklīnika Aura (AS “Veselības centru apvienība),Health & Wellbeing,Rīga,Latvia,56.9581011,24.1777161,https://www.vca.lv/vca-poliklinikas/aura.html,,+371 67 799 977,,False
+780,Aura Būve,Other,Rīga,Latvia,56.9734299,24.1405799,,,+371 26 827 275,,False
+781,Aurabalt,Health & Wellbeing,Rīga,Latvia,56.950632,24.1108696,http://www.aurabalt.com/,,+371 26 555 824,,False
+782,Aura Lab,Health & Wellbeing,Rīga,Latvia,56.9571115,24.1173345,http://bookauralab.as.me/,,+371 20 409 268,,False
+783,Auralife Global,Health & Wellbeing,Rīga,Latvia,56.95616829999999,24.1252126,http://auralife.lv/,,+371 20 276 151,,False
+784,Aurora Riga,Other,Rīga,Latvia,56.95721810000001,24.1157311,,,+371 29 335 821,,False
+785,Aura Spa Vilnius,Health & Wellbeing,Vilnius,Lithuania,54.675195,25.2896334,https://www.auraspa.lt/,,+370 621 74645,,False
+786,AuraGroup UAB,Other,Vilnius,Lithuania,54.7064688,25.2867259,https://www.auragroup.lt/,,+370 622 05823,,False
+787,AUREA.SHOP,Other,Vilnius,Lithuania,54.7208285,25.2451882,https://aurea.shop/,,+370 699 33359,,False
+788,Aura salonas,Health & Wellbeing,Vilnius,Lithuania,54.68541889999999,25.2751889,,,+370 653 89324,,False
+789,AURAPLUS UAB AUSNĖ,Other,Šiauliai,Lithuania,55.9511182,23.315129,http://auraplus.eu/,,+370 686 38191,,False
+790,Aurea Praxis,Other,Vilnius,Lithuania,54.7073596,25.2835177,http://www.aurea.lt/,,+370 5 237 5120,,False
+791,Groupe Aura Sàrl,Other,Niederanven,Luxembourg,49.6517555,6.256821899999999,http://www.groupeaura.lu/,,+352 621 272 379,,False
+792,Aura Lux Sàrl,Other,Steinfort,Luxembourg,49.6326628,5.892666999999999,https://www.aura-lux.lu/,,+352 27 56 11 11,,False
+793,Aura Group,Other,Mondercange,Luxembourg,49.5245246,6.0103357,https://www.aura-groupe.lu/,,+352 26 55 02 98,,False
+794,AURAE | Consulting & coaching | Gestion du stress & Leadership,Health & Wellbeing,Luxembourg,Luxembourg,49.6111691,6.1244013,https://auraebyestelle.com/,,+352 691 138 577,,False
+795,Aura Wellness,Health & Wellbeing,St,Malta,35.9181118,14.4921949,http://www.aurawellnesspoint.com/,,+356 9911 3030,,False
+796,Aura Aesthetics Malta,Health & Wellbeing,Il-Fgura,Malta,35.8739771,14.5172646,,,,,False
+797,Look and Style by Aura salon,Health & Wellbeing,Chișinău,Moldova,47.0426142,28.7925784,https://www.instagram.com/lookandstyle_by_aura?igsh=MW82Y2dxM2ZhNWVjdQ==,,+373 684 46 629,,False
+798,Agenția Aura,Other,Chișinău,Moldova,47.029838,28.8384691,,,+373 698 03 080,,False
+799,Aurora Trust,Other,Chișinău,Moldova,47.0420484,28.8564947,https://aurora.md/?portfolio=gradinita-pentru-fiecare,,+373 691 08 836,,False
+800,Louis Vuitton Monaco,Other,Monaco,Monaco,43.7393596,7.426683499999999,https://en.louisvuitton.com/eng-nl/point-of-sale/monaco/louis-vuitton-monaco,,+377 93 25 13 44,,False
+801,AURA - Your Connection to Montenegro,Other,Podgorica,Montenegro,42.4518688,19.2978957,http://auramontenegro.com/,,+382 69 270 270,,False
+802,AURA,Other,Podgorica,Montenegro,42.4423729,19.2717996,,,+382 69 029 889,,False
+803,Aura Smart Store,Creative Industries,Amsterdam,Netherlands,52.3778544,4.8956953,,,+31 20 233 7110,,False
+804,Aurai,Other,Amsterdam,Netherlands,52.35923099999999,4.8951632,http://aurai.com/,,+31 20 240 9103,,False
+805,Aura Smart Store,Creative Industries,Amsterdam,Netherlands,52.37620339999999,4.8953685,,,+31 20 620 3905,,False
+806,het ´AURA TEAM´ Aura Foto 's en uitleg,Other,Amsterdam,Netherlands,52.3818239,4.8867536,http://www.aura-foto.nl/,,+31 6 83218402,,False
+807,Aurora,Other,Amsterdam,Netherlands,52.36619719999999,4.893394,http://www.aurora-kontakt.nl/,,+31 20 623 4062,,False
+808,Aura Business Center,Other,Shkupi,North Macedonia,41.9986053,21.4251704,,,,,False
+809,Aura,Other,Skopje,North Macedonia,42.0010582,21.4246883,http://www.aura.com.mk/,,+389 2 313 3338,,False
+810,Aura Lounge,Event Management,Shkupi,North Macedonia,42.0034789,21.3962392,,,+389 76 204 677,,False
+811,AURA AS,Other,Sopishte,North Macedonia,41.9422431,21.4318597,https://www.instagram.com/auraas.mk,,+389 78 283 323,,False
+812,Casa Aura,Other,Skopje,North Macedonia,41.96236589999999,21.4396018,,,+389 77 771 821,,False
+813,Aura,Other,Shkupi,North Macedonia,42.001053,21.4395851,,,,,False
+814,Aura By Jewel of India Restaurant,Other,,Norway,59.91594559999999,10.7168612,http://www.aurarestaurant.no/,,+47 22 55 39 29,,False
+815,Auralight AS,Other,,Norway,59.9127274,10.6348997,http://www.auralight.no/,,+47 22 88 39 00,,False
+816,Aura Group,Other,,Norway,59.95566280000001,10.6607014,,,+47 92 65 50 50,,False
+817,Aura Beauty AS,Health & Wellbeing,,Norway,59.9201533,10.7374858,http://aurabeauty.no/no/contact,,+47 92 35 39 97,,False
+818,Aura Nightclub,Event Management,,Norway,60.3935826,5.3241524,,,+47 55 32 22 77,,False
+819,Aura Distribution Sp. z o.o.,Other,Mościska,Poland,52.2840114,20.8753602,,,+48 506 281 001,,False
+820,Aura,Other,Warszawa,Poland,52.2265405,21.0159834,https://m.facebook.com/aurabourbonbar/,,+48 576 367 379,,False
+821,Centrum Podróży AURA Sp. z o.o.,Other,Warszawa,Poland,52.218065,20.964274,http://www.bilety.pl/,,+48 22 823 68 58,,False
+822,"AURA Technologies Sp. z o.o. - dostawca rozwiązań IT; autoryzowany partner enova365, SaldeoSMART i AMODIT",Creative Industries,Warszawa,Poland,52.2103127,20.952388,https://www.auratech.pl/,,+48 22 460 54 60,,False
+823,Aura Solar Sp. z o.o. Sp. K.,Other,Warszawa,Poland,52.23788159999999,20.99525,https://aurasolar.pl/,,+48 667 500 500,,False
+824,Aura Krzysztof Ryszewski,Other,Warszawa,Poland,52.2810058,21.0471704,https://www.money.pl/rejestr-firm/nip/524-23-11-829/kod-pocztowy/03-285/,,,,False
+825,Aurora,Other,Warszawa,Poland,52.24225759999999,21.0127736,http://auroraintelligence.com/,,+48 22 299 84 11,,False
+826,Aura Park,Other,Warszawa,Poland,52.160832,21.0753865,,,+48 603 409 640,,False
+827,Aura Massage Warsaw,Health & Wellbeing,Warszawa,Poland,52.2359701,21.0112829,https://auramassage.pl/,,+48 453 272 888,,False
+828,Aura Place,Health & Wellbeing,Warszawa,Poland,52.344263,21.0543426,http://auraplace.booksy.com/,,+48 881 776 221,,False
+829,Auraco sp. z o.o.,Other,Warszawa,Poland,52.2339668,21.0334609,http://www.auraco.pl/,,+48 22 207 21 87,,False
+830,Aura Wind Sp. z o.o.,Other,Warszawa,Poland,52.2379171,20.9956396,https://aurawind.pl/,,+48 667 500 500,,False
+831,Marcin Januszaniec – delikatne tatuaże Warszawa,Other,Warszawa,Poland,52.23022100000001,21.016413,https://aurastudiotatuazu.localo.site/?utm_source=google_profile&utm_campaign=localo&utm_medium=mainlink,,+48 733 951 313,,False
+832,Aura | Kawiarnia,Other,Kraków,Poland,50.0668783,19.9407591,,,+48 737 484 266,,False
+833,Producent mebli - Aura Design,Creative Industries,Kraków,Poland,50.0807618,20.0159772,http://www.aura-meble.com/,,+48 12 292 30 63,,False
+834,Aura REE Portugal,Other,Lisboa,Portugal,38.7701449,-9.0980724,http://www.auraree.com/portugal,,+351 21 053 4816,,False
+835,AURA Residences,Other,Lisboa,Portugal,38.7221288,-9.1450506,http://www.aura30.com/,,,,False
+836,Aura Wellness Bar,Health & Wellbeing,Lisboa,Portugal,38.7146396,-9.162633000000001,http://www.aurawellnessbar.com/,,,,False
+837,AURA Rentals,Other,Agualva-Cacém,Portugal,38.7617337,-9.3012633,http://www.aurarentals.pt/,,,,False
+838,Aura Dim Sum,Other,Lisboa,Portugal,38.712882,-9.1291298,http://auradimsum.com/,,+351 910 116 489,,False
+839,Áurea Museum,Other,Lisboa,Portugal,38.7092059,-9.130455399999999,https://www.eurostarshotels.com.pt/aurea-museum.html?referer_code=lb0gg00yx&utm_source=google&utm_medium=business&utm_campaign=lb0gg00yx,,+351 21 116 6100,,False
+840,Aura Lisbon,Health & Wellbeing,Lisboa,Portugal,38.7645779,-9.1796068,https://www.auralisbonspa.com/,,+351 911 872 349,,False
+841,Aura Lisboa,Other,Lisboa,Portugal,38.7079219,-9.1377963,,,+351 21 346 9447,,False
+842,AuraBrand,Other,Porto,Portugal,41.1572891,-8.6023,http://aurabrand.pt/,,+351 915 575 701,,False
+843,Aura Beauty,Health & Wellbeing,Porto,Portugal,41.1486176,-8.6075993,https://pt.zappysoftware.com/m/saraoliveira-5?fbclid=PAZXh0bgNhZW0CMTEAAaYUcL0YcMPlPX7YT8uW09AQa3rv6p7wNPVipFSnEO5Lzt0eyvxruBVx2vM_aem_ARf28lYWsYFXdccTujzr4w0LSFCAsTzZ920QVOYtxl5aaVcMMTRLDIQrbaR084xpReTWLX3zajmwHT1OUVfl4LQB#pro,,+351 912 952 262,,False
+844,Aura Partners,Creative Industries,Porto,Portugal,41.1592278,-8.6120194,http://www.aurapartners.pt/,,+351 22 323 1246,,False
+845,Aura Radu,Other,București,Romania,44.4265322,26.0976717,http://www.creatievestimentara.ro/,,+40 747 154 357,,False
+846,DRUID AI,Other,București,Romania,44.433622,26.0789961,https://www.druidai.com/,,+40 31 069 9256,,False
+847,Pullman Bucharest World Trade Center,Other,București,Romania,44.4758571,26.0698567,https://all.accor.com/lien_externe.svlt?goto=fiche_hotel&code_hotel=1714&merchantid=seo-maps-RO-1714&sourceid=aw-cen&utm_medium=seo%20maps&utm_source=google%20Maps&utm_campaign=seo%20maps,,+40 21 202 1600,,False
+848,официальный представитель aura в россии,Other,Moskva,Russia,55.8992379,37.5424661,http://aura-technology.ru/kontakty,,+7 495 211-80-65,,False
+849,Aura авторское строительство,Other,Moskva,Russia,55.791914,37.470474,https://aurastroy.com/,,+7 499 322-16-00,,False
+850,Aurora Group,Other,Moskva,Russia,55.735829,37.61757000000001,,,+7 499 238-10-10,,False
+851,Aura Interiors,Other,Moskva,Russia,55.70985040000001,37.6544602,https://aura-mebel.ru/,,+7 495 201-90-09,,False
+852,"Ooo ""Aura""",Other,Moskva,Russia,55.7040014,37.5212411,,,,,False
+853,"Yuridicheskiy Tsentr ""Avrora""",Other,Moskva,Russia,55.7169209,37.6289005,http://www.avroracenter.ru/,,+7 495 120-74-44,,False
+854,Aura,Other,Moskva,Russia,55.759496,37.64566,,,+7 495 711-88-55,,False
+855,Aura,Other,Moskva,Russia,55.7464749,37.6290935,,,+7 499 700-94-37,,False
+856,"Aura, Ooo",Other,Moskva,Russia,55.737025,37.690193,,,,,False
+857,"Ooo ""Aura""",Other,Moskva,Russia,55.62568899999999,37.6757071,,,,,False
+858,Aura | Сервис аренды полезных вещей,Other,Sankt-Peterburg,Russia,59.930434,30.3591388,https://spb.aura-rent.ru/?utm_source=googlemaps,,+7 812 622-66-76,,False
+859,Aura,Other,Sankt-Peterburg,Russia,59.9936667,30.1512635,,,+7 812 249-88-08,,False
+860,Aura,Other,Sankt-Peterburg,Russia,59.9108601,30.3852608,http://kresla-massage.ru/,,+7 921 954-24-88,,False
+861,"Ooo ""Aura""",Other,Sankt-Peterburg,Russia,59.93926499999999,30.3608995,,,,,False
+862,Aura Computers,Other,Sankt-Peterburg,Russia,59.92241259999999,30.2789929,http://aura.ru/,,+7 812 327-21-21,,False
+863,Aura,Other,Sankt-Peterburg,Russia,59.9145212,30.3383933,,,+7 812 337-20-16,,False
+864,Aurora S.p.a.,Other,Dogana,San Marino,43.9817469,12.4900091,https://www.aurora.sm/,,+378 0549 905650,,False
+865,AURA HOME DOO,Other,Beograd,Serbia,44.7860118,20.512077,http://aurasrbija.rs/,,+381 60 3440133,,False
+866,Aura,Other,Beograd,Serbia,44.7801994,20.4163931,https://www.newageshop.rs/,,+381 11 3573079,,False
+867,Aura,Other,Beograd,Serbia,44.8205556,20.4622222,,,+381 11 777644,,False
+868,Aura Team,Other,Beograd,Serbia,44.7888933,20.4869721,,,+381 60 3445574,,False
+869,Aura Massage Belgrade,Other,Beograd,Serbia,44.819987,20.4594742,http://auramassage.rs/,,+381 66 5373333,,False
+870,Aurora Green d.o.o. environmental consulting in Belgrade,Other,Beograd,Serbia,44.8165752,20.417453,https://auroragreen.rs/,,+381 11 2694283,,False
+871,BW Aurora,Other,Beograd,Serbia,44.8060908,20.4509516,https://www.belgradewaterfront.com/en/property/bw-aurora/,,+381 800 300888,,False
+872,Predstavnistvo Aura Grup Dooel,Other,Beograd,Serbia,44.7959719,20.4936757,,,+381 11 2836771,,False
+873,Aura Relax,Health & Wellbeing,Beograd,Serbia,44.8141121,20.4669619,https://www.aurarelax.rs/,,+381 62 9328510,,False
+874,Zgrada Aura,Other,Beograd,Serbia,44.7552234,20.4907702,,,,,False
+875,AURA CoffeeStudio,Creative Industries,,Slovakia,48.1615585,17.133762,,,,,False
+876,Café L'Aura & Antik art shop,Creative Industries,Bratislava,Slovakia,48.1415301,17.1052521,,,+421 917 510 850,,False
+877,Tantra AURA,Other,Bratislava,Slovakia,48.1480586,17.1117081,https://www.tantra-aura.sk/,,+421 940 640 000,,False
+878,AURA Coffee Eurovea,Other,Bratislava,Slovakia,48.1400284,17.1253574,,,+421 918 129 123,,False
+879,AURA,Other,Bratislava,Slovakia,48.12914259999999,17.1155898,http://auraflowers.net/,,+421 905 946 443,,False
+880,AURA,Other,Bratislava,Slovakia,48.1400478,17.1217324,,,,,False
+881,AURA Vedomého Bytia,Other,Bratislava,Slovakia,48.1449073,17.1068497,,,,,False
+882,AURACENTRUM s.r.o.,Other,Bratislava,Slovakia,48.1483451,17.1761366,http://www.auracentrum.sk/,,+421 903 217 768,,False
+883,Aura Sro,Other,,Slovakia,48.7404932,19.1652288,,,+421 48/411 26 55,,False
+884,Aura,Other,,Slovakia,48.3786842,17.5857417,,,+421 918 376 665,,False
+885,Aurora,Other,Bratislava,Slovakia,48.1588445,17.1289877,http://www.aurora-eu.sk/,,+421 905 275 129,,False
+886,Aura Shop Ljubljana,Other,,Slovenia,46.0483874,14.506011,https://www.aura.hr/,,,,False
+887,"zlatarna aura, ljubljana BTC",Other,,Slovenia,46.0660878,14.5428062,https://www.zlatarna-aura.si/,,+386 30 429 999,,False
+888,Zlatarna Aura,Other,,Slovenia,45.8166914,15.1539341,https://www.zlatarna-aura.si/,,+386 7 302 11 01,,False
+889,Aura Shop Koper,Other,,Slovenia,45.54639479999999,13.7288791,https://www.aura.hr/,,,,False
+890,Aurora International d.o.o,Other,,Slovenia,46.0633186,14.5686088,https://www.theaurorateam.com/,,+386 41 282 173,,False
+891,Thermostar Aura Sistem,Other,,Slovenia,46.0627295,14.5635701,https://www.aura-sistem.com/,,+386 30 484 140,,False
+892,Aurora in You - spirit of essence,Health & Wellbeing,,Slovenia,46.0540015,14.5124838,http://www.aurorainyou.com/,,,,False
+893,AURA Roboclean,Other,,Slovenia,46.07586269999999,14.4844777,http://www.roboclean.si/index7.html,,+386 51 360 764,,False
+894,AURA Coworking Ljubljana,Other,,Slovenia,46.0448312,14.4860527,,,+386 30 434 140,,False
+895,AURA Guesthouse Ljubljana,Accommodation,,Slovenia,46.0381902,14.5066872,,,,,False
+896,Aura,Other,Madrid,Spain,40.4135665,-3.7276026,,,,,False
+897,Aura Real Estate Experts,Cities & Developments,Madrid,Spain,40.4283212,-3.6952535,http://www.auraree.com/,,+34 672 36 13 77,,False
+898,AURA RESTAURANTE,Other,Valdebebas,Spain,40.4970319,-3.6092605,https://www.aura-restaurante.es/,,+34 917 16 41 68,,False
+899,Aura,Other,Madrid,Spain,40.4036063,-3.6730637,http://aurastaffing.es/,,+34 918 31 78 00,,False
+900,Aura Asset Management,Other,Madrid,Spain,40.4284537,-3.6953491,http://auraam.com/,,+34 634 60 81 23,,False
+901,AURA,Other,Madrid,Spain,40.4237842,-3.6775062,https://www.instagram.com/aura._boutique.__?igsh=MTVvc3AzdXZiOHlwNA==,,,,False
+902,AURA Growth,Other,Madrid,Spain,40.4200752,-3.690743,https://www.auragrowth.com/?utm_source=google&utm_medium=wix_google_business_profile&utm_campaign=11480835324547719756,,+34 646 92 00 19,,False
+903,Aura Staffing España E.T.T.,Health & Wellbeing,Alcorcón,Spain,40.3442551,-3.811347,http://www.aurastaffing.es/,,+34 916 96 39 11,,False
+904,Aurahome | Domótica en Madrid,Other,Villaviciosa de Odón,Spain,40.3506622,-3.8962558,https://aurahome.es/,,+34 691 51 76 59,,False
+905,Aura Madrid Beauty wellness,Health & Wellbeing,Torrejón de Ardoz,Spain,40.4582933,-3.477804,,,+34 653 44 89 93,,False
+906,Manufacturas Aura S.A.,Other,Villaviciosa de Odón,Spain,40.3476421,-3.9082302,http://www.manufacturasaura.com/,,+34 916 16 49 06,,False
+907,Restaurante Áurea,Other,Alcobendas,Spain,40.5150968,-3.6515332,https://ultramarinosaurea.com/,,+34 913 30 42 58,,False
+908,Aurora Madrid,Other,Madrid,Spain,40.4583461,-3.6822901,http://auroramadrid.com/,,+34 699 14 05 25,,False
+909,Aura Retail,Other,Barcelona,Spain,41.3949151,2.1518978,http://auraretailes.com/,,+34 606 57 36 12,,False
+910,CopaCabana Aribau,Other,Barcelona,Spain,41.3952243,2.1500545,,,+34 607 82 44 72,,False
+911,Aura Beauty Barcelona,Health & Wellbeing,Barcelona,Spain,41.3890463,2.1667065,http://aurabarcelona.com/,,+34 691 78 48 46,,False
+912,Edifici AURA,Other,Barcelona,Spain,41.3925928,2.1464824,https://inmobiliaria.cushmanwakefield.es/inmuebles/alquiler-de-oficinas-edificio-aura-avinguda-diagonal-barcelona/,,+34 934 88 18 81,,False
+913,AURA Silent Disco S.L.,Other,Barcelona,Spain,41.386784,2.1753135,http://www.aura-events.co/,,+34 629 87 02 21,,False
+914,AQUA AURA SPA CAPILAR,Health & Wellbeing,Barcelona,Spain,41.4007669,2.1682574,http://www.aquaaura.es/,,+34 932 07 74 98,,False
+915,El Salón by Aura Institut,Health & Wellbeing,Barcelona,Spain,41.3922316,2.1562744,http://www.elsalonbyaurainstitut.com/,,+34 608 58 02 63,,False
+916,Aura Seguros,Other,Santa Coloma de Gramenet,Spain,41.4509811,2.2084964,https://www.auraseguros.es/,,+34 934 66 11 00,,False
+917,Papereria i Llibreria Aura,Other,Barcelona,Spain,41.3988511,2.15678,https://agraciahotrobes.cat/papereria-i-llibreria-aura,,+34 932 37 10 86,,False
+918,Alura Multiespai Beauty & Wellness,Health & Wellbeing,Barcelona,Spain,41.387835,2.1287046,https://alurabeauty.com/,,+34 937 61 71 24,,False
+919,Aura Bañó,Other,Barcelona,Spain,41.4099758,2.159203,http://aurabano.com/,,,,False
+920,Aura Personal,Other,,Sweden,59.33934370000001,18.0106688,https://www.aurapersonal.se/,,+46 8 24 52 60,,False
+921,Aura Cloud AB,Other,,Sweden,59.32843570000001,17.9837574,https://www.auracloud.com/,,+46 10 214 62 55,,False
+922,Aura Sthlm,Other,,Sweden,59.3385531,18.094906,https://aurasthlm.com/,,+46 70 688 25 65,,False
+923,Aura Light,Other,,Sweden,59.35761220000001,17.977008,http://www.auralight.com/,,+46 8 564 881 40,,False
+924,aura-soma,Other,,Sweden,59.34142569999999,18.0399494,http://www.aura-soma.se/aura-soma/aurasoma_terapeuter.html,,+46 8 31 36 60,,False
+925,"AureaVita - Linkofta, linklänning, linbyxor",Other,,Sweden,59.32379799999999,18.0737915,,,+46 70 797 08 86,,False
+926,Aurora Energy Research,Other,,Sweden,59.3370816,18.0771256,https://auroraer.com/company/contact/,,,,False
+927,Aura restaurang,Other,,Sweden,57.6403584,12.0255334,https://www.aurarestaurang.se/,,,,False
+928,Aura Göteborg,Other,,Sweden,57.7036022,11.9637503,,,+46 73 522 32 17,,False
+929,Aura,Other,,Sweden,57.75896539999999,12.0416079,,,,,False
+930,Aurora Consulting,Other,,Sweden,57.7002269,11.9832363,https://www.auroraconsulting.se/,,,,False
+931,Aura Bern-Cosmetic and Spa,Health & Wellbeing,Bern,Switzerland,46.9496844,7.441170199999999,http://aurabern.ch/,,+41 76 370 90 29,,False
+932,AURORA COSMETICS GmbH,Other,Bern,Switzerland,46.9475817,7.4485052,http://www.aurora-cosmetics.ch/,,+41 31 311 45 53,,False
+933,Aura-Soma Laden Mahbuba Mühlemann,Other,Bern,Switzerland,46.9490242,7.4547842,http://www.aurasomaladen.ch/,,+41 31 311 99 59,,False
+934,AURA 800° Grill & Bar,Other,Zürich,Switzerland,47.3686627,8.537952899999999,https://www.aura-zurich.ch/,,+41 44 448 11 44,,False
+935,AURA Event Saal,Other,Zürich,Switzerland,47.3686627,8.537952899999999,http://www.aura-event.ch/,,+41 44 448 11 40,,False
+936,Aurora,Other,Zürich,Switzerland,47.3732572,8.5380099,http://www.aurora-restaurant.ch/,,+41 44 210 03 18,,False
+937,Aura Markt,Other,Zürich,Switzerland,47.34350939999999,8.52989,,,+41 44 572 32 74,,False
+938,ORA Bar Zürich,Other,Zürich,Switzerland,47.3760382,8.5446896,https://www.ora-bar.ch/,,,,False
+939,AURA bureau & associés Sàrl,Other,Vésenaz,Switzerland,46.2377073,6.2107863,https://www.aura-associes.ch/,,+41 79 570 67 88,,False
+940,Auraïa,Other,Genève,Switzerland,46.20281929999999,6.149731099999999,https://www.auraia.ch/index.php/contact-us/,,+41 22 318 77 60,,False
+941,Aura Informatique Sàrl,Other,Genève,Switzerland,46.1882346,6.1283891,http://www.aura-informatique.ch/,,+41 22 800 07 94,,False
+942,Aura Consult Sa,Other,Genève,Switzerland,46.21935430000001,6.1152003,,,,,False
+943,Aura Consult SA,Other,Genève,Switzerland,46.2031675,6.155142,,,+41 22 318 59 00,,False
+944,Aura Spa Salon,Health & Wellbeing,Kyiv,Ukraine,50.44233089999999,30.4275437,http://aura-spa.site/,,+380 96 823 3404,,False
+945,"Масаж Київ AURA SPA - massage, hammam",Health & Wellbeing,Kyiv,Ukraine,50.4553916,30.5146915,https://aura.kiev.ua/,,+380 98 399 0866,,False
+946,Aura Development,Other,Kyiv,Ukraine,50.4288487,30.5027331,,,+380 67 077 1770,,False
+947,AURA Deuch online,Other,Kyiv,Ukraine,50.4511417,30.5275503,https://aura-school.com/,,+380 93 113 1244,,False
+948,БЦ AURA,Other,Kyiv,Ukraine,50.4763896,30.486995,,,,,False
+949,Жк «Aura»,Other,Nove,Ukraine,50.319404,30.3024802,,,+380 95 125 8888,,False
+950,ЖК Aura City,Other,Kyiv,Ukraine,50.3930499,30.6043497,https://aura-city.com.ua/,,,,False
+951,Eurasia Business Centre,Other,Kyiv,Ukraine,50.4389385,30.4987675,https://eurasia-bc.com.ua/,,+380 67 495 2005,,False
+952,Aura/Аура,Other,Kyiv,Ukraine,50.48134779999999,30.4880164,,,+380 95 012 0431,,False
+953,AURA VIZOR,Other,Kyiv,Ukraine,50.4296341,30.5156475,,,,,False
+954,Aura Ooo,Other,Kyiv,Ukraine,50.4424077,30.495521,,,+380 44 230 6086,,False
+955,"Международная ассоциация ""АУРА""",Other,Kyiv,Ukraine,50.4591396,30.5170875,,,+380 44 278 0450,,False
+956,Aura London,Other,,United Kingdom,51.4781422,-0.1840312,http://www.auralondon.com/,,+44 20 7351 3211,,False
+957,AURA UK,Other,,United Kingdom,51.546295,-0.1786348,https://aura.services/uk/,,+44 7760 171938,,False
+958,Aura,Other,,United Kingdom,51.5128004,-0.0862479,http://weareaura.com/,,+44 20 3869 4848,,False
+959,Aura Consulting UK Ltd,Other,,United Kingdom,51.512391,-0.0884575,http://www.aura-consulting.co.uk/,,+44 20 3178 6048,,False
+960,Aura Construction,Other,,United Kingdom,51.4506457,0.1011491,http://aura.construction/,,+44 20 8300 0102,,False
+961,Aura Lingerie,Other,,United Kingdom,51.4760634,-0.2846071,http://www.aura-lingerie.com/,,+44 20 8876 6650,,False
+962,Aura Grill and Bar,Other,,United Kingdom,51.64530300000001,0.0532618,http://www.auragrillandbar.com/,,+44 20 8191 1510,,False
+963,Ora Lounge,Event Management,,United Kingdom,51.5838239,-0.1002419,https://oralounge.co.uk/,,+44 20 8341 4814,,False
+964,Aura,Other,,United Kingdom,51.5216709,-0.0832429,http://www.aurafutures.com/,,+44 20 7240 0800,,False
+965,Aura - Museum Genius,Other,,United Kingdom,51.51691210000001,-0.07800019999999999,https://www.aura.tours/,,,,False
+966,Aura Commodities,Other,,United Kingdom,51.51069320000001,-0.1448337,https://auracommodities.com/,,,,False
+967,AURA Consulting Ltd,Other,,United Kingdom,51.5023002,-0.1544552,http://www.aura-consulting.co.uk/,,+44 20 3478 1773,,False
+968,Aura Sales Ltd,Other,,United Kingdom,51.5082216,-0.138864,http://www.aurasales.com/,,+44 20 7917 6269,,False
+969,Aura Mayfair,Other,,United Kingdom,51.50759370000001,-0.1406768,,,,,False
+970,Aura Journeys | Scotland,Other,,United Kingdom,55.9536643,-3.2018309,https://www.scotlandtours.co/,,+44 333 355 2872,,False
+971,Aurora Consulting (Scotland),Other,,United Kingdom,55.9508818,-3.2057609,http://www.aurora-consulting.net/,,+44 131 463 0007,,False
+972,Laura's aura,Other,,United Kingdom,55.9661823,-3.247898,,,+44 7379 586342,,False
+973,Aura Lounge,Event Management,,United Kingdom,53.454631,-2.2250327,,,,,False
+974,AURA Manchester,Health & Wellbeing,Radcliffe,United Kingdom,53.5634455,-2.3330193,,,+44 161 465 4822,,False
+975,Aura Court Business Centre,Other,Stretford,United Kingdom,53.4653504,-2.2600349,,,,,False
+976,Aura Business Centres | Meeting rooms| Office space| Virtual office| Hot desk| Newark-on-Trent,Health & Wellbeing,Newark-on-Trent,United Kingdom,53.0799077,-0.8162773999999999,https://www.aura-businesscentres.co.uk/,,+44 1636 647112,,False
+977,Aura Beauty & Massage,Health & Wellbeing,,United Kingdom,53.4317631,-2.2005728,,,+44 161 374 0165,,False
+978,Aura Heritage Limited,Other,Handforth,United Kingdom,53.3551071,-2.2076575,http://www.auraltd.co.uk/,,+44 161 442 9850,,False
+979,Aurora Worldwide,Other,,United Kingdom,53.4811233,-2.248372,,,+44 161 243 5529,,False
+980,Aura Residence,Other,Prishtina,,42.636015,21.1663012,,,,,False
+981,Aura Academy,Other,Prishtina,,42.65437379999999,21.1522208,https://academyaura.com/,,+383 48 914 914,,False
+982,Klinika Aura,Health & Wellbeing,Prishtina,,42.6435203,21.155139,http://www.klinikaaura.com/,,+383 49 262 222,,False
+983,Perkthime Aura,Other,Prishtina,,42.6543815,21.1522708,http://perkthimeaura.com/,,,,False
+984,Aura Light,Other,Prishtina,,42.6569292,21.1518824,,,+383 44 239 753,,False
+985,Aura Pharmacy,Health & Wellbeing,Prishtina,,42.6478869,21.162339,,,+383 49 810 812,,False
+986,Aura,Other,Paradise Island,The Bahamas,25.0835778,-77.3221422,https://www.atlantisbahamas.com/thingstodo/entertainment/auranightclub,,+1 242-363-3000,,False
+987,Aura Beauté Barbados,Other,Bridgetown,Barbados,13.0998698,-59.6180314,https://www.fresha.com/a/aura-beaute-barbados-bridgetown-reed-street-v6zyfvad/booking?menu=true&pId=652332&dppub=true&employeeId=1861046,,,,False
+988,AURA ARTS AND PHOTOGRAPHY,Creative Industries,Bridgetown,Barbados,13.1059816,-59.61317409999999,https://instagram.com/aura_artsandphotography?utm_medium=copy_link,,+1 246-255-1236,,False
+989,Aura Media Ltd.,Creative Industries,Belize City,Belize,17.5050758,-88.1999828,http://ostfrauendating.com/,,,,False
+990,AURA Professional Hair And Esthetics Studio Inc,Health & Wellbeing,Ottawa,Canada,45.4183916,-75.7023701,http://www.aurasalon.ca/,,+1 613-238-2872,,False
+991,Aura Design,Creative Industries,Ottawa,Canada,45.4622361,-75.55011979999999,http://aura-design.ca/,,+1 613-830-6787,,False
+992,Aurora Salon & Spa,Health & Wellbeing,Ottawa,Canada,45.3808332,-75.66941229999999,https://aurorasalonspa.com/,,+1 613-695-5444,,False
+993,aura-flow,Other,Ottawa,Canada,45.3491315,-75.8134231,https://aura-flow-three.vercel.app/,,,,False
+994,Aura Counselling Services,Health & Wellbeing,Ottawa,Canada,45.290076,-75.91802299999999,http://www.auracounselling.ca/,,+1 613-884-0493,,False
+995,ALORA Ottawa & ALORA Rooftop,Other,Ottawa,Canada,45.42832079999999,-75.6943277,http://www.aloraottawa.com/,,+1 613-562-4955,,False
+996,Aura Forero,Other,Ottawa,Canada,45.4434451,-75.64160389999999,,,,,False
+997,Aura,Other,Toronto,Canada,43.6596706,-79.3825726,http://www.auracollegepark.ca/,,+1 416-962-8688,,False
+998,Aura,Other,Toronto,Canada,43.6588074,-79.3507721,http://www.auraofficial.ca/,,+1 416-465-2872,,False
+999,Aura Concourse Shopping Mall,Other,Toronto,Canada,43.65966239999999,-79.3825772,,,+1 416-205-1130,,False
+1000,Aura LLP,Other,Toronto,Canada,43.6509319,-79.3833355,https://aurallp.com/,,+1 416-900-0389,,False
+1001,Aura Cleaners,Other,Toronto,Canada,43.6593246,-79.3827819,,,,,False
+1002,Aura Finance Inc - Tax Filing Services in Toronto/Mortgage and Business Loans/Best Accountant in Toronto,Other,Toronto,Canada,43.6639718,-79.4029958,http://www.aurafinance.ca/,,+1 647-949-2900,,False
+1003,Aura Group of Companies,Other,Vaughan,Canada,43.827012,-79.4899877,https://www.auragoc.com/,,+1 905-761-0077,,False
+1004,Aura Office Environments,Other,Toronto,Canada,43.6486362,-79.38174389999999,https://www.auraoffice.ca/,,+1 437-747-2805,,False
+1005,GLG LLP,Other,Toronto,Canada,43.6516207,-79.3822568,https://www.glgllp.ca/,,+1 416-272-7557,,False
+1006,Shop Aura,Other,Toronto,Canada,43.8174374,-79.3029421,https://shopauratools.com/pages/about-us,,+1 647-493-1953,,False
+1007,Aura Office,Other,Vancouver,Canada,49.283644,-123.1170477,https://www.auraoffice.ca/,,+1 604-510-7101,,False
+1008,Aura Nightclub,Event Management,Vancouver,Canada,49.2771997,-123.1256034,http://www.auravancouver.com/,,+1 604-688-8889,,False
+1009,Aura 3D,Other,Vancouver,Canada,49.2861397,-123.1232654,http://www.aura3dstudios.com/,,+1 778-985-4761,,False
+1010,Aura Clinic Spaces,Health & Wellbeing,Vancouver,Canada,49.2827092,-123.1188238,http://auraclinicspaces.ca/,,+1 604-510-7101,,False
+1011,Aurora Cannabis Inc.,Other,Vancouver,Canada,49.2853775,-123.1146923,https://investor.auroramj.com/,,+1 844-928-7672,,False
+1012,Aura Health and Safety Corp,Health & Wellbeing,Burnaby,Canada,49.2329453,-123.0163781,http://aurahealthsafety.com/,,+1 604-428-5941,,False
+1013,Aura,Other,Vancouver,Canada,49.2354912,-123.0349881,,,,,False
+1014,Aura at Sets Salon Spa,Health & Wellbeing,Burnaby,Canada,49.2265151,-123.0018355,https://www.auraatsets.ca/,,+1 604-435-6894,,False
+1015,AURA Condo Presentation Centre,Other,Vancouver,Canada,49.2334497,-123.0363539,,,,,False
+1016,Aura Surgical Center,Other,San Rafael de Escazú,Costa Rica,9.9363546,-84.14309990000001,,,,,False
+1017,Aura Studios,Creative Industries,Guadalupe,Costa Rica,9.950642,-84.0416597,https://www.instagram.com/aurastudioscr?igsh=MzY1NDJmNzMyNQ==,,+506 6031 9525,,False
+1018,Aura Store,Other,Desamparados,Costa Rica,9.9003395,-84.0825326,https://www.facebook.com/aurastore2026,,+506 7049 9831,,False
+1019,Aura Turquesa Bienestar Integral,Health & Wellbeing,San José,Costa Rica,9.992897899999999,-84.1226501,,,+506 8707 2831,,False
+1020,Aura,Other,Fond Cani,Dominica,15.3212854,-61.3554123,,,+1 767-235-7955,,False
+1021,Aura Dominicana,Other,Santo Domingo,Dominican Republic,18.440603,-69.9501181,,,+1 809-563-1011,,False
+1022,𝘼𝙐𝙍𝘼 𝙍𝙀𝙎𝙏𝘼𝙐𝙍𝘼𝙉𝙏 𝙇𝙊𝙐𝙉𝙂𝙀,Other,Santo Domingo Este,Dominican Republic,18.4896636,-69.8680543,,,,,False
+1023,Aura Gardens,Other,Santo Domingo,Dominican Republic,18.5247338,-69.966836,http://consobi.com.do/,,+1 809-563-6214,,False
+1024,AURA AFTER WORK,Other,Santiago de los Caballeros,Dominican Republic,19.4634591,-70.6899205,,,+1 809-964-2121,,False
+1025,Villa Aura,Accommodation,,Dominican Republic,18.4825114,-69.98927669999999,,,,,False
+1026,Aura Boulevard,Other,Punta Cana,Dominican Republic,18.581188,-68.3869271,https://auraboulevard.do/,,+1 809-475-6318,,False
+1027,Salon Aura,Health & Wellbeing,Santo Domingo Este,Dominican Republic,18.51121,-69.8169906,,,,,False
+1028,Aura Confecciones,Other,Santo Domingo,Dominican Republic,18.4867736,-69.8933607,,,+1 829-359-5000,,False
+1029,AURA Corporate,Other,San Salvador,El Salvador,13.6732482,-89.2547281,https://www.facebook.com/auracorporate,,+503 2523 7769,,False
+1030,Torre Aura 360,Other,San Salvador,El Salvador,13.7048968,-89.25561139999999,https://www.propilatam.com/sv/venta/casas-y-apartamentos/aura-360/1080,,,,False
+1031,Aura boutique,Other,Santa Tecla,El Salvador,13.67854,-89.2827478,https://linktr.ee/auraboutique.sv,,+503 7708 0952,,False
+1032,Aurora 360,Other,San Salvador,El Salvador,13.6746859,-89.22669669999999,,,+503 2277 1906,,False
+1033,Silversands Grand Anse,Other,Saint George's,Grenada,12.0309734,-61.75314789999999,https://www.silversandscollection.com/resorts/grand-anse/?utm_source=google&utm_medium=organic&utm_campaign=business-listing,,+1 800-935-4857,,False
+1034,Aura,Other,Ciudad de Guatemala,Guatemala,14.58045,-90.51199009999999,http://aura.gt/,,+502 2333 4456,,False
+1035,Aura Galerías | Guatemala,Creative Industries,Ciudad de Guatemala,Guatemala,14.5850526,-90.5174421,https://www.auragalerias.com/,,+502 4747 5067,,False
+1036,La Aurora International Airport,Other,Ciudad de Guatemala,Guatemala,14.5879704,-90.5306907,http://www.dgac.gob.gt/,,+502 2321 5000,,False
+1037,Aurora C Jewelry,Other,Ciudad de Guatemala,Guatemala,14.5905197,-90.4926717,,,+502 3799 8028,,False
+1038,L’Aurora Inn,Other,Ciudad de Guatemala,Guatemala,14.5862063,-90.5325098,https://www.laurorainn.com/,,+502 3566 6771,,False
+1039,Aurora Networks Guatemala,Other,Zaragoza,Guatemala,14.6495712,-90.89133059999999,http://aurora.com.gt/,,+502 3365 2501,,False
+1040,Auro Guatemala,Other,Ciudad de Guatemala,Guatemala,14.6052723,-90.5111985,http://www.auro.com.gt/,,+502 2238 5836,,False
+1041,AURA BEAUTY STUDIO,Health & Wellbeing,Tegucigalpa,Honduras,14.101872,-87.1865703,,,,,False
+1042,Aura's Beauty Studio,Health & Wellbeing,Tegucigalpa,Honduras,14.0948384,-87.1811323,https://www.facebook.com/profile.php?id=61561531409280&mibextid=kFxxJD,,,,False
+1043,Aura Group,Other,Ciudad de México,Mexico,19.4250418,-99.17053209999999,,,+52 999 489 0306,,False
+1044,Grupo Aura,Other,Ciudad de México,Mexico,19.4359967,-99.19450549999999,,,+52 55 5279 3550,,False
+1045,Aura Campos Eliseos,Other,Polanco,Mexico,19.4299918,-99.1859903,https://www.orchidhousehotels.com/food-and-drinks/mexico-city-aura-restaurant,,+52 55 2155 2023,,False
+1046,Aura México,Other,Colonia Juárez,Mexico,19.4251968,-99.1606858,,,,,False
+1047,Aura Cocina Mexicana,Other,Ciudad de México,Mexico,19.411723,-99.164701,https://www.auramexcooking.com/,,+52 55 8434 7727,,False
+1048,Aura Casa Coyoacán,Other,Ciudad de México,Mexico,19.3468847,-99.16453,https://auramexcooking.com/,,+52 55 5160 1534,,False
+1049,Aura,Other,Ciudad de México,Mexico,19.399929,-99.1412615,,,,,False
+1050,Aura Tienda de Ropa,Other,Ciudad de México,Mexico,19.4377426,-99.12400670000001,https://www.tiktok.com/@auramexico24,,+52 56 1016 0082,,False
+1051,Plaza Aura,Other,Cancún,Mexico,21.120322,-86.8446252,,,,,False
+1052,Comercializadora Aura Cancun SA DE CV,Other,Cancún,Mexico,21.152256,-86.844928,,,+52 998 847 5349,,False
+1053,"The Westin Resort & Spa, Cancun",Health & Wellbeing,Cancún,Mexico,21.0392024,-86.7821664,https://www.marriott.com/en-us/hotels/cunwo-the-westin-resort-and-spa-cancun/overview/?scid=f2ae0541-1279-4f24-b197-a979c79310b0,,+52 998 848 7400,,False
+1054,Wyndham Grand Cancun All Inclusive Resort & Villas,Accommodation,Cancún,Mexico,21.0747617,-86.7759482,https://www.wyndhamgrandcancun.com/,,+52 998 881 0600,,False
+1055,Aura Smart Luxury Living,Creative Industries,Mérida,Mexico,21.0184412,-89.6072482,,,+52 999 461 1692,,False
+1056,Aura Solar,Other,Managua,Nicaragua,12.1413231,-86.2295273,https://www.facebook.com/detodoventa123?mibextid=LQQJ4d&rdid=jGj48ndkibS3ktDp&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2FMCen7CDEvqEziYtS%2F%3Fmibextid%3DLQQJ4d,,+505 5820 2530,,False
+1057,Arura Salud Holística,Health & Wellbeing,Managua,Nicaragua,12.1246844,-86.25757709999999,https://www.aruraholistica.com/,,+505 7546 9797,,False
+1058,Aurora Bienes Raices,Other,Managua,Nicaragua,12.1090148,-86.25131209999999,https://www.aurorabienesraices.com/,,+505 2276 2508,,False
+1059,Aura Panamá,Other,Panamá,Panama,9.1095928,-79.47594029999999,https://aurapanama.com/,,+507 6204-6321,,False
+1060,Aura BioBalance,Health & Wellbeing,Panamá,Panama,9.015265500000002,-79.4649575,https://aurabiobalance.com/,,,,False
+1061,Aura Beauty Salon,Health & Wellbeing,Panamá,Panama,8.9942522,-79.5098196,,,+507 6792-5695,,False
+1062,Aura Posada Spa,Health & Wellbeing,Panamá,Panama,8.9784426,-79.5113636,,,+507 6263-7337,,False
+1063,AURA Obarrio,Other,Panamá,Panama,8.9884302,-79.5188191,https://auraobarrio.com/,,+507 301-0011,,False
+1064,Aurora Panamá,Other,Panamá,Panama,9.0273805,-79.52359109999999,https://aurorapma.com/,,+507 6579-0489,,False
+1065,Aurea,Other,Panamá,Panama,8.9808928,-79.51000630000001,http://desarrolladora-aurea.com/,,+507 202-2080,,False
+1066,Villa Aura,Accommodation,Sapphire,Saint Lucia,13.7610384,-61.0212361,http://airbnb.com/h/aura-villa,,+1 758-716-8598,,False
+1067,Aura Energy Limited,Other,,Trinidad and Tobago,10.4005653,-61.47859329999999,,,,,False
+1068,Aura Solution Company Limited,Other,Washington,United States,38.9005046,-77.0384718,http://www.aura.co.th/,,+1 267-696-0444,,False
+1069,AURA Corporate Headquarters,Creative Industries,Washington,United States,38.8963689,-77.0310413,http://www.aura-astronomy.org/,,+1 202-483-2101,,False
+1070,Aura Bar & Lounge,Event Management,Washington,United States,38.9587442,-77.0843502,https://aurabardc.com/,,+1 202-525-4525,,False
+1071,Aura spa - Logan Circle,Health & Wellbeing,Washington,United States,38.9101462,-77.0342187,https://auraspa.net/logan-circle/?utm_source=extnet&utm_medium=yext,,+1 202-588-5557,,False
+1072,Aura spa - U Street,Health & Wellbeing,Washington,United States,38.9167819,-77.0376355,https://auraspa.net/u-street/?utm_source=extnet&utm_medium=yext,,+1 202-232-6620,,False
+1073,"AURA (North, Main Entrance)",Other,Washington,United States,38.8971951,-77.0307026,https://www.aura-astronomy.org/,,+1 202-483-2101,,False
+1074,Aurora Salon,Health & Wellbeing,Washington,United States,38.9000532,-77.00131019999999,https://www.aurorasalondc.com/,,+1 202-525-4944,,False
+1075,Aura Studio Designs,Creative Industries,Washington,United States,38.91064830000001,-76.99773359999999,,,+1 240-421-9180,,False
+1076,Aura Indian Food Paradise,Other,Ashburn,United States,39.0138055,-77.4611271,https://www.auraashburn.com/,,+1 703-842-7500,,False
+1077,Assocation of Universities for Research in Astronomy,Other,Washington,United States,38.89634119999999,-77.03116870000001,,,+1 202-483-2101,,False
+1078,Waldorf Astoria Washington DC,Other,Washington,United States,38.894108,-77.027582,https://www.hilton.com/en/hotels/dcawawa-waldorf-astoria-washington-dc/?SEO_id=GMB-AMER-WA-DCAWAWA&y_source=1_NDAwNzQzNTktNzE1LWxvY2F0aW9uLndlYnNpdGU%3D,,+1 202-695-1100,,False
+1079,Aurae,Other,Washington,United States,38.9437242,-77.0612477,,,+1 804-244-1185,,False
+1080,Aura New York,Other,New York,United States,40.7467751,-73.99327,https://auranewyork.com/,,+1 917-727-5250,,False
+1081,Aura International Inc.,Other,New York,United States,40.7573938,-73.9806151,,,+1 212-944-8491,,False
+1082,Aura Merchandising Ltd,Other,New York,United States,40.7412103,-74.00673859999999,http://www.auralimited.com/,,+1 212-760-0803,,False
+1083,aura,Health & Wellbeing,New York,United States,40.7438875,-73.9850604,,,+1 929-357-2773,,False
+1084,AURA Tapas & Cocktail Bar,Other,New York,United States,40.7269507,-73.9860185,http://www.aurabarandkitchen.com/,,+1 646-573-5578,,False
+1085,"Aura Home, Inc.",Other,New York,United States,40.7195239,-73.9998387,https://auraframes.com/,,,,False
+1086,Love Letter NYC: Aura Experience,Other,New York,United States,40.7190176,-73.9912931,https://www.loveletter.nyc/,,+1 646-585-8347,,False
+1087,Aura Mirrors,Other,New York,United States,40.7338569,-74.003074,,,+1 917-704-7519,,False
+1088,Aura Reading NYC,Health & Wellbeing,New York,United States,40.76461949999999,-73.9803238,http://aurareadingnyc.com/,,,,False
+1089,Aura Lounge,Event Management,Clifton,United States,40.8850832,-74.1492573,https://www.auraloungenj.com/,,+1 973-400-0333,,False
+1090,Aura Frames,Other,New York,United States,40.7281197,-73.99161149999999,http://auraframes.com/,,+1 800-778-7879,,False
+1091,"One Aura Holdings, LLC",Other,,United States,40.6720401,-73.9310927,https://oneauraholdings.com/,,+1 866-271-6653,,False
+1092,Aura Hotel Times Square,Accommodation,New York,United States,40.7564316,-73.98428679999999,https://www.aurahotelnyc.com/,,+1 212-710-7000,,False
+1093,Aura Cocina,Other,,United States,40.7092108,-73.9350019,https://auracocinanyc.com/,,+1 718-736-3054,,False
+1094,Aura Coffee and Bar,Health & Wellbeing,,United States,40.6764739,-73.9625935,https://www.instagram.com/aura_coffee_bk,,+1 347-365-7365,,False
+1095,Aura Media,Creative Industries,,United States,40.7472718,-73.95587189999999,http://auramedia.us/,,+1 917-331-3537,,False
+1096,Aura Photo Pros,Health & Wellbeing,Los Angeles,United States,34.04423240000001,-118.4531667,https://auraphotopros.com/,,+1 747-444-7274,,False
+1097,Hollywood Aura Photography,Health & Wellbeing,Los Angeles,United States,34.0840604,-118.360066,https://hollywoodaura.com/,,+1 424-542-7727,,False
+1098,Auragami,Other,Los Angeles,United States,34.0652905,-118.2373771,http://auragami.la/,,,,False
+1099,Aura photography and reading,Other,Los Angeles,United States,34.0441362,-118.4533103,,,+1 323-345-7373,,False
+1100,The Aura Journey: Event Aura Photography Experience,Other,Glendale,United States,34.1765377,-118.2887646,https://www.theaurajourney.com/,,+1 818-813-1274,,False
+1101,Hotel Aurora,Accommodation,Nuuk,Greenland,64.1652597,-51.7381095,https://www.hotel-aurora.gl/,,+299 36 22 90,,False
+1102,Aura Salón by Marleny,Other,San Juan,Puerto Rico,18.4243674,-66.0587544,,,+1 787-662-1872,,False
+1103,Aura Club Mayagüez,Other,Mayagüez,Puerto Rico,18.2009856,-67.1377054,http://fb.me/AuraClubPR,,+1 787-579-1198,,False
+1104,Aurora,Other,San Juan,Puerto Rico,18.4510371,-66.0800879,https://www.instagram.com/auroralacerra?igsh=OTV5MzBmaHdlZWMz,,,,False
+1105,Plaza Aura,Other,San Juan del Río,Mexico,20.3801287,-99.9865414,,,+52 427 272 4274,,False
+1106,Aura Med Clinic,Health & Wellbeing,Ponce,Puerto Rico,18.0098606,-66.6020675,https://auramedclinicpr.com/,,+1 787-931-7309,,False
+1107,Aurora Boutique,Other,San Juan,Puerto Rico,18.3995926,-66.10450159999999,,,+1 787-428-1212,,False
+1108,Aura,Other,Braddon,Australia,-35.2741702,149.1336148,http://thisisaura.com/,,,,False
+1109,Aurabox,Other,Symonston,Australia,-35.334175,149.1657717,http://aurabox.cloud/,,,,False
+1110,J.Aura,Other,Canberra,Australia,-35.3075194,149.1100125,https://www.j-aura.com.au/,,+61 433 467 136,,False
+1111,Aura Group,Other,Sydney,Australia,-33.8667645,151.209816,https://www.aura.co/,,+61 2 9199 8888,,False
+1112,Aura,Other,Pyrmont,Australia,-33.8636746,151.1948953,http://thisisaura.com/,,,,False
+1113,Aura Online Digital Agency Sydney,Other,Sydney,Australia,-33.8684708,151.2050309,http://auraonline.com.au/,,+61 435 619 455,,False
+1114,AURA,Other,Ultimo,Australia,-33.879286,151.196234,https://aura.travel/,,+61 2 8002 5400,,False
+1115,AURA by Aqualand,Other,North Sydney,Australia,-33.8346177,151.2089165,https://aurasydney.com.au/,,+61 1800 207 778,,False
+1116,Aura Nightclub,Event Management,Darlinghurst,Australia,-33.8814119,151.2173385,https://auranightclub.com.au/,,+61 423 447 872,,False
+1117,Aurora Rooftop Hotel,Accommodation,Surry Hills,Australia,-33.8841261,151.2084186,http://www.aurorahotel.com.au/,,+61 2 9211 3462,,False
+1118,AURA by Aqualand Display Showroom,Other,North Sydney,Australia,-33.8347534,151.2090783,https://aurasydney.com.au/enquire/,,+61 1800 207 778,,False
+1119,Aurora Place,Other,Sydney,Australia,-33.8647133,151.2120189,http://www.auroraplace.com.au/,,+61 2 8243 4400,,False
+1120,Aura Aquarium,Other,Moorebank,Australia,-33.9307241,150.9410906,http://www.auraaquarium.com/,,+61 411 576 508,,False
+1121,AURA Migration Services,Other,Parramatta,Australia,-33.814349,151.0090789,https://auramigrationservices.com.au/,,+61 433 986 780,,False
+1122,Aura Electrical Group,Other,Illawong,Australia,-34.0012551,151.0230092,http://auraelectricalgroup.com.au/,,+61 482 075 604,,False
+1123,Aurora People Pty Ltd,Other,Sydney,Australia,-33.8684088,151.2073994,http://www.aurorapeople.com.au/,,+61 428 534 948,,False
+1124,Aurora Digital Sydney,Other,Parramatta,Australia,-33.8156786,151.0101769,http://www.auroradigitalsydney.com.au/,,+61 435 552 365,,False
+1125,Ora Restaurant,Other,Waterloo,Australia,-33.8974442,151.210175,http://orasydney.com.au/,,+61 2 6261 0088,,False
+1126,Aurora Ventures,Other,Sydney,Australia,-33.863638,151.2049168,https://www.aurora-ventures.com/Contact,,+61 2 8074 6876,,False
+1127,AurA Hair & Body,Health & Wellbeing,Crows Nest,Australia,-33.8302234,151.2023296,http://www.aurahairandbody.com.au/,,+61 2 9955 5055,,False
+1128,Aurora Financial Group,Other,Sydney,Australia,-33.8623272,151.2080953,http://www.aurorafinancial.com.au/,,,,False
+1129,Aura Home South Melbourne Concept Store,Other,South Melbourne,Australia,-37.8319375,144.9591016,https://www.aurahome.com.au/?utm_source=google&utm_medium=organic&utm_campaign=gmb_south-melbourne,,+61 3 9558 0765,,False
+1130,Aura on Flinders,Other,Melbourne,Australia,-37.8201858,144.9564628,http://www.auraonflinders.com.au/,,+61 3 8648 4178,,False
+1131,Aura Beverage Co,Other,South Melbourne,Australia,-37.8307863,144.9559712,,,+61 3 9681 8224,,False
+1132,Aura & Co,Other,Cheltenham,Australia,-37.9493397,145.0645686,https://auraandco.com.au/,,+61 3 9078 2014,,False
+1133,Aura Home Office,Other,Heatherton,Australia,-37.9481049,145.0821887,https://www.aurahome.com.au/?utm_source=gmb&utm_medium=organic&utm_campaign=gmb,,+61 1300 304 269,,False
+1134,Aura Home Hawksburn Concept Store,Other,Toorak,Australia,-37.8480169,145.0041084,https://www.aurahome.com.au/,,+61 3 9551 7695,,False
+1135,Aura Properties Australia,Cities & Developments,Williams Landing,Australia,-37.8667871,144.7463543,https://auraproperties.com.au/,,+61 433 237 444,,False
+1136,Aura Information Security,Other,Melbourne,Australia,-37.8182249,144.9617661,https://www.aurainfosec.com/,,+61 3 8652 1243,,False
+1137,Aurarum Pty Ltd,Other,Ringwood,Australia,-37.8284053,145.215227,https://aurarum.com.au/,,+61 3 0000 0000,,False
+1138,Aurum Aura Pty Ltd,Other,Camberwell,Australia,-37.836699,145.0978232,,,+61 456 831 383,,False
+1139,Aurora Melbourne Central,Other,Melbourne,Australia,-37.8097352,144.9624679,,,+61 497 777 057,,False
+1140,Aurora,Other,Docklands,Australia,-37.8186894,144.9468471,https://www.development.vic.gov.au/projects/docklands,,+61 3 8317 3400,,False
+1141,Aura Wellness Massage Center,Health & Wellbeing,Ormond,Australia,-37.9041483,145.0434159,,,+61 416 794 582,,False
+1142,Aurà,Other,Tarneit,Australia,-37.8536495,144.66587,https://www.aurafragrancesoflife.com/,,+61 412 101 096,,False
+1143,Aura Skin Boutique,Health & Wellbeing,Essendon North,Australia,-37.7403906,144.9005129,https://auraskinboutique.com.au/,,+61 450 000 083,,False
+1144,AURA CURRY HOUSE AND CAFE - Indian Cuisine Restaurant,Other,Dandenong,Australia,-37.9843682,145.2142402,https://auracurryhousecafe.com/,,+61 3 8774 4913,,False
+1145,Aura Mind Body Soul,Health & Wellbeing,Altona,Australia,-37.868226,144.8302548,https://aura-mind-body-soul.me/,,+61 3 9398 8609,,False
+1146,Aura & Stone,Other,Epping,Australia,-37.6414773,145.0026789,,,,,False
+1147,Aurora Foods Pty Ltd,Other,Coburg North,Australia,-37.726119,144.9529441,https://www.aurorafoods.com.au/,,+61 3 9350 1800,,False
+1148,EdroloHQ,Other,Melbourne,Australia,-37.8085405,144.9685306,http://edrolo.com.au/,,+61 1300 337 656,,False
+1149,Aurora Funds Management,Other,Melbourne,Australia,-37.8318044,144.970969,https://www.aurorafunds.com.au/contact-us/,,+61 1300 553 431,,False
+1150,Aura Holdings,Other,Coorparoo,Australia,-27.4887109,153.0545611,https://auraholdings.com.au/,,+61 7 3397 2930,,False
+1151,Aura Education,Other,Fortitude Valley,Australia,-27.4565383,153.0350623,https://aura.edu.au/,,+61 482 036 611,,False
+1152,Oaks Brisbane Aurora Suites,Other,Brisbane City,Australia,-27.4654214,153.0303564,http://oakshotels.com/en/oaks-aurora-tower?utm_description=GoogleMyBusiness&utm_campaign=GMBAurora&utm_source=GoogleMyBusiness&utm_medium=GMBAurora,,+61 1300 661 903,,False
+1153,Stockland Aura Vision Centre & Display Village,Accommodation,Bells Creek,Australia,-26.8209449,153.0641318,https://www.stockland.com.au/residential/qld/aura?utm_source=google&utm_medium=organic&utm_campaign=googlemybusiness,,+61 135263,,False
+1154,AURA WASHROOMS,Other,Strathpine,Australia,-27.3038926,152.9880201,http://aurawashrooms.com.au/,,+61 7 3881 1350,,False
+1155,Aura Bar,Other,Brisbane City,Australia,-27.459406,153.030936,,,+61 7 3831 6661,,False
+1156,It's A Wrap Fiji,Other,Suva,Fiji,-18.1094873,178.4461463,https://devhousebyitsawrap.com/,,+679 944 4307,,False
+1157,aurora mirage apartments,Creative Industries,Nadi,Fiji,-17.7980659,177.4139177,,,,,False
+1158,Aura Information Security,Other,Wellington,New Zealand,-41.2808898,174.7761633,https://www.aurainfosec.com/,,+64 4 894 3755,,False
+1159,Aura Hotel,Accommodation,Wellington,New Zealand,-41.2913504,174.7773019,http://rivers-guest-house.wellington-hotels-guide.com/en/,,+64 4 333 0591,,False
+1160,Auror,Other,Auckland,New Zealand,-36.8449853,174.7694146,https://www.auror.co/,,,,False
+1161,Auror,Other,Auckland,New Zealand,-36.8449853,174.7694146,http://www.auror.co/,,,,False
+1162,Aura Apartments,Creative Industries,Auckland,New Zealand,-36.8511495,174.7591033,,,,,False
+1163,Aura-Soma NZ,Health & Wellbeing,Auckland,New Zealand,-36.7117663,174.7485405,http://www.aura-soma.co.nz/,,+64 27 887 8894,,False
+1164,Aura,Other,Auckland,New Zealand,-36.9076503,174.8148255,https://www.aura.com.au/contact-aura/,,+64 9 579 0246,,False
+1165,Aurae Ltd,Other,Auckland,New Zealand,-36.7531399,174.704464,https://www.aurae.co.nz/,,+64 9 972 2897,,False
+1166,Beauty Aura Medi Spa,Health & Wellbeing,Auckland,New Zealand,-36.8842309,174.7317382,https://www.beautyaura.co.nz/,,+64 20 4035 6327,,False
+1167,Aura Information Security,Other,Auckland,New Zealand,-36.8480771,174.758638,https://www.aurainfosec.com/,,+64 800 287 212,,False
+1168,Aura,Other,Auckland,New Zealand,-36.8932537,174.8303241,https://www.btl-aura.co.nz/contact-aura/,,+64 9 579 0246,,False
+1169,Aura Cars,Other,Auckland,New Zealand,-36.9805237,174.8759411,http://www.auracars.co.nz/,,+64 800 287 222,,False
+1170,Akura Dining & Lounge Bar,Event Management,Port Moresby,Papua New Guinea,-9.476603100000002,147.1489725,,,+675 7320 7777,,False
+1171,Le Aura Inn,Other,Vaitele,Samoa,-13.8346907,-171.8183502,,,+685 22221,,False
+1172,A & A Retailer (Tonga) Ltd,Other,Nuku'alofa,Tonga,-21.1453882,-175.205028,http://www.aagroup.to/,,+676 22-331,,False
+1173,Emerald Hotel,Accommodation,Nuku'alofa,Tonga,-21.1347696,-175.1955068,,,+676 22-888,,False
+1174,Tanoa International Dateline Hotel,Accommodation,Nuku'alofa,Tonga,-21.1352765,-175.1946697,http://www.tanoadateline.com/,,+676 23-411,,False
+1175,Leiola,Other,Nuku'alofa,Tonga,-21.1413491,-175.1862288,https://leiola.com/,,,,False
+1176,AURORA KAVA BAR - NAMBURU,Other,Port Vila,Vanuatu,-17.7195321,168.3149558,,,+678 522 0196,,False
+1177,Ora Partners Cook Islands Limited,Creative Industries,Avarua,Cook Islands,-21.2012338,-159.805944,http://www.ora-partners.com/,,+682 27 047,,False
+1178,Avarua,Other,Avarua,Cook Islands,-21.2056839,-159.7850102,,,,,False
+1179,Kia Orana Villas and Spa,Health & Wellbeing,Rarotonga,Cook Islands,-21.2077856,-159.791048,https://kiaoranavillas.com/,,+682 54 341,,False
+1180,Aura,Other,C1407EJN,Argentina,-34.6280619,-58.4774099,http://www.auraonline.com.ar/,,+54 9 11 2778-1150,,False
+1181,AURA Edificios,Other,Villa Madero,Argentina,-34.6977352,-58.5066844,https://www.auraedificios.com.ar/,,+54 9 11 3080-0532,,False
+1182,AURA,Other,Buenos Aires,Argentina,-34.5854472,-58.41147519999999,,,,,False
+1183,Aura Olivos,Other,Olivos,Argentina,-34.5064383,-58.4831311,https://grupochomer.com/,,,,False
+1184,Aura Group srl,Other,Buenos Aires,Argentina,-34.5597126,-58.46206240000001,,,+54 11 3965-7849,,False
+1185,Aura,Other,C1414CWF,Argentina,-34.5863993,-58.4363815,,,,,False
+1186,El Aura SA,Other,Buenos Aires,Argentina,-34.5997615,-58.3931511,,,+54 11 4816-5348,,False
+1187,AURA Diseño y Comunicación,Other,Castelar,Argentina,-34.639114,-58.62706129999999,https://www.facebook.com/aurasublimaciones/,,+54 9 11 6592-1332,,False
+1188,Auren,Other,Buenos Aires,Argentina,-34.6024473,-58.3710256,https://auren.com/ar/,,+54 11 6011-9638,,False
+1189,AURA NEGOCIOS INMOBILIARIOS,Other,Buenos Aires,Argentina,-34.5694054,-58.44648579999999,https://www.instagram.com/julieta.broker/,,+54 9 11 4179-1421,,False
+1190,Aura SRL,Other,Buenos Aires,Argentina,-34.6173506,-58.4288826,,,+54 11 4903-4705,,False
+1191,AURA,Other,Vicente López,Argentina,-34.5306199,-58.4702478,,,,,False
+1192,Torres Aura,Other,La Paz,Bolivia,-16.562489,-68.0915614,,,,,False
+1193,Aura by GTN,Other,La Paz,Bolivia,-16.5423329,-68.0915618,,,,,False
+1194,Aura Restaurante,Other,La Paz,Bolivia,-16.5431961,-68.0796427,https://linktr.ee/aurarest,,+591 77782800,,False
+1195,Aura Laser e Estética Avançada - Jardim Botânico,Other,,Brazil,-15.8699984,-47.8215824,,,+55 61 99654-7575,,False
+1196,Aura Fashion Store,Other,,Brazil,-15.7982442,-47.91980479999999,http://www.aurafashionstore.com.br/,,+55 61 98311-8292,,False
+1197,Luxe Aura - Beleza,Other,,Brazil,-15.8225691,-47.92839739999999,,,+55 61 98180-2425,,False
+1198,Aura - Design Criativo,Creative Industries,,Brazil,-15.8381822,-48.03804220000001,,,+55 61 99800-9570,,False
+1199,Aura Decora,Other,,Brazil,-15.7991901,-47.9217561,,,+55 61 98208-0811,,False
+1200,Agência Aurora Marketing e Consultoria,Other,,Brazil,-15.7917014,-47.9136163,http://www.vendacomaurora.com.br/,,+55 61 99815-0456,,False
+1201,AURA ateliê oral,Health & Wellbeing,,Brazil,-15.7869309,-47.88925159999999,http://www.auraodontologia.com.br/,,+55 61 3033-5979,,False
+1202,AURA BEAUTY,Health & Wellbeing,,Brazil,-15.7987919,-47.8948349,https://instagram.com/aylon.aylon?igshid=NTc4MTIwNjQ2YQ==,,+55 61 99106-0415,,False
+1203,Aura Swimwear,Other,,Brazil,-22.9845958,-43.2022359,https://www.auraswimwear.com.br/,,+55 21 99940-6123,,False
+1204,Aura spa,Health & Wellbeing,,Brazil,-22.9694715,-43.1845783,https://linktr.ee/aura.spa,,+55 21 97704-7115,,False
+1205,AURA BRASIL - TRANSPORTES MÁQUINAS E EQUIPAMENTOS LTDA,Other,,Brazil,-22.8173989,-43.3103875,http://www.aurabrasil.com.br/,,+55 21 3452-8879,,False
+1206,Aura,Other,,Brazil,-23.0165111,-43.4662041,https://aura.jbandrade.com.br/,,+55 21 3139-9700,,False
+1207,Aura Design,Creative Industries,,Brazil,-22.9160419,-43.2094026,http://www.auradesign.com.br/,,+55 21 2504-2153,,False
+1208,AURA headquarters.,Creative Industries,,Brazil,-23.5303759,-46.69806699999999,,,+55 11 94990-9314,,False
+1209,Studio Aura,Creative Industries,,Brazil,-23.5307511,-46.6618651,https://creativeaura.com.br/,,+55 11 3661-6183,,False
+1210,Aura Investimentos,Other,,Brazil,-23.5371441,-46.673181,http://www.aurainvestimentos.com.br/,,+55 11 3392-5750,,False
+1211,Aura Brazil Comércio Internacional,Other,,Brazil,-21.1882866,-47.795324,https://www.aurabrazil.com/,,+55 16 3100-0054,,False
+1212,Aura Galeria,Creative Industries,,Brazil,-23.557718,-46.664872,http://aura.art.br/,,+55 11 3034-3825,,False
+1213,Aura Spa,Health & Wellbeing,,Brazil,-23.5846932,-46.64703979999999,http://auraspa.com.br/,,+55 11 93422-1020,,False
+1214,Aura Pacaembu Perdizes,Other,,Brazil,-23.5371037,-46.6675446,http://cyrelaperdizes.habitatinnov.com/,,+55 11 97053-8128,,False
+1215,AURA SIGNATURES,Other,,Brazil,-23.5688611,-46.6904946,https://www.aurasignatures.com.br/,,+55 17 99144-6840,,False
+1216,Aura Soma Artworks Brasil,Health & Wellbeing,,Brazil,-23.61151,-46.708134,http://www.aura-soma.com.br/,,+55 11 3759-0047,,False
+1217,Aura criativos,Other,,Brazil,-23.5524279,-46.6290009,http://www.auracriativos.com.br/,,+55 11 95197-0036,,False
+1218,Aura Soma Artworks Brasil,Creative Industries,,Brazil,-23.5950511,-46.6700651,,,+55 11 3045-1155,,False
+1219,La Bella Aura,Other,,Brazil,-23.567364,-46.6577572,https://www.instagram.com/labellaaura_mentoria/,,+55 11 94376-7628,,False
+1220,IMPORTADORA Y COMERCIALIZADORA AURA SPA,Health & Wellbeing,Santiago,Chile,-33.4511395,-70.67328599999999,,,+56 9 7267 2376,,False
+1221,Aura Club | Centro de Eventos y Discoteca en Vitacura,Other,Vitacura,Chile,-33.3817958,-70.5453806,https://auraclub.cl/,,+56 9 8901 8185,,False
+1222,Aura Ltda,Other,Santiago,Chile,-33.4488928,-70.6692793,,,+56 9 6660 2852,,False
+1223,Aura Chile S.A.,Other,Las Condes,Chile,-33.4279839,-70.5733468,,,,,False
+1224,Aura Estudios Santiago,Creative Industries,Santiago,Chile,-33.4459231,-70.6347712,,,+56 9 7495 1708,,False
+1225,Aura Pilates Studio,Health & Wellbeing,Las Condes,Chile,-33.4181781,-70.5923602,https://aurapilates.cl/,,+56 9 2627 4048,,False
+1226,Aura Empresarial,Other,Bogotá,Colombia,4.6772504,-74.0835596,http://auraempresarial.com/,,,,False
+1227,Edificio Aura,Other,Quito,Ecuador,-0.1938579,-78.4782146,http://www.alvarezbravo.com.ec/,,+593 99 596 9598,,False
+1228,Aura Imports,Other,Quito,Ecuador,-0.1432648,-78.4829613,,,+593 93 999 1234,,False
+1229,Vesijue!!,Other,Quito,Ecuador,-0.1981092,-78.4811364,,,,,False
+1230,Aurora Rush Makeup Studio,Creative Industries,Georgetown,Guyana,6.8196091,-58.11038669999999,,,+592 663 1772,,False
+1231,Aura Boutique,Other,Asunción,Paraguay,-25.2894315,-57.64922190000001,https://instagram.com/auraconfecciones?utm_medium=copy_link,,+595 981 851964,,False
+1232,Aura Paraguay,Other,Asunción,Paraguay,-25.2829867,-57.5623157,,,,,False
+1233,Aura audiovisual,Other,Asunción,Paraguay,-25.3009391,-57.5498696,http://www.auraaudiovisual.com/,,,,False
+1234,Áurea Network,Other,Asunción,Paraguay,-25.2972094,-57.581014,,,+595 972 560010,,False
+1235,Aura Esthetic Center,Other,Asunción,Paraguay,-25.2873566,-57.55696440000001,,,+595 971 100940,,False
+1236,AURA Japandi Residences,Other,Asunción,Paraguay,-25.2968481,-57.5765396,,,,,False
+1237,Estudio Aura,Creative Industries,Asunción,Paraguay,-25.2860983,-57.6396495,,,+595 972 110759,,False
+1238,Aura Face Lab - Shopping Mariscal,Other,Asunción,Paraguay,-25.2945262,-57.5816407,https://www.instagram.com/aurafacelab?igsh=MWZhODAxeXE4OGdqMA==,,+595 971 100940,,False
+1239,Inversiones Aura Peru SAC,Other,La Victoria,Peru,-12.06534,-77.02919720000001,https://inversionesauraperu.com/,,,,False
+1240,AURA DISEÑO Y ARQUITECTURA,Other,Ate,Peru,-12.0697154,-76.9860344,http://www.auraperusac.com/,,,,False
+1241,Aura Systems,Other,Santiago de Surco,Peru,-12.0809624,-76.9667351,https://www.aurasystemsperu.com/,,+51 1 7392521,,False
+1242,Aura,Other,Lima,Peru,-12.114534,-77.027091,,,,,False
+1243,"Edificio ""Aura del Sur""",Other,Miraflores,Peru,-12.123957,-77.02129959999999,,,+51 920 568 339,,False
+1244,AURA INGENIERÍA PERÚ S.A.C.,Other,Santiago de Surco,Peru,-12.1119413,-76.9902484,http://www.aura.cl/,,,,False
+1245,AURA INTERNATIONAL SAC,Other,Los Olivos,Peru,-11.9585869,-77.0641508,,,+51 993 816 522,,False
+1246,AURA MARKET PERU,Other,Breña,Peru,-12.0664573,-77.054745,,,,,False
+1247,Aura Store - Tienda de ropa y zapatos de dama Huaycan,Other,Ate,Peru,-12.0123733,-76.8240816,https://www.facebook.com/aurastore.pee,,+51 930 525 889,,False
+1248,Aura Studio Perú,Health & Wellbeing,San Miguel,Peru,-12.0872179,-77.0751884,https://www.instagram.com/aurastudio_peru/,,+51 972 402 092,,False
+1249,Consultorio Médico Tu Aura Wellness,Health & Wellbeing,Miraflores,Peru,-12.1211103,-77.0364829,https://www.tuaura.com/,,+51 983 232 939,,False
+1250,Novias AURA,Other,Lima,Peru,-12.047206,-77.029825,,,+51 923 127 914,,False
+1251,Aura salon spa,Health & Wellbeing,Lima,Peru,-11.9893357,-77.0654596,,,,,False
+1252,Aura Andina,Other,Santiago de Surco,Peru,-12.1313061,-76.98247219999999,,,+51 954 827 341,,False
+1253,Aurea Peru,Other,Lima,Peru,-12.0565092,-76.94990279999999,https://www.aureaperu.com/,,+51 975 468 565,,False
+1254,AURA,Other,Cusco,Peru,-13.523322,-71.97426519999999,,,+51 992 767 390,,False
+1255,Aura Restobar Cusco,Other,Cusco,Peru,-13.5141716,-71.9740758,,,+51 992 447 272,,False
+1256,Surora Exchange,Other,Paramaribo,Suriname,5.8295974,-55.1568103,,,+597 477-965,,False
+1257,Aurora hair boutique,Other,Paramaribo,Suriname,5.8152957,-55.1771241,,,+597 889-0975,,False
+1258,Aura,Other,Montevideo,Uruguay,-34.8356352,-56.20686420000001,https://aura.com.uy/,,+598 92 430 558,,False
+1259,Aurora Ideas,Other,Montevideo,Uruguay,-34.8972206,-56.1419541,https://auroraideas.com/,,+598 98 665 724,,False
+1260,Aura Studio | Salón de uñas,Health & Wellbeing,Montevideo,Uruguay,-34.9212723,-56.1595036,https://aurastudio.site.agendapro.com/uy,,+598 91 759 987,,False
+1261,Aura Los Caracas,Other,Los Caracas,Venezuela,10.6271733,-66.5714386,https://auralg.com/,,+58 424-2022524,,False
