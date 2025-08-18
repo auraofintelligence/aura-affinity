@@ -169,7 +169,7 @@
       const icon = buildIcon(color);
       const m = L.marker([+entry.latitude, +entry.longitude], { icon });
       const safeUrl = (entry.website||'').startsWith('http') ? entry.website : (entry.website?`https://${entry.website}`:'');
-      m.bindPopup(`<strong>${entry.name}</strong><br>${entry.category || '—'}<br>${entry.country || ''}${safeUrl?`<br><a href="${safeUrl}" target="_blank">Website</a>`:''}`);
+      const location = [entry.city, entry.country].filter(Boolean).join(', '); const safeSocial = (entry.social||'').startsWith('http') ? entry.social : (entry.social?`https://${entry.social}`:''); m.bindPopup(`   <strong>${entry.name}</strong><br>   <small>${entry.category || '—'}</small><br>   <em>${location || ''}</em>   ${safeUrl ? `<br><a href="${safeUrl}" target="_blank">🌐 Website</a>` : ''}   ${entry.phone ? `<br>📞 ${entry.phone}` : ''}   ${safeSocial ? `<br><a href="${safeSocial}" target="_blank">🔗 Social</a>` : ''} `);
       m.__row = entry;
       clusterGroup.addLayer(m);
       markers.push(m);
