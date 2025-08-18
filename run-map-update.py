@@ -15,7 +15,7 @@ CITY_LIST_PATH = "curation/city-list.txt"
 LOCKLIST_PATH = "curation/locklist.csv"
 OUTPUT_CSV_PATH = "aura-affinity.csv"
 TIMESTAMP_PATH = "last-run.txt"
-SEARCH_KEYWORDS = ["Aura", "Chakra", "Aurora"]
+SEARCH_KEYWORDS = ["Aura", "Chakra", "Aurora", "gajra", "Yoga", "Tai Chi"]
 
 # --- Language Cache ---
 language_cache = {}
