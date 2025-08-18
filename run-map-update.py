@@ -17,7 +17,7 @@ CITY_LIST_PATH = "curation/city-list.txt"
 LOCKLIST_PATH = "curation/locklist.csv"
 OUTPUT_CSV_PATH = "aura-affinity.csv"
 TIMESTAMP_PATH = "last-run.txt"
-SEARCH_KEYWORDS = ["Aura", "Chakra"] # Base keywords to translate
+SEARCH_KEYWORDS = ["Aura", "Chakra", "Aurora"] # Base keywords to translate
 
 # --- Language Cache to avoid re-detecting language for the same country ---
 language_cache = {}
