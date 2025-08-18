@@ -1,150 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <title>Aura Affinity Map</title>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
-    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/papaparse@5.3.0/papaparse.min.js"></script>
-    <style>
-        body {
-            background-color: #111;
-            color: #eee;
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin: 0;
-            padding: 0;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Aura Affinity • Business Directory & Map</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+  <style>
+    :root { --bg:#0e0e10; --panel:#141418; --text:#e6e6ea; --muted:#9aa0a6; --gold:#f7c948; }
+    * { box-sizing: border-box }
+    body { margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji"; background:var(--bg); color:var(--text);}    
+    header { padding:18px 20px 8px; text-align:center; background:#0b0b0d; border-bottom:1px solid #1e1f25; position:sticky; top:0; z-index:5 }
+    h1{ margin:0; color:var(--gold); letter-spacing:.5px }
+    .sub{ margin:6px 0 12px; color:var(--muted); font-size:.95rem }
 
-        h1 {
-            color: gold;
-            margin-top: 1rem;
-        }
+    #map { height:60vh; width:100%; border-bottom:1px solid #1e1f25 }
 
-        #map {
-            height: 60vh;
-            width: 100%;
-        }
+    /* Toolbar under the map */
+    .toolbar { display:flex; flex-wrap:wrap; gap:10px; padding:12px 16px; background:#0b0b0d; border-bottom:1px solid #1e1f25 }
+    .toolbar .field { display:flex; align-items:center; gap:8px; background:var(--panel); border:1px solid #23242b; padding:8px 10px; border-radius:12px }
+    .toolbar label { color:#c7c9ce; font-size:.9rem }
+    .toolbar input[type="text"], .toolbar select { background:transparent; border:none; color:var(--text); outline:none; font-size:.95rem }
+    .toolbar input::placeholder { color:#7a7f87 }
 
-        #filter {
-            margin: 1em;
-            color: #fff;
-        }
+    /* Directory grid */
+    #directory { display:grid; grid-template-columns:repeat(auto-fill, minmax(280px, 1fr)); gap:14px; padding:16px }
+    .card { background:var(--panel); border:1px solid #262832; padding:14px; border-radius:16px; transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease }
+    .card:hover { transform: translateY(-2px) }
+    .card .name { font-weight:700; font-size:1.05rem; margin:0 0 6px }
+    .meta { display:flex; flex-wrap:wrap; gap:8px; align-items:center; color:#c7c9ce; font-size:.9rem; margin-bottom:8px }
+    .badge { padding:3px 8px; border-radius:999px; font-size:.75rem; border:1px solid rgba(255,255,255,.15) }
+    .actions a { color:#7dcfff; text-decoration:none }
+    .actions a:hover { text-decoration:underline }
 
-        #list {
-            width: 90%;
-            margin: auto;
-            color: white;
-        }
+    /* Neon glow per-category via CSS custom prop */
+    .card { box-shadow: 0 0 0px rgba(0,0,0,0); border-color:#262832 }
+    .card[style*="--glow:"] { box-shadow: 0 0 0px rgba(0,0,0,0), 0 0 14px var(--glow); border-color: color-mix(in oklab, var(--glow) 60%, #262832) }
 
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 1rem;
-        }
-
-        th,
-        td {
-            padding: 0.5em;
-            border: 1px solid #333;
-        }
-
-        th {
-            background-color: #333;
-        }
-    </style>
+    /* Utility */
+    .sr { position:absolute; left:-10000px; width:1px; height:1px; overflow:hidden }
+    @media (max-width:640px){ #map{ height:55vh } }
+  </style>
 </head>
-
 <body>
+  <header>
     <h1>Aura Affinity Map</h1>
-    <p>A living network of verified businesses using the name "Aura" across global industries</p>
+    <div class="sub">A living directory of businesses carrying the name “Aura” across the world. Verify, connect, and grow the network.</div>
+  </header>
 
-    <div id="filter">
-        Filter by Category:
-        <select id="categoryFilter">
-            <option value="All">All</option>
-        </select>
+  <div id="map" role="region" aria-label="Aura Affinity map"></div>
+
+  <!-- Toolbar under the map -->
+  <div class="toolbar" id="controls">
+    <div class="field"><label for="q">Search</label><input id="q" type="text" placeholder="Search by name…" /></div>
+    <div class="field"><label for="cat">Category</label>
+      <select id="cat"><option value="">All</option></select>
     </div>
+    <div class="field"><label for="country">Country</label>
+      <select id="country"><option value="">All</option></select>
+    </div>
+  </div>
 
-    <div id="map"></div>
-    <div id="list"></div>
+  <div id="directory" aria-live="polite"></div>
 
-    <script>
-        const map = L.map('map').setView([20, 0], 2);
+  <script>
+    // Chakra palette mapped to closest leaflet-color-marker set
+    const markerColorName = {
+      'Health & Wellbeing': 'red',      // Root / red
+      'Creative Industries': 'orange',  // Sacral / orange
+      'Event Management': 'gold',       // Solar plexus / yellow (gold asset)
+      'Accommodation': 'blue',          // Throat / blue
+      'Cities & Developments': 'green', // Heart / green
+      'Blockchain': 'violet',           // Crown / violet
+      '': 'blue',                       // default
+    };
 
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '&copy; OpenStreetMap contributors'
-        }).addTo(map);
+    const ICON_BASE = 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/';
+    function buildIcon(colorName){
+      // Fallback to blue if unknown
+      const c = colorName && ['red','orange','gold','green','blue','violet','grey','black'].includes(colorName) ? colorName : 'blue';
+      return new L.Icon({
+        iconUrl: ICON_BASE + `marker-icon-2x-${c}.png`,
+        shadowUrl: ICON_BASE + 'marker-shadow.png',
+        iconSize: [25, 41], iconAnchor: [12, 41], popupAnchor: [1, -34], shadowSize: [41, 41]
+      });
+    }
 
-        const markers = [];
-        const colors = {
-            "Health & Wellbeing": "#e91e63",
-            "Creative Industries": "#9c27b0",
-            "Event Management": "#3f51b5",
-            "Accommodation": "#03a9f4",
-            "Cities & Developments": "#4caf50",
-            "Unverified": "#607d8b"
-        };
+    const map = L.map('map').setView([15, 0], 2);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: '© OpenStreetMap contributors' }).addTo(map);
 
-        const colorIcon = (color) => new L.Icon({
-            iconUrl: `https://chart.googleapis.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|${color.replace('#', '')}`,
-            iconSize: [21, 34],
-            iconAnchor: [10, 34],
-            popupAnchor: [1, -34]
+    let raw = [];            // all rows
+    let markers = [];        // current marker refs
+
+    function clearMarkers(){ markers.forEach(m => map.removeLayer(m)); markers = []; }
+
+    function addMarker(entry){
+      const color = markerColorName[entry.category] || 'blue';
+      const icon = buildIcon(color);
+      const m = L.marker([+entry.latitude, +entry.longitude], { icon }).addTo(map);
+      const safeUrl = (entry.website||'').startsWith('http') ? entry.website : `https://${entry.website||''}`;
+      m.bindPopup(`<strong>${entry.name}</strong><br>${entry.category || '—'}<br>${entry.country || ''}<br><a href="${safeUrl}" target="_blank" rel="noopener">Website</a>`);
+      m.__row = entry;
+      markers.push(m);
+      return m;
+    }
+
+    function setOptions(id, values){
+      const sel = document.getElementById(id);
+      const chosen = sel.value;
+      sel.innerHTML = '<option value="">All</option>' + [...values].sort().map(v=>`<option value="${v}">${v}</option>`).join('');
+      if(values.has(chosen)) sel.value = chosen; // preserve
+    }
+
+    function neonFromCategory(cat){
+      const map = { red:'#ef4444', orange:'#fb923c', gold:'#fbbf24', green:'#22c55e', blue:'#3b82f6', violet:'#a78bfa' };
+      return map[markerColorName[cat]||'blue']||'#3b82f6';
+    }
+
+    function renderDirectory(rows){
+      const wrap = document.getElementById('directory');
+      wrap.innerHTML = rows.map((r,i)=>{
+        const glow = neonFromCategory(r.category);
+        const safeUrl = (r.website||'').startsWith('http') ? r.website : (r.website?`https://${r.website}`:'');
+        const verified = String(r.verified||'').toLowerCase()==='true';
+        return `<article class="card" style="--glow:${glow}">
+            <h3 class="name">${r.name || '—'}</h3>
+            <div class="meta">
+              <span class="badge" style="border-color:${glow}; color:${glow}">${r.category || 'Other'}</span>
+              <span>${r.country || ''}</span>
+              <span class="badge" style="color:${verified?'#22c55e':'#eab308'}">${verified?'Verified':'Unverified'}</span>
+            </div>
+            <div class="actions">${safeUrl?`<a href="${safeUrl}" target="_blank" rel="noopener">Visit website</a>`:''}</div>
+          </article>`
+      }).join('');
+
+      // card click -> flyTo marker
+      Array.from(wrap.querySelectorAll('.card')).forEach((el, idx)=>{
+        el.addEventListener('click', ()=>{
+          const r = rows[idx];
+          const m = markers.find(mm=>mm.__row===r);
+          if(m){ map.flyTo(m.getLatLng(), 6, {duration:.6}); m.openPopup(); }
         });
+      });
+    }
 
-        fetch('aura-affinity.csv')
-            .then(response => response.text())
-            .then(csv => {
-                const data = Papa.parse(csv, { header: true }).data;
-                const table = document.createElement('table');
-                const header = table.insertRow();
-                ["Name", "Category", "Country", "Website", "Verified"].forEach(h => header.insertCell().textContent = h);
+    function applyFilters(){
+      const q = document.getElementById('q').value.trim().toLowerCase();
+      const cat = document.getElementById('cat').value;
+      const country = document.getElementById('country').value;
 
-                const categories = new Set();
+      const rows = raw.filter(r=>{
+        if(!r.latitude || !r.longitude) return false;
+        if(cat && r.category!==cat) return false;
+        if(country && r.country!==country) return false;
+        if(q && !( (r.name||'').toLowerCase().includes(q) || (r.website||'').toLowerCase().includes(q) )) return false;
+        return true;
+      });
 
-                data.forEach(entry => {
-                    if (!entry.latitude || !entry.longitude) return;
+      clearMarkers();
+      rows.forEach(addMarker);
+      renderDirectory(rows);
+    }
 
-                    const color = colors[entry.category] || colors["Unverified"];
-                    const marker = L.marker([entry.latitude, entry.longitude], {
-                        icon: colorIcon(color)
-                    }).addTo(map);
-                    marker.bindPopup(`<b>${entry.name}</b><br>${entry.category}<br>${entry.country}<br><a href='${entry.website}' target='_blank'>Visit</a>`);
-                    markers.push({ marker, category: entry.category });
+    // Load CSV
+    fetch('aura-affinity.csv')
+      .then(r=>r.text())
+      .then(text=>{
+        const parsed = Papa.parse(text, { header:true, skipEmptyLines:true }).data;
+        // Normalize types
+        raw = parsed.map(d=>({ ...d, latitude: parseFloat(d.latitude), longitude: parseFloat(d.longitude) }));
+        // Populate selects
+        setOptions('cat', new Set(raw.map(r=>r.category).filter(Boolean)));
+        setOptions('country', new Set(raw.map(r=>r.country).filter(Boolean)));
+        applyFilters();
+      });
 
-                    const row = table.insertRow();
-                    [entry.name, entry.category, entry.country, entry.website, entry.verified].forEach(text => {
-                        const cell = row.insertCell();
-                        cell.innerHTML = text.includes('http') ? `<a href="${text}" target="_blank">${text}</a>` : text;
-                    });
-
-                    categories.add(entry.category);
-                });
-
-                document.getElementById('list').appendChild(table);
-
-                const filter = document.getElementById('categoryFilter');
-                categories.forEach(cat => {
-                    const option = document.createElement('option');
-                    option.value = cat;
-                    option.textContent = cat;
-                    filter.appendChild(option);
-                });
-
-                filter.addEventListener('change', () => {
-                    const selected = filter.value;
-                    markers.forEach(({ marker, category }) => {
-                        if (selected === "All" || category === selected) {
-                            marker.addTo(map);
-                        } else {
-                            map.removeLayer(marker);
-                        }
-                    });
-                });
-            });
-    </script>
+    // UI listeners
+    document.getElementById('q').addEventListener('input', ()=> applyFilters());
+    document.getElementById('cat').addEventListener('change', ()=> applyFilters());
+    document.getElementById('country').addEventListener('change', ()=> applyFilters());
+  </script>
 </body>
-
 </html>
