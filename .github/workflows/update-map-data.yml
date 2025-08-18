@@ -33,5 +33,5 @@ jobs:
       - name: Commit and push if there are changes
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "Automated update of aura-affinity.csv"
-          file_pattern: aura-affinity.csv
+          commit_message: "Automated update of map data"
+          file_pattern: "aura-affinity.csv last-run.txt"
