@@ -1,281 +1,494 @@
 Algiers, Algeria
 Oran, Algeria
+Algeria
 Luanda, Angola
+Angola
 Cotonou, Benin
+Benin
 Gaborone, Botswana
 Maun, Botswana
+Botswana
 Ouagadougou, Burkina Faso
+Burkina Faso
 Bujumbura, Burundi
+Burundi
 Praia, Cabo Verde
 Sal, Cabo Verde
+Cabo Verde
 Yaoundé, Cameroon
 Douala, Cameroon
+Cameroon
 Bangui, Central African Republic
+Central African Republic
 N'Djamena, Chad
+Chad
 Moroni, Comoros
+Comoros
 Kinshasa, Congo, Dem. Rep. of
 Lubumbashi, Congo, Dem. Rep. of
+Congo, Dem. Rep. of
 Brazzaville, Congo, Republic of the
+Congo, Republic of the
 Abidjan, Côte d'Ivoire
+Côte d'Ivoire
 Djibouti, Djibouti
+Djibouti
 Cairo, Egypt
 Alexandria, Egypt
 Luxor, Egypt
+Egypt
 Malabo, Equatorial Guinea
+Equatorial Guinea
 Asmara, Eritrea
+Eritrea
 Manzini, Eswatini
+Eswatini
 Addis Ababa, Ethiopia
+Ethiopia
 Libreville, Gabon
+Gabon
 Banjul, Gambia
+Gambia
 Accra, Ghana
+Ghana
 Conakry, Guinea
+Guinea
 Bissau, Guinea-Bissau
+Guinea-Bissau
 Nairobi, Kenya
 Mombasa, Kenya
+Kenya
 Maseru, Lesotho
+Lesotho
 Monrovia, Liberia
+Liberia
 Tripoli, Libya
 Benghazi, Libya
+Libya
 Antananarivo, Madagascar
+Madagascar
 Lilongwe, Malawi
+Malawi
 Bamako, Mali
+Mali
 Nouakchott, Mauritania
+Mauritania
 Port Louis, Mauritius
+Mauritius
 Rabat, Morocco
 Casablanca, Morocco
 Marrakech, Morocco
+Morocco
 Maputo, Mozambique
+Mozambique
 Windhoek, Namibia
+Namibia
 Niamey, Niger
+Niger
 Abuja, Nigeria
 Lagos, Nigeria
+Nigeria
 Kigali, Rwanda
+Rwanda
 São Tomé, São Tomé and Príncipe
+São Tomé and Príncipe
 Dakar, Senegal
+Senegal
 Victoria, Seychelles
+Seychelles
 Freetown, Sierra Leone
+Sierra Leone
 Mogadishu, Somalia
+Somalia
 Pretoria, South Africa
 Cape Town, South Africa
 Johannesburg, South Africa
+South Africa
 Juba, South Sudan
+South Sudan
 Khartoum, Sudan
+Sudan
 Dodoma, Tanzania
 Dar es Salaam, Tanzania
 Zanzibar, Tanzania
+Tanzania
 Lomé, Togo
+Togo
 Tunis, Tunisia
+Tunisia
 Kampala, Uganda
+Uganda
 Lusaka, Zambia
+Zambia
 Harare, Zimbabwe
 Victoria Falls, Zimbabwe
+Zimbabwe
 Hargeisa, Somaliland
+Somaliland
 Laayoune, Western Sahara
+Western Sahara
 Kabul, Afghanistan
+Afghanistan
 Yerevan, Armenia
+Armenia
 Baku, Azerbaijan
+Azerbaijan
 Manama, Bahrain
+Bahrain
 Dhaka, Bangladesh
+Bangladesh
 Thimphu, Bhutan
+Bhutan
 Bandar Seri Begawan, Brunei
+Brunei
 Phnom Penh, Cambodia
 Siem Reap, Cambodia
+Cambodia
 Beijing, China
 Shanghai, China
 Guangzhou, China
+China
 Nicosia, Cyprus
+Cyprus
 Tbilisi, Georgia
+Georgia
 New Delhi, India
 Mumbai, India
 Kolkata, India
+India
 Jakarta, Indonesia
 Denpasar (Bali), Indonesia
+Indonesia
 Tehran, Iran
+Iran
 Baghdad, Iraq
+Iraq
 Jerusalem, Israel
 Tel Aviv, Israel
+Israel
 Tokyo, Japan
 Osaka, Japan
 Kyoto, Japan
+Japan
 Amman, Jordan
+Jordan
 Astana, Kazakhstan
 Almaty, Kazakhstan
+Kazakhstan
 Kuwait City, Kuwait
+Kuwait
 Bishkek, Kyrgyzstan
+Kyrgyzstan
 Vientiane, Laos
+Laos
 Beirut, Lebanon
+Lebanon
 Kuala Lumpur, Malaysia
+Malaysia
 Malé, Maldives
+Maldives
 Ulaanbaatar, Mongolia
+Mongolia
 Naypyidaw, Myanmar (Burma)
 Yangon, Myanmar (Burma)
+Myanmar (Burma)
 Kathmandu, Nepal
+Nepal
 Pyongyang, North Korea
+North Korea
 Muscat, Oman
+Oman
 Islamabad, Pakistan
 Karachi, Pakistan
+Pakistan
 Ramallah, Palestine
+Palestine
 Manila, Philippines
 Cebu, Philippines
+Philippines
 Doha, Qatar
+Qatar
 Riyadh, Saudi Arabia
 Jeddah, Saudi Arabia
+Saudi Arabia
 Singapore, Singapore
+Singapore
 Seoul, South Korea
 Busan, South Korea
+South Korea
 Colombo, Sri Lanka
+Sri Lanka
 Damascus, Syria
+Syria
 Taipei, Taiwan
+Taiwan
 Dushanbe, Tajikistan
+Tajikistan
 Bangkok, Thailand
 Phuket, Thailand
 Chiang Mai, Thailand
+Thailand
 Dili, Timor-Leste
+Timor-Leste
 Ankara, Turkey
 Istanbul, Turkey
+Turkey
 Ashgabat, Turkmenistan
+Turkmenistan
 Abu Dhabi, United Arab Emirates
 Dubai, United Arab Emirates
+United Arab Emirates
 Tashkent, Uzbekistan
+Uzbekistan
 Hanoi, Vietnam
 Ho Chi Minh City, Vietnam
+Vietnam
 Sana'a, Yemen
+Yemen
 Sukhumi, Abkhazia
+Abkhazia
 Stepanakert, Artsakh (Nagorno-Karabakh)
+Artsakh (Nagorno-Karabakh)
 Hong Kong, Hong Kong
+Hong Kong
 Macau, Macau
+Macau
 North Nicosia, Northern Cyprus
+Northern Cyprus
 Tskhinvali, South Ossetia
+South Ossetia
 Tirana, Albania
+Albania
 Andorra la Vella, Andorra
+Andorra
 Vienna, Austria
+Austria
 Minsk, Belarus
+Belarus
 Brussels, Belgium
+Belgium
 Sarajevo, Bosnia and Herzegovina
+Bosnia and Herzegovina
 Sofia, Bulgaria
+Bulgaria
 Zagreb, Croatia
 Dubrovnik, Croatia
 Split, Croatia
+Croatia
 Prague, Czech Republic
+Czech Republic
 Copenhagen, Denmark
+Denmark
 Tallinn, Estonia
+Estonia
 Helsinki, Finland
+Finland
 Paris, France
 Nice, France
 Lyon, France
+France
 Berlin, Germany
 Munich, Germany
 Frankfurt, Germany
+Germany
 Athens, Greece
 Thessaloniki, Greece
+Greece
 Budapest, Hungary
+Hungary
 Reykjavik, Iceland
+Iceland
 Dublin, Ireland
+Ireland
 Rome, Italy
 Milan, Italy
 Venice, Italy
+Italy
 Riga, Latvia
+Latvia
 Vaduz, Liechtenstein
+Liechtenstein
 Vilnius, Lithuania
+Lithuania
 Luxembourg, Luxembourg
+Luxembourg
 Valletta, Malta
+Malta
 Chișinău, Moldova
+Moldova
 Monaco, Monaco
+Monaco
 Podgorica, Montenegro
+Montenegro
 Amsterdam, Netherlands
+Netherlands
 Skopje, North Macedonia
+North Macedonia
 Oslo, Norway
 Bergen, Norway
+Norway
 Warsaw, Poland
 Kraków, Poland
+Poland
 Lisbon, Portugal
 Porto, Portugal
+Portugal
 Bucharest, Romania
+Romania
 Moscow, Russia
 Saint Petersburg, Russia
+Russia
 San Marino, San Marino
+San Marino
 Belgrade, Serbia
+Serbia
 Bratislava, Slovakia
+Slovakia
 Ljubljana, Slovenia
+Slovenia
 Madrid, Spain
 Barcelona, Spain
+Spain
 Stockholm, Sweden
 Gothenburg, Sweden
+Sweden
 Bern, Switzerland
 Zürich, Switzerland
 Geneva, Switzerland
+Switzerland
 Kyiv, Ukraine
+Ukraine
 London, United Kingdom
 Edinburgh, United Kingdom
 Manchester, United Kingdom
+United Kingdom
 Vatican City, Vatican City
+Vatican City
 Pristina, Kosovo
+Kosovo
 Tiraspol, Transnistria
+Transnistria
 St. John's, Antigua and Barbuda
+Antigua and Barbuda
 Nassau, Bahamas
+Bahamas
 Bridgetown, Barbados
+Barbados
 Belize City, Belize
+Belize
 Ottawa, Canada
 Toronto, Canada
 Vancouver, Canada
+Canada
 San José, Costa Rica
+Costa Rica
 Havana, Cuba
+Cuba
 Roseau, Dominica
+Dominica
 Santo Domingo, Dominican Republic
+Dominican Republic
 San Salvador, El Salvador
+El Salvador
 St. George's, Grenada
+Grenada
 Guatemala City, Guatemala
+Guatemala
 Port-au-Prince, Haiti
+Haiti
 Tegucigalpa, Honduras
+Honduras
 Kingston, Jamaica
 Montego Bay, Jamaica
+Jamaica
 Mexico City, Mexico
 Cancún, Mexico
+Mexico
 Managua, Nicaragua
+Nicaragua
 Panama City, Panama
+Panama
 Basseterre, Saint Kitts and Nevis
+Saint Kitts and Nevis
 Castries, Saint Lucia
+Saint Lucia
 Kingstown, Saint Vincent & Grenadines
+Saint Vincent & Grenadines
 Port of Spain, Trinidad and Tobago
+Trinidad and Tobago
 Washington D.C., United States
 New York, United States
 Los Angeles, United States
+United States
 Nuuk, Greenland
+Greenland
 San Juan, Puerto Rico
+Puerto Rico
 Canberra, Australia
 Sydney, Australia
 Melbourne, Australia
 Brisbane, Australia
+Perth, Australia
+Gold Coast, Australia
+Byron Bay, Australia
+Australia
 Suva, Fiji
 Nadi, Fiji
+Fiji
 Tarawa, Kiribati
+Kiribati
 Majuro, Marshall Islands
+Marshall Islands
 Palikir, Micronesia
+Micronesia
 Yaren, Nauru
+Nauru
 Wellington, New Zealand
 Auckland, New Zealand
+New Zealand
 Ngerulmud, Palau
+Palau
 Port Moresby, Papua New Guinea
+Papua New Guinea
 Apia, Samoa
+Samoa
 Honiara, Solomon Islands
+Solomon Islands
 Nukuʻalofa, Tonga
+Tonga
 Funafuti, Tuvalu
+Tuvalu
 Port Vila, Vanuatu
+Vanuatu
 Avarua, Cook Islands
+Cook Islands
 Alofi, Niue
+Niue
 Buenos Aires, Argentina
+Argentina
 Sucre, Bolivia
 La Paz, Bolivia
+Bolivia
 Brasília, Brazil
 Rio de Janeiro, Brazil
 São Paulo, Brazil
+Brazil
 Santiago, Chile
+Chile
 Bogotá, Colombia
+Colombia
 Quito, Ecuador
+Ecuador
 Georgetown, Guyana
+Guyana
 Asunción, Paraguay
+Paraguay
 Lima, Peru
 Cusco, Peru
+Peru
 Paramaribo, Suriname
+Suriname
 Montevideo, Uruguay
+Uruguay
 Caracas, Venezuela
+Venezuela
