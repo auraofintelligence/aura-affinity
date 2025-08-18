@@ -169,7 +169,16 @@
       const icon = buildIcon(color);
       const m = L.marker([+entry.latitude, +entry.longitude], { icon });
       const safeUrl = (entry.website||'').startsWith('http') ? entry.website : (entry.website?`https://${entry.website}`:'');
-      const location = [entry.city, entry.country].filter(Boolean).join(', '); const safeSocial = (entry.social||'').startsWith('http') ? entry.social : (entry.social?`https://${entry.social}`:''); m.bindPopup(`   <strong>${entry.name}</strong><br>   <small>${entry.category || '—'}</small><br>   <em>${location || ''}</em>   ${safeUrl ? `<br><a href="${safeUrl}" target="_blank">🌐 Website</a>` : ''}   ${entry.phone ? `<br>📞 ${entry.phone}` : ''}   ${safeSocial ? `<br><a href="${safeSocial}" target="_blank">🔗 Social</a>` : ''} `);
+      const location = [entry.city, entry.country].filter(Boolean).join(', ');
+      const safeSocial = (entry.social||'').startsWith('http') ? entry.social : (entry.social?`https://${entry.social}`:'');
+      m.bindPopup(`
+        <strong>${entry.name}</strong><br>
+        <small>${entry.category || '—'}</small><br>
+        <em>${location || ''}</em>
+        ${safeUrl ? `<br><a href="${safeUrl}" target="_blank">🌐 Website</a>` : ''}
+        ${entry.phone ? `<br>📞 ${entry.phone}` : ''}
+        ${safeSocial ? `<br><a href="${safeSocial}" target="_blank">🔗 Social</a>` : ''}
+      `);
       m.__row = entry;
       clusterGroup.addLayer(m);
       markers.push(m);
@@ -188,9 +197,9 @@
       return mapCol[markerColorName[cat]||'blue']||'#3b82f6';
     }
 
+    // === THIS IS THE SINGLE, CORRECTED RENDERDIRECTORY FUNCTION ===
     function renderDirectory(rows){
       const wrap = document.getElementById('directory');
-      // === UPDATE 2: UPGRADED DIRECTORY CARD TEMPLATE ===
       wrap.innerHTML = rows.map((r,i)=>{
         const glow = neonFromCategory(r.category);
         const safeUrl = (r.website||'').startsWith('http') ? r.website : (r.website?`https://${r.website}`:'');
@@ -203,10 +212,12 @@
             <h3 class="name">${r.name || '—'}</h3>
             <div class="meta">
               <span class="badge" style="border-color:${glow}; color:${glow}">${r.category || 'Other'}</span>
-              <span>${location || ''}</span>
+              <span class="location-link" style="cursor: pointer;" title="Zoom to city">${location || ''}</span>
               <span class="badge" style="color:${verified?'#22c55e':'#eab308'}">${verified?'Verified':'Unverified'}</span>
             </div>
+            ${r.description ? `<p style="font-size:0.85rem; color:#c7c9ce; margin:10px 0 0; opacity:0.8;">${r.description.substring(0, 100)}${r.description.length > 100 ? '...' : ''}</p>` : ''}
             <div class="actions">
+              <a href="#" class="map-link" title="Find on map">📍 Map</a>
               ${safeUrl?`<a href="${safeUrl}" target="_blank" title="Website">🌐 Website</a>`:''}
               ${r.phone?`<a href="tel:${r.phone}" title="Phone">📞 Phone</a>`:''}
               ${safeSocial?`<a href="${safeSocial}" target="_blank" title="Social Media">🔗 Social</a>`:''}
@@ -214,15 +225,32 @@
           </article>`
       }).join('');
 
-      Array.from(wrap.querySelectorAll('.card')).forEach((el, idx)=>{
-        el.addEventListener('click', (ev)=>{
-          if(ev.target.classList.contains('delete')) return;
-          const r = rows[idx];
-          const m = markers.find(mm=>mm.__row===r);
-          if(m){ map.flyTo(m.getLatLng(), 16, {duration:.6}); m.openPopup(); }
-        });
-      });
+      const cards = wrap.querySelectorAll('.card');
+      cards.forEach((card, idx) => {
+        const rowData = rows[idx];
+        const marker = markers.find(m => m.__row === rowData);
+        if (!marker) return;
 
+        const mapLink = card.querySelector('.map-link');
+        if (mapLink) {
+          mapLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            map.flyTo(marker.getLatLng(), 16, { duration: 0.8 });
+            marker.openPopup();
+            document.getElementById('map').scrollIntoView({ behavior: 'smooth' });
+          });
+        }
+        
+        const locationLink = card.querySelector('.location-link');
+        if (locationLink) {
+          locationLink.addEventListener('click', (e) => {
+            e.stopPropagation();
+            map.flyTo(marker.getLatLng(), 10, { duration: 0.8 });
+          });
+        }
+      });
+      
       wrap.querySelectorAll('.delete').forEach((btn, idx)=>{
         btn.addEventListener('click', (e)=>{
           e.stopPropagation();
@@ -296,7 +324,6 @@
 
     document.getElementById('add').addEventListener('click', ()=>{
       const n = id => document.getElementById(id).value.trim();
-      // === UPDATE 3: EXPANDED MANUAL ADD LOGIC ===
       const entry = {
         id: String(Date.now()),
         name: n('new-name'), category: n('new-category'), city: n('new-city'), country: n('new-country'),
@@ -313,7 +340,6 @@
     });
 
     document.getElementById('download').addEventListener('click', ()=>{
-      // === UPDATE 4: EXPANDED CSV DOWNLOAD HEADERS ===
       const headers = ['place_id','id','name','category','city','country','latitude','longitude','website','email','phone','social','verified'];
       const rows = [headers.join(',')].concat(raw.map(r=> headers.map(h=> (r[h]!==undefined? `"${String(r[h]).replaceAll('"', '""')}"` : '') ).join(',')));
       const blob = new Blob([rows.join('\n')], {type:'text/csv;charset=utf-8;'});
