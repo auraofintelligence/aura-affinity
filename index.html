@@ -5,80 +5,64 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Aura Affinity Map</title>
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #0e0e0e;
-      color: #e0e0e0;
-    }
-    header {
-      background: #111;
-      padding: 1rem 2rem;
-      text-align: center;
-      border-bottom: 1px solid #444;
-    }
-    h1 {
-      font-size: 2rem;
-      margin: 0;
-      color: #f5b342;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #121212;
+      color: #fff;
     }
     #map {
-      height: 90vh;
+      height: 100vh;
       width: 100%;
     }
-    footer {
-      padding: 1rem;
-      text-align: center;
-      font-size: 0.9rem;
-      color: #888;
-      border-top: 1px solid #333;
+    .leaflet-popup-content {
+      color: #000;
+    }
+    .popup-category {
+      font-size: 0.85em;
+      color: #555;
+      background: #f0f0f0;
+      padding: 2px 6px;
+      border-radius: 4px;
+      display: inline-block;
+      margin-top: 4px;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>✨ Aura Affinity Global Map ✨</h1>
-    <p>Businesses around the world aligned with the name and vibe of "Aura"</p>
-  </header>
-
   <div id="map"></div>
-
-  <footer>
-    Built with love by Aura of Intelligence. Data is updated manually from CSV.
-  </footer>
-
-  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
   <script>
     const map = L.map('map').setView([0, 0], 2);
+
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: '&copy; OpenStreetMap contributors',
       maxZoom: 18,
+      attribution: '© OpenStreetMap contributors'
     }).addTo(map);
 
-    const auraBusinesses = [
-      {
-        name: 'Aura Spa',
-        category: 'Health & Wellbeing',
-        lat: -33.8688,
-        lon: 151.2093,
-        website: 'https://auraspa.com'
-      },
-      {
-        name: 'Aura Creative Co',
-        category: 'Creative Industries',
-        lat: 40.7128,
-        lon: -74.0060,
-        website: 'https://auracreative.co'
+    // Load CSV dynamically from GitHub
+    Papa.parse('aura-affinity.csv', {
+      download: true,
+      header: true,
+      complete: function(results) {
+        const data = results.data;
+        data.forEach(entry => {
+          if (entry.verified === 'true') {
+            const lat = parseFloat(entry.latitude);
+            const lon = parseFloat(entry.longitude);
+            if (!isNaN(lat) && !isNaN(lon)) {
+              const popup = `
+                <strong>${entry.name}</strong><br/>
+                <span class="popup-category">${entry.category}</span><br/>
+                <a href="${entry.website}" target="_blank">Website</a>
+              `;
+              L.marker([lat, lon]).addTo(map).bindPopup(popup);
+            }
+          }
+        });
       }
-      // Add more entries here or load dynamically in future
-    ];
-
-    auraBusinesses.forEach(biz => {
-      const popupContent = `<strong>${biz.name}</strong><br>${biz.category}<br><a href="${biz.website}" target="_blank">Visit Website</a>`;
-      L.marker([biz.lat, biz.lon])
-        .addTo(map)
-        .bindPopup(popupContent);
     });
   </script>
 </body>
