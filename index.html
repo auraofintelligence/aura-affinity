@@ -15,7 +15,7 @@
       color: #fff;
     }
     #map {
-      height: 100vh;
+      height: 90vh;
       width: 100%;
     }
     .leaflet-popup-content {
@@ -30,39 +30,102 @@
       display: inline-block;
       margin-top: 4px;
     }
+    #filter {
+      background: #1e1e1e;
+      color: #fff;
+      border: none;
+      padding: 8px;
+      margin: 10px;
+      font-size: 16px;
+    }
   </style>
 </head>
 <body>
+  <select id="filter">
+    <option value="all">Show All Categories</option>
+    <option value="Health & Wellbeing">Health & Wellbeing</option>
+    <option value="Creative Industries">Creative Industries</option>
+    <option value="Event Management">Event Management</option>
+    <option value="Accommodation">Accommodation</option>
+    <option value="Cities & Developments">Cities & Developments</option>
+    <option value="Blockchain">Blockchain</option>
+  </select>
   <div id="map"></div>
+
   <script>
     const map = L.map('map').setView([0, 0], 2);
+    const markers = [];
 
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       maxZoom: 18,
       attribution: '© OpenStreetMap contributors'
     }).addTo(map);
 
-    // Load CSV dynamically from GitHub
+    function mapIconForCategory(category, verified) {
+      if (verified !== 'true') {
+        return new L.Icon.Default();
+      }
+      const colors = {
+        'Health & Wellbeing': 'pink',
+        'Creative Industries': 'violet',
+        'Event Management': 'orange',
+        'Accommodation': 'blue',
+        'Blockchain': 'gray'
+      };
+      if (category === 'Cities & Developments') {
+        return L.icon({
+          iconUrl: 'https://cdn-icons-png.flaticon.com/512/2933/2933926.png',
+          iconSize: [30, 30],
+          iconAnchor: [15, 30],
+          popupAnchor: [0, -30]
+        });
+      }
+      const color = colors[category] || 'blue';
+      return new L.Icon({
+        iconUrl: `https://chart.googleapis.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|${color}`,
+        iconSize: [21, 34],
+        iconAnchor: [10, 34],
+        popupAnchor: [1, -34],
+        shadowSize: [41, 41]
+      });
+    }
+
+    let globalData = [];
+
+    function updateMarkers(categoryFilter = 'all') {
+      markers.forEach(m => map.removeLayer(m));
+      markers.length = 0;
+
+      globalData.forEach(entry => {
+        const lat = parseFloat(entry.latitude);
+        const lon = parseFloat(entry.longitude);
+        if (!isNaN(lat) && !isNaN(lon)) {
+          if (entry.verified === 'true' && (categoryFilter === 'all' || entry.category === categoryFilter)) {
+            const popup = `
+              <strong>${entry.name}</strong><br/>
+              <span class="popup-category">${entry.category}</span><br/>
+              <a href="${entry.website}" target="_blank">Website</a>
+            `;
+            const marker = L.marker([lat, lon], { icon: mapIconForCategory(entry.category, entry.verified) })
+              .addTo(map)
+              .bindPopup(popup);
+            markers.push(marker);
+          }
+        }
+      });
+    }
+
     Papa.parse('aura-affinity.csv', {
       download: true,
       header: true,
       complete: function(results) {
-        const data = results.data;
-        data.forEach(entry => {
-          if (entry.verified === 'true') {
-            const lat = parseFloat(entry.latitude);
-            const lon = parseFloat(entry.longitude);
-            if (!isNaN(lat) && !isNaN(lon)) {
-              const popup = `
-                <strong>${entry.name}</strong><br/>
-                <span class="popup-category">${entry.category}</span><br/>
-                <a href="${entry.website}" target="_blank">Website</a>
-              `;
-              L.marker([lat, lon]).addTo(map).bindPopup(popup);
-            }
-          }
-        });
+        globalData = results.data;
+        updateMarkers();
       }
+    });
+
+    document.getElementById('filter').addEventListener('change', (e) => {
+      updateMarkers(e.target.value);
     });
   </script>
 </body>
