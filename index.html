@@ -69,7 +69,6 @@
 
   <div class="toolbar">
     <div class="container" id="controls" style="display:flex; justify-content:center; flex-wrap:wrap; gap:10px; align-items:center;">
-      
       <div class="field"><label for="q">Search</label><input id="q" type="text" placeholder="Search by name or website…" /></div>
       <div class="field"><label for="cat">Category</label>
         <select id="cat"><option value="">All</option></select>
@@ -84,7 +83,6 @@
           <option value="false">Unverified</option>
         </select>
       </div>
-
       <div class="field"><label for="has-info">Has Contact</label>
         <select id="has-info">
           <option value="">Any</option>
@@ -94,7 +92,6 @@
           <option value="social">Has Social</option>
         </select>
       </div>
-      
       <div class="field"><label for="sort">Sort</label>
         <select id="sort">
           <option value="name-asc">Name A→Z</option>
@@ -212,15 +209,13 @@
         const verified = String(r.verified||'').toLowerCase()==='true';
         const location = [r.city, r.country].filter(Boolean).join(', ');
 
-         return `<article class="card" style="--glow:${glow}">
+        return `<article class="card" style="--glow:${glow}">
             <button class="delete" data-id="${r.id||''}" title="Delete entry">Delete</button>
             <h3 class="name">${r.name || '—'}</h3>
             <div class="meta">
               <span class="badge" style="border-color:${glow}; color:${glow}">${r.category || 'Other'}</span>
               <span class="location-link" style="cursor: pointer;" title="Zoom to city">${location || ''}</span>
-              
               ${r.business_type ? `<span class="badge" style="background-color: #4b5563;">${r.business_type}</span>` : ''}
-
               <span class="badge" style="color:${verified?'#22c55e':'#eab308'}">${verified?'Verified':'Unverified'}</span>
             </div>
             ${r.description ? `<p style="font-size:0.85rem; color:#c7c9ce; margin:10px 0 0; opacity:0.8;">${r.description.substring(0, 100)}${r.description.length > 100 ? '...' : ''}</p>` : ''}
@@ -290,12 +285,14 @@
       const cat = document.getElementById('cat').value;
       const country = document.getElementById('country').value;
       const verified = document.getElementById('verified').value;
+      const hasInfo = document.getElementById('has-info').value;
 
       let rows = raw.filter(r=>{
         if(!r.latitude || !r.longitude) return false;
         if(cat && r.category!==cat) return false;
         if(country && r.country!==country) return false;
         if(verified && String(r.verified).toLowerCase()!==verified) return false;
+        if(hasInfo && !r[hasInfo]) return false;
         if(q && !( (r.name||'').toLowerCase().includes(q) || (r.website||'').toLowerCase().includes(q) )) return false;
         return true;
       });
@@ -327,6 +324,7 @@
     document.getElementById('country').addEventListener('change', applyFilters);
     document.getElementById('verified').addEventListener('change', applyFilters);
     document.getElementById('sort').addEventListener('change', applyFilters);
+    document.getElementById('has-info').addEventListener('change', applyFilters);
 
     document.getElementById('toTop').addEventListener('click', ()=> window.scrollTo({ top:0, behavior:'smooth' }));
     document.getElementById('toBottom').addEventListener('click', ()=> window.scrollTo({ top:document.body.scrollHeight, behavior:'smooth' }));
