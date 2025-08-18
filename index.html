@@ -4,161 +4,164 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Aura Affinity Map</title>
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
-  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-sA+e2atLYmGmQ6Vp7pPxqXF/w3R04Vb5wWm+vBef2zU="
+    crossorigin=""
+  />
   <style>
     body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background-color: #121212;
-      color: #fff;
+      color: white;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
     }
     header {
       background-color: #1f1f1f;
-      padding: 16px;
+      padding: 1rem;
       text-align: center;
-      color: #FFD700;
-      font-size: 24px;
-      font-weight: bold;
     }
-    .description {
+    h1 {
+      margin: 0;
+      color: #ffcc00;
+    }
+    #description {
       text-align: center;
-      margin-top: 4px;
-      font-size: 14px;
+      margin: 0.5rem;
+      font-size: 1rem;
       color: #ccc;
     }
     #map {
-      height: 60vh;
+      height: 500px;
       width: 100%;
     }
     #filter {
-      background: #1e1e1e;
-      color: #fff;
-      border: none;
-      padding: 8px;
-      margin: 10px;
-      font-size: 16px;
+      margin: 1rem;
+      text-align: center;
     }
     #list {
-      padding: 20px;
-      background: #1a1a1a;
-      max-height: 40vh;
+      padding: 1rem;
+      max-height: 300px;
       overflow-y: auto;
+      background: #1f1f1f;
     }
     .entry {
       border-bottom: 1px solid #333;
-      padding: 10px 0;
-    }
-    .entry h3 {
-      margin: 0;
-      color: #FFD700;
+      padding: 0.5rem 0;
     }
     .entry a {
-      color: #66ccff;
+      color: #4fc3f7;
+      text-decoration: none;
+    }
+    .entry a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
-  <header>Aura Affinity Map</header>
-  <div class="description">An organic directory of businesses, brands, and places with "Aura" in their name. Filter, explore and grow the global network.</div>
-  <select id="filter">
-    <option value="all">Show All Categories</option>
-    <option value="Health & Wellbeing">Health & Wellbeing</option>
-    <option value="Creative Industries">Creative Industries</option>
-    <option value="Event Management">Event Management</option>
-    <option value="Accommodation">Accommodation</option>
-    <option value="Cities & Developments">Cities & Developments</option>
-    <option value="Blockchain">Blockchain</option>
-  </select>
+  <header>
+    <h1>Aura Affinity Map</h1>
+    <div id="description">A living network of verified businesses using the name "Aura" across global industries</div>
+  </header>
+  <div id="filter">
+    <label for="category">Filter by Category: </label>
+    <select id="category" onchange="filterMarkers()">
+      <option value="All">All</option>
+    </select>
+  </div>
   <div id="map"></div>
   <div id="list"></div>
 
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-o9N1j7kP5Qb+rqQ5w3gFZTfZ3t3Qpzt1Tf0zPzF++S0=" crossorigin=""></script>
   <script>
     const map = L.map('map').setView([0, 0], 2);
-    const markers = [];
-    let globalData = [];
 
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      maxZoom: 18,
-      attribution: '© OpenStreetMap contributors'
+      attribution: '&copy; OpenStreetMap contributors',
     }).addTo(map);
 
-    function mapIconForCategory(category, verified) {
-      if (verified !== 'true') {
-        return new L.Icon.Default();
+    const categoryColors = {
+      'Health & Wellbeing': '#e91e63',
+      'Creative Industries': '#ff5722',
+      'Event Management': '#ffc107',
+      'Accommodation': '#2196f3',
+      'Cities & Developments': '#4caf50',
+      'Blockchain': '#3f51b5',
+      'Unverified/Other': '#9e9e9e'
+    };
+
+    const markers = [];
+
+    function getColor(category, verified) {
+      if (!verified || !categoryColors[category]) {
+        return categoryColors['Unverified/Other'];
       }
-      const colors = {
-        'Health & Wellbeing': 'pink',
-        'Creative Industries': 'violet',
-        'Event Management': 'orange',
-        'Accommodation': 'blue',
-        'Blockchain': 'gray'
-      };
-      if (category === 'Cities & Developments') {
-        return L.icon({
-          iconUrl: 'https://cdn-icons-png.flaticon.com/512/2933/2933926.png',
-          iconSize: [30, 30],
-          iconAnchor: [15, 30],
-          popupAnchor: [0, -30]
-        });
-      }
-      const color = colors[category] || 'blue';
-      return new L.Icon({
-        iconUrl: `https://chart.googleapis.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|${color}`,
-        iconSize: [21, 34],
-        iconAnchor: [10, 34],
-        popupAnchor: [1, -34],
-        shadowSize: [41, 41]
+      return categoryColors[category];
+    }
+
+    function createMarker(entry) {
+      const color = getColor(entry.category, entry.verified === 'true');
+      const icon = L.divIcon({
+        className: 'custom-div-icon',
+        html: `<div style="background:${color};width:16px;height:16px;border-radius:50%;border:2px solid white;"></div>`
+      });
+
+      const marker = L.marker([entry.latitude, entry.longitude], { icon }).addTo(map);
+      marker.bindPopup(`<strong>${entry.name}</strong><br>${entry.category}<br><a href="${entry.website}" target="_blank">Website</a>`);
+      marker.category = entry.category;
+      markers.push(marker);
+    }
+
+    function updateList(data) {
+      const container = document.getElementById('list');
+      container.innerHTML = '';
+      data.forEach(entry => {
+        const div = document.createElement('div');
+        div.className = 'entry';
+        div.innerHTML = `<strong>${entry.name}</strong> — ${entry.category} (${entry.country})<br><a href="${entry.website}" target="_blank">${entry.website}</a>`;
+        container.appendChild(div);
       });
     }
 
-    function updateMarkers(categoryFilter = 'all') {
-      markers.forEach(m => map.removeLayer(m));
-      markers.length = 0;
-      document.getElementById('list').innerHTML = '';
-
-      globalData.forEach(entry => {
-        const lat = parseFloat(entry.latitude);
-        const lon = parseFloat(entry.longitude);
-        if (!isNaN(lat) && !isNaN(lon)) {
-          if (entry.verified === 'true' && (categoryFilter === 'all' || entry.category === categoryFilter)) {
-            const popup = `
-              <strong>${entry.name}</strong><br/>
-              <span class="popup-category">${entry.category}</span><br/>
-              <a href="${entry.website}" target="_blank">Website</a>
-            `;
-            const marker = L.marker([lat, lon], { icon: mapIconForCategory(entry.category, entry.verified) })
-              .addTo(map)
-              .bindPopup(popup);
-            markers.push(marker);
-
-            const div = document.createElement('div');
-            div.className = 'entry';
-            div.innerHTML = `
-              <h3>${entry.name}</h3>
-              <div><strong>Category:</strong> ${entry.category}</div>
-              <div><strong>Country:</strong> ${entry.country}</div>
-              <div><a href="${entry.website}" target="_blank">Visit Website</a></div>
-            `;
-            document.getElementById('list').appendChild(div);
-          }
+    function filterMarkers() {
+      const category = document.getElementById('category').value;
+      markers.forEach(marker => {
+        if (category === 'All' || marker.category === category) {
+          marker.addTo(map);
+        } else {
+          map.removeLayer(marker);
         }
       });
+      const filtered = csvData.filter(d => category === 'All' || d.category === category);
+      updateList(filtered);
     }
 
-    Papa.parse('aura-affinity.csv', {
-      download: true,
-      header: true,
-      complete: function(results) {
-        globalData = results.data;
-        updateMarkers();
-      }
-    });
+    let csvData = [];
 
-    document.getElementById('filter').addEventListener('change', (e) => {
-      updateMarkers(e.target.value);
-    });
+    fetch('aura-affinity.csv')
+      .then(res => res.text())
+      .then(csv => {
+        const lines = csv.split('\n').slice(1);
+        const entries = lines.map(line => {
+          const [id, name, category, country, latitude, longitude, website, email, verified] = line.split(',');
+          return { id, name, category, country, latitude: parseFloat(latitude), longitude: parseFloat(longitude), website, email, verified };
+        }).filter(e => e.name);
+
+        csvData = entries;
+
+        const categories = new Set(entries.map(e => e.category));
+        categories.forEach(cat => {
+          const opt = document.createElement('option');
+          opt.value = cat;
+          opt.textContent = cat;
+          document.getElementById('category').appendChild(opt);
+        });
+
+        entries.forEach(createMarker);
+        updateList(entries);
+      });
   </script>
 </body>
 </html>
