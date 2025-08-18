@@ -31,12 +31,13 @@
     .toolbar input::placeholder { color:#7a7f87 }
 
     #directory { display:grid; grid-template-columns:repeat(auto-fill, minmax(300px, 1fr)); gap:16px; padding:16px }
-    .card { background:var(--panel); border:1px solid #262832; padding:14px; border-radius:16px; transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease; position:relative }
+    .card { background:var(--panel); border:1px solid #262832; padding:14px; border-radius:16px; transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease; position:relative; display: flex; flex-direction: column; }
     .card:hover { transform: translateY(-2px) }
     .card .name { font-weight:700; font-size:1.05rem; margin:0 0 6px }
-    .meta { display:flex; flex-wrap:wrap; gap:8px; align-items:center; color:#c7c9ce; font-size:.9rem; margin-bottom:8px }
+    .meta { display:flex; flex-wrap:wrap; gap:8px; align-items:center; color:#c7c9ce; font-size:.9rem; margin-bottom:12px }
     .badge { padding:3px 8px; border-radius:999px; font-size:.75rem; border:1px solid rgba(255,255,255,.15) }
-    .actions a { color:#7dcfff; text-decoration:none }
+    .actions { margin-top: auto; display:flex; gap: 15px; align-items:center; flex-wrap:wrap; font-size: 0.9rem; }
+    .actions a { color:#7dcfff; text-decoration:none; display:inline-flex; align-items:center; gap: 4px; }
     .actions a:hover { text-decoration:underline }
     .delete { position:absolute; top:10px; right:10px; background:#ef4444; color:#fff; border:none; border-radius:10px; padding:4px 8px; cursor:pointer; font-size:.75rem }
     .delete:hover { filter:brightness(1.1) }
@@ -63,13 +64,18 @@
   <header>
     <h1>Aura Affinity Map</h1>
     <div class="sub">A living directory of businesses carrying the name “Aura” across the world. Verify, connect, and grow the network.</div>
+    <div id="status-bar" style="font-size: 0.85rem; color: #9aa0a6; margin-top: 10px;">
+      <span>Last updated: <strong id="last-updated">loading...</strong></span>
+      <a id="trigger-run" href="https://github.com/auraofintelligence/aura-affinity/actions/workflows/update-map-data.yml" target="_blank" style="margin-left: 15px; color: #3b82f6; text-decoration: none;">
+        🚀 Trigger New Run
+      </a>
+    </div>
   </header>
 
   <div id="map" role="region" aria-label="Aura Affinity map">
     <button class="fab map-fab" id="recenter" title="Re-center map">🎯</button>
   </div>
 
-  <!-- Toolbar (centered) -->
   <div class="toolbar">
     <div class="container" id="controls" style="display:flex; justify-content:center; flex-wrap:wrap; gap:10px;">
       <div class="field"><label for="q">Search</label><input id="q" type="text" placeholder="Search by name or website…" /></div>
@@ -98,20 +104,21 @@
     </div>
   </div>
 
-  <!-- Directory -->
   <div class="container"><div id="directory" aria-live="polite"></div></div>
 
-  <!-- Add / Export panel -->
   <div class="adder">
     <div class="container">
       <div class="row" aria-label="Add new entry">
         <input id="new-name" placeholder="Name" />
         <input id="new-category" placeholder="Category" />
+        <input id="new-city" placeholder="City" />
         <input id="new-country" placeholder="Country" />
         <input id="new-lat" placeholder="Latitude" />
         <input id="new-lon" placeholder="Longitude" />
         <input id="new-website" placeholder="Website (https://...)" />
         <input id="new-email" placeholder="Email" />
+        <input id="new-phone" placeholder="Phone" />
+        <input id="new-social" placeholder="Social URL" />
         <select id="new-verified">
           <option value="false">Unverified</option>
           <option value="true">Verified</option>
@@ -122,7 +129,6 @@
     </div>
   </div>
 
-  <!-- Persistent page nav buttons -->
   <div class="sticky-actions" aria-label="Page navigation helpers">
     <button class="fab blue" id="toTop" title="Scroll to top">⬆</button>
     <button class="fab blue" id="toBottom" title="Scroll to bottom">⬇</button>
@@ -151,7 +157,6 @@
     const map = L.map('map').setView([15, 0], 2);
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution:'© OpenStreetMap contributors' }).addTo(map);
 
-    // Cluster group
     const clusterGroup = L.markerClusterGroup();
     map.addLayer(clusterGroup);
 
@@ -185,33 +190,39 @@
 
     function renderDirectory(rows){
       const wrap = document.getElementById('directory');
+      // === UPDATE 2: UPGRADED DIRECTORY CARD TEMPLATE ===
       wrap.innerHTML = rows.map((r,i)=>{
         const glow = neonFromCategory(r.category);
         const safeUrl = (r.website||'').startsWith('http') ? r.website : (r.website?`https://${r.website}`:'');
+        const safeSocial = (r.social||'').startsWith('http') ? r.social : (r.social?`https://${r.social}`:'');
         const verified = String(r.verified||'').toLowerCase()==='true';
+        const location = [r.city, r.country].filter(Boolean).join(', ');
+
         return `<article class="card" style="--glow:${glow}">
             <button class="delete" data-id="${r.id||''}" title="Delete entry">Delete</button>
             <h3 class="name">${r.name || '—'}</h3>
             <div class="meta">
               <span class="badge" style="border-color:${glow}; color:${glow}">${r.category || 'Other'}</span>
-              <span>${r.country || ''}</span>
+              <span>${location || ''}</span>
               <span class="badge" style="color:${verified?'#22c55e':'#eab308'}">${verified?'Verified':'Unverified'}</span>
             </div>
-            <div class="actions">${safeUrl?`<a href="${safeUrl}" target="_blank">Visit website</a>`:''}</div>
+            <div class="actions">
+              ${safeUrl?`<a href="${safeUrl}" target="_blank" title="Website">🌐 Website</a>`:''}
+              ${r.phone?`<a href="tel:${r.phone}" title="Phone">📞 Phone</a>`:''}
+              ${safeSocial?`<a href="${safeSocial}" target="_blank" title="Social Media">🔗 Social</a>`:''}
+            </div>
           </article>`
       }).join('');
 
-      // card click -> flyTo marker (not when clicking delete)
       Array.from(wrap.querySelectorAll('.card')).forEach((el, idx)=>{
         el.addEventListener('click', (ev)=>{
-          if(ev.target.classList.contains('delete')) return; // handled elsewhere
+          if(ev.target.classList.contains('delete')) return;
           const r = rows[idx];
           const m = markers.find(mm=>mm.__row===r);
           if(m){ map.flyTo(m.getLatLng(), 6, {duration:.6}); m.openPopup(); }
         });
       });
 
-      // Delete handlers
       wrap.querySelectorAll('.delete').forEach((btn, idx)=>{
         btn.addEventListener('click', (e)=>{
           e.stopPropagation();
@@ -242,7 +253,7 @@
       const q = document.getElementById('q').value.trim().toLowerCase();
       const cat = document.getElementById('cat').value;
       const country = document.getElementById('country').value;
-      const verified = document.getElementById('verified').value; // '', 'true', 'false'
+      const verified = document.getElementById('verified').value;
 
       let rows = raw.filter(r=>{
         if(!r.latitude || !r.longitude) return false;
@@ -268,48 +279,68 @@
       .then(r=>r.text())
       .then(text=>{
         raw = Papa.parse(text, { header:true, skipEmptyLines:true }).data;
-        raw = raw.map(d=>({ id: d.id || String(Date.now()+Math.random()), ...d, latitude: parseFloat(d.latitude), longitude: parseFloat(d.longitude) }));
+        raw = raw.map(d=>({ ...d, id: d.id || String(Date.now()+Math.random()), latitude: parseFloat(d.latitude), longitude: parseFloat(d.longitude) }));
         refreshFilters();
         applyFilters();
       });
 
-    // UI listeners
     document.getElementById('q').addEventListener('input', applyFilters);
     document.getElementById('cat').addEventListener('change', applyFilters);
     document.getElementById('country').addEventListener('change', applyFilters);
     document.getElementById('verified').addEventListener('change', applyFilters);
     document.getElementById('sort').addEventListener('change', applyFilters);
 
-    // Page nav + map
     document.getElementById('toTop').addEventListener('click', ()=> window.scrollTo({ top:0, behavior:'smooth' }));
     document.getElementById('toBottom').addEventListener('click', ()=> window.scrollTo({ top:document.body.scrollHeight, behavior:'smooth' }));
     document.getElementById('recenter').addEventListener('click', ()=> map.setView([15, 0], 2));
 
-    // Add entry & Download CSV
     document.getElementById('add').addEventListener('click', ()=>{
       const n = id => document.getElementById(id).value.trim();
+      // === UPDATE 3: EXPANDED MANUAL ADD LOGIC ===
       const entry = {
         id: String(Date.now()),
-        name: n('new-name'), category: n('new-category'), country: n('new-country'),
+        name: n('new-name'), category: n('new-category'), city: n('new-city'), country: n('new-country'),
         latitude: parseFloat(n('new-lat')), longitude: parseFloat(n('new-lon')),
-        website: n('new-website'), email: n('new-email'), verified: n('new-verified')
+        website: n('new-website'), email: n('new-email'), phone: n('new-phone'), social: n('new-social'),
+        verified: n('new-verified')
       };
       if(!entry.name || isNaN(entry.latitude) || isNaN(entry.longitude)) { alert('Name, latitude and longitude are required.'); return; }
       raw.push(entry);
       refreshFilters();
       applyFilters();
-      ['new-name','new-category','new-country','new-lat','new-lon','new-website','new-email'].forEach(id=>document.getElementById(id).value='');
+      ['new-name','new-category','new-city','new-country','new-lat','new-lon','new-website','new-email','new-phone','new-social'].forEach(id=>document.getElementById(id).value='');
       document.getElementById('new-verified').value='false';
     });
 
     document.getElementById('download').addEventListener('click', ()=>{
-      // Serialize current RAW dataset to CSV
-      const headers = ['id','name','category','country','latitude','longitude','website','email','verified'];
-      const rows = [headers.join(',')].concat(raw.map(r=> headers.map(h=> (r[h]!==undefined? String(r[h]).replaceAll('\n',' ').replaceAll(',',';') : '') ).join(',')));
+      // === UPDATE 4: EXPANDED CSV DOWNLOAD HEADERS ===
+      const headers = ['place_id','id','name','category','city','country','latitude','longitude','website','email','phone','social','verified'];
+      const rows = [headers.join(',')].concat(raw.map(r=> headers.map(h=> (r[h]!==undefined? `"${String(r[h]).replaceAll('"', '""')}"` : '') ).join(',')));
       const blob = new Blob([rows.join('\n')], {type:'text/csv;charset=utf-8;'});
       const url = URL.createObjectURL(blob);
       const a = document.createElement('a'); a.href = url; a.download = 'aura-affinity.csv'; a.click(); URL.revokeObjectURL(url);
     });
+  </script>
+
+  <script>
+    async function displayLastUpdated() {
+      try {
+        const response = await fetch(`last-run.txt?v=${Date.now()}`);
+        if (!response.ok) throw new Error('Not found');
+        const lastRunISO = await response.text();
+        const lastRunDate = new Date(lastRunISO);
+        const now = new Date();
+        const diffMillis = now - lastRunDate;
+        const diffHours = Math.floor(diffMillis / (1000 * 60 * 60));
+        const diffDays = Math.floor(diffHours / 24);
+        const remainingHours = diffHours % 24;
+        const friendlyTime = `${diffDays} days, ${remainingHours} hours ago`;
+        document.getElementById('last-updated').textContent = friendlyTime;
+      } catch (error) {
+        document.getElementById('last-updated').textContent = 'never';
+      }
+    }
+    displayLastUpdated();
   </script>
 </body>
 </html>
