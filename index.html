@@ -1,159 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Aura Affinity Map</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-sA+e2PKV0Tn7HC3j7iU0IT4X1I4Kx8W3SX7CcLkSauU=" crossorigin="" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/papaparse@5.3.0/papaparse.min.js"></script>
     <style>
         body {
-            margin: 0;
-            font-family: Arial, sans-serif;
             background-color: #111;
-            color: #f1f1f1;
-        }
-        h1, p {
+            color: #eee;
+            font-family: Arial, sans-serif;
             text-align: center;
+            margin: 0;
+            padding: 0;
         }
+
+        h1 {
+            color: gold;
+            margin-top: 1rem;
+        }
+
         #map {
-            height: 500px;
+            height: 60vh;
             width: 100%;
         }
-        #list {
-            padding: 20px;
-            overflow-x: auto;
+
+        #filter {
+            margin: 1em;
+            color: #fff;
         }
+
+        #list {
+            width: 90%;
+            margin: auto;
+            color: white;
+        }
+
         table {
             width: 100%;
             border-collapse: collapse;
-            background: #222;
+            margin-top: 1rem;
         }
-        th, td {
-            border: 1px solid #555;
-            padding: 8px;
-            text-align: left;
+
+        th,
+        td {
+            padding: 0.5em;
+            border: 1px solid #333;
         }
+
         th {
-            background: #333;
-        }
-        select {
-            background: #333;
-            color: #f1f1f1;
-            border: 1px solid #555;
-            padding: 5px;
+            background-color: #333;
         }
     </style>
 </head>
+
 <body>
-    <h1 style="color: gold">Aura Affinity Map</h1>
+    <h1>Aura Affinity Map</h1>
     <p>A living network of verified businesses using the name "Aura" across global industries</p>
-    <div style="text-align:center; margin-bottom:10px">
-        Filter by Category: 
-        <select id="categoryFilter" onchange="filterMarkers()">
+
+    <div id="filter">
+        Filter by Category:
+        <select id="categoryFilter">
             <option value="All">All</option>
         </select>
     </div>
+
     <div id="map"></div>
     <div id="list"></div>
 
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-o9N1jG8S+1UwxzjPIl9zL1hzQzHlZk6lKAau8U2y57w=" crossorigin=""></script>
     <script>
-        const categoryColors = {
-            "Health & Wellbeing": "red",
-            "Creative Industries": "orange",
-            "Event Management": "yellow",
-            "Accommodation": "green",
-            "Cities & Developments": "blue",
-            "Other": "gray",
-            "Unverified": "gray"
-        };
+        const map = L.map('map').setView([20, 0], 2);
 
-        let map = L.map('map').setView([0, 0], 2);
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '© OpenStreetMap contributors'
+            attribution: '&copy; OpenStreetMap contributors'
         }).addTo(map);
 
-        let markers = [];
-        let data = [];
+        const markers = [];
+        const colors = {
+            "Health & Wellbeing": "#e91e63",
+            "Creative Industries": "#9c27b0",
+            "Event Management": "#3f51b5",
+            "Accommodation": "#03a9f4",
+            "Cities & Developments": "#4caf50",
+            "Unverified": "#607d8b"
+        };
+
+        const colorIcon = (color) => new L.Icon({
+            iconUrl: `https://chart.googleapis.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|${color.replace('#', '')}`,
+            iconSize: [21, 34],
+            iconAnchor: [10, 34],
+            popupAnchor: [1, -34]
+        });
 
         fetch('aura-affinity.csv')
             .then(response => response.text())
-            .then(text => {
-                const rows = text.trim().split('\n');
-                const headers = rows[0].split(',');
-                data = rows.slice(1).map(row => {
-                    const values = row.split(',');
-                    const obj = {};
-                    headers.forEach((header, i) => obj[header.trim()] = values[i]?.trim());
-                    return obj;
+            .then(csv => {
+                const data = Papa.parse(csv, { header: true }).data;
+                const table = document.createElement('table');
+                const header = table.insertRow();
+                ["Name", "Category", "Country", "Website", "Verified"].forEach(h => header.insertCell().textContent = h);
+
+                const categories = new Set();
+
+                data.forEach(entry => {
+                    if (!entry.latitude || !entry.longitude) return;
+
+                    const color = colors[entry.category] || colors["Unverified"];
+                    const marker = L.marker([entry.latitude, entry.longitude], {
+                        icon: colorIcon(color)
+                    }).addTo(map);
+                    marker.bindPopup(`<b>${entry.name}</b><br>${entry.category}<br>${entry.country}<br><a href='${entry.website}' target='_blank'>Visit</a>`);
+                    markers.push({ marker, category: entry.category });
+
+                    const row = table.insertRow();
+                    [entry.name, entry.category, entry.country, entry.website, entry.verified].forEach(text => {
+                        const cell = row.insertCell();
+                        cell.innerHTML = text.includes('http') ? `<a href="${text}" target="_blank">${text}</a>` : text;
+                    });
+
+                    categories.add(entry.category);
                 });
-                renderMarkers();
-                renderList();
-                populateFilter();
+
+                document.getElementById('list').appendChild(table);
+
+                const filter = document.getElementById('categoryFilter');
+                categories.forEach(cat => {
+                    const option = document.createElement('option');
+                    option.value = cat;
+                    option.textContent = cat;
+                    filter.appendChild(option);
+                });
+
+                filter.addEventListener('change', () => {
+                    const selected = filter.value;
+                    markers.forEach(({ marker, category }) => {
+                        if (selected === "All" || category === selected) {
+                            marker.addTo(map);
+                        } else {
+                            map.removeLayer(marker);
+                        }
+                    });
+                });
             });
-
-        function getColor(category) {
-            return categoryColors[category] || categoryColors["Other"];
-        }
-
-        function renderMarkers() {
-            markers.forEach(m => map.removeLayer(m));
-            markers = [];
-            const filter = document.getElementById('categoryFilter').value;
-            data.forEach(entry => {
-                if (filter !== "All" && entry.category !== filter) return;
-                const marker = L.circleMarker([entry.latitude, entry.longitude], {
-                    color: getColor(entry.verified === 'false' ? 'Unverified' : entry.category),
-                    radius: 8,
-                    fillOpacity: 0.9
-                }).addTo(map).bindPopup(`<b>${entry.name}</b><br>${entry.category}<br>${entry.country}<br><a href='${entry.website}' target='_blank'>Visit Website</a>`);
-                markers.push(marker);
-            });
-        }
-
-        function renderList() {
-            const filter = document.getElementById('categoryFilter').value;
-            const filteredData = filter === "All" ? data : data.filter(d => d.category === filter);
-            const html = `
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Name</th>
-                            <th>Category</th>
-                            <th>Country</th>
-                            <th>Website</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        ${filteredData.map(entry => `
-                            <tr>
-                                <td>${entry.name}</td>
-                                <td>${entry.category}</td>
-                                <td>${entry.country}</td>
-                                <td><a href="${entry.website}" target="_blank">${entry.website}</a></td>
-                            </tr>
-                        `).join('')}
-                    </tbody>
-                </table>
-            `;
-            document.getElementById('list').innerHTML = html;
-        }
-
-        function populateFilter() {
-            const categories = [...new Set(data.map(d => d.category))];
-            const filter = document.getElementById('categoryFilter');
-            categories.forEach(c => {
-                const opt = document.createElement('option');
-                opt.value = c;
-                opt.textContent = c;
-                filter.appendChild(opt);
-            });
-        }
-
-        function filterMarkers() {
-            renderMarkers();
-            renderList();
-        }
     </script>
 </body>
+
 </html>
