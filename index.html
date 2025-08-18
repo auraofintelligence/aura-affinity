@@ -10,18 +10,20 @@
   <style>
     :root { --bg:#0e0e10; --panel:#141418; --text:#e6e6ea; --muted:#9aa0a6; --gold:#f7c948; }
     * { box-sizing: border-box }
-    body { margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji"; background:var(--bg); color:var(--text);}    
+    body { margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; background:var(--bg); color:var(--text);}    
     header { padding:18px 20px 8px; text-align:center; background:#0b0b0d; border-bottom:1px solid #1e1f25; position:sticky; top:0; z-index:5 }
     h1{ margin:0; color:var(--gold); letter-spacing:.5px }
     .sub{ margin:6px 0 12px; color:var(--muted); font-size:.95rem }
 
-    #map { height:60vh; width:100%; border-bottom:1px solid #1e1f25 }
+    #map { height:60vh; width:100%; border-bottom:1px solid #1e1f25; position:relative }
 
     /* Toolbar under the map */
     .toolbar { display:flex; flex-wrap:wrap; gap:10px; padding:12px 16px; background:#0b0b0d; border-bottom:1px solid #1e1f25 }
     .toolbar .field { display:flex; align-items:center; gap:8px; background:var(--panel); border:1px solid #23242b; padding:8px 10px; border-radius:12px }
     .toolbar label { color:#c7c9ce; font-size:.9rem }
-    .toolbar input[type="text"], .toolbar select { background:transparent; border:none; color:var(--text); outline:none; font-size:.95rem }
+    .toolbar input[type="text"], .toolbar select { background:transparent; border:none; color:var(--text); outline:none; font-size:.95rem; appearance:none }
+    .toolbar select { padding-right:20px; }
+    .toolbar option { background:var(--panel); color:var(--text); }
     .toolbar input::placeholder { color:#7a7f87 }
 
     /* Directory grid */
@@ -34,13 +36,16 @@
     .actions a { color:#7dcfff; text-decoration:none }
     .actions a:hover { text-decoration:underline }
 
-    /* Neon glow per-category via CSS custom prop */
+    /* Neon glow per-category */
     .card { box-shadow: 0 0 0px rgba(0,0,0,0); border-color:#262832 }
-    .card[style*="--glow:"] { box-shadow: 0 0 0px rgba(0,0,0,0), 0 0 14px var(--glow); border-color: color-mix(in oklab, var(--glow) 60%, #262832) }
+    .card[style*="--glow:"] { box-shadow: 0 0 14px var(--glow); border-color: var(--glow) }
 
-    /* Utility */
-    .sr { position:absolute; left:-10000px; width:1px; height:1px; overflow:hidden }
-    @media (max-width:640px){ #map{ height:55vh } }
+    /* Floating buttons */
+    .fab-container { position:absolute; bottom:15px; right:15px; display:flex; flex-direction:column; gap:10px; z-index:1000 }
+    .fab { width:42px; height:42px; border-radius:50%; border:none; color:white; font-size:18px; cursor:pointer; display:flex; align-items:center; justify-content:center; box-shadow:0 0 10px rgba(0,0,0,0.4); transition:transform .2s, box-shadow .2s }
+    .fab:hover { transform:scale(1.1); box-shadow:0 0 14px rgba(0,0,0,0.6) }
+    .fab.blue { background:#3b82f6 }
+    .fab.green { background:#22c55e }
   </style>
 </head>
 <body>
@@ -49,7 +54,13 @@
     <div class="sub">A living directory of businesses carrying the name “Aura” across the world. Verify, connect, and grow the network.</div>
   </header>
 
-  <div id="map" role="region" aria-label="Aura Affinity map"></div>
+  <div id="map" role="region" aria-label="Aura Affinity map">
+    <div class="fab-container">
+      <button class="fab blue" id="toTop" title="Scroll to top">⬆</button>
+      <button class="fab green" id="recenter" title="Re-center map">🎯</button>
+      <button class="fab blue" id="toBottom" title="Scroll to bottom">⬇</button>
+    </div>
+  </div>
 
   <!-- Toolbar under the map -->
   <div class="toolbar" id="controls">
@@ -65,34 +76,30 @@
   <div id="directory" aria-live="polite"></div>
 
   <script>
-    // Chakra palette mapped to closest leaflet-color-marker set
     const markerColorName = {
-      'Health & Wellbeing': 'red',      // Root / red
-      'Creative Industries': 'orange',  // Sacral / orange
-      'Event Management': 'gold',       // Solar plexus / yellow (gold asset)
-      'Accommodation': 'blue',          // Throat / blue
-      'Cities & Developments': 'green', // Heart / green
-      'Blockchain': 'violet',           // Crown / violet
-      '': 'blue',                       // default
+      'Health & Wellbeing': 'red',
+      'Creative Industries': 'orange',
+      'Event Management': 'gold',
+      'Accommodation': 'blue',
+      'Cities & Developments': 'green',
+      'Blockchain': 'violet',
+      '': 'blue',
     };
-
     const ICON_BASE = 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/';
     function buildIcon(colorName){
-      // Fallback to blue if unknown
-      const c = colorName && ['red','orange','gold','green','blue','violet','grey','black'].includes(colorName) ? colorName : 'blue';
+      const c = ['red','orange','gold','green','blue','violet'].includes(colorName)? colorName : 'blue';
       return new L.Icon({
         iconUrl: ICON_BASE + `marker-icon-2x-${c}.png`,
         shadowUrl: ICON_BASE + 'marker-shadow.png',
-        iconSize: [25, 41], iconAnchor: [12, 41], popupAnchor: [1, -34], shadowSize: [41, 41]
+        iconSize:[25,41], iconAnchor:[12,41], popupAnchor:[1,-34], shadowSize:[41,41]
       });
     }
 
     const map = L.map('map').setView([15, 0], 2);
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: '© OpenStreetMap contributors' }).addTo(map);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution:'© OpenStreetMap contributors' }).addTo(map);
 
-    let raw = [];            // all rows
-    let markers = [];        // current marker refs
-
+    let raw = [];
+    let markers = [];
     function clearMarkers(){ markers.forEach(m => map.removeLayer(m)); markers = []; }
 
     function addMarker(entry){
@@ -100,7 +107,7 @@
       const icon = buildIcon(color);
       const m = L.marker([+entry.latitude, +entry.longitude], { icon }).addTo(map);
       const safeUrl = (entry.website||'').startsWith('http') ? entry.website : `https://${entry.website||''}`;
-      m.bindPopup(`<strong>${entry.name}</strong><br>${entry.category || '—'}<br>${entry.country || ''}<br><a href="${safeUrl}" target="_blank" rel="noopener">Website</a>`);
+      m.bindPopup(`<strong>${entry.name}</strong><br>${entry.category || '—'}<br>${entry.country || ''}<br><a href="${safeUrl}" target="_blank">Website</a>`);
       m.__row = entry;
       markers.push(m);
       return m;
@@ -110,12 +117,12 @@
       const sel = document.getElementById(id);
       const chosen = sel.value;
       sel.innerHTML = '<option value="">All</option>' + [...values].sort().map(v=>`<option value="${v}">${v}</option>`).join('');
-      if(values.has(chosen)) sel.value = chosen; // preserve
+      if(values.has(chosen)) sel.value = chosen;
     }
 
     function neonFromCategory(cat){
-      const map = { red:'#ef4444', orange:'#fb923c', gold:'#fbbf24', green:'#22c55e', blue:'#3b82f6', violet:'#a78bfa' };
-      return map[markerColorName[cat]||'blue']||'#3b82f6';
+      const mapCol = { red:'#ef4444', orange:'#fb923c', gold:'#fbbf24', green:'#22c55e', blue:'#3b82f6', violet:'#a78bfa' };
+      return mapCol[markerColorName[cat]||'blue']||'#3b82f6';
     }
 
     function renderDirectory(rows){
@@ -131,11 +138,9 @@
               <span>${r.country || ''}</span>
               <span class="badge" style="color:${verified?'#22c55e':'#eab308'}">${verified?'Verified':'Unverified'}</span>
             </div>
-            <div class="actions">${safeUrl?`<a href="${safeUrl}" target="_blank" rel="noopener">Visit website</a>`:''}</div>
+            <div class="actions">${safeUrl?`<a href="${safeUrl}" target="_blank">Visit website</a>`:''}</div>
           </article>`
       }).join('');
-
-      // card click -> flyTo marker
       Array.from(wrap.querySelectorAll('.card')).forEach((el, idx)=>{
         el.addEventListener('click', ()=>{
           const r = rows[idx];
@@ -149,7 +154,6 @@
       const q = document.getElementById('q').value.trim().toLowerCase();
       const cat = document.getElementById('cat').value;
       const country = document.getElementById('country').value;
-
       const rows = raw.filter(r=>{
         if(!r.latitude || !r.longitude) return false;
         if(cat && r.category!==cat) return false;
@@ -157,29 +161,29 @@
         if(q && !( (r.name||'').toLowerCase().includes(q) || (r.website||'').toLowerCase().includes(q) )) return false;
         return true;
       });
-
       clearMarkers();
       rows.forEach(addMarker);
       renderDirectory(rows);
     }
 
-    // Load CSV
     fetch('aura-affinity.csv')
       .then(r=>r.text())
       .then(text=>{
-        const parsed = Papa.parse(text, { header:true, skipEmptyLines:true }).data;
-        // Normalize types
-        raw = parsed.map(d=>({ ...d, latitude: parseFloat(d.latitude), longitude: parseFloat(d.longitude) }));
-        // Populate selects
+        raw = Papa.parse(text, { header:true, skipEmptyLines:true }).data;
+        raw = raw.map(d=>({ ...d, latitude: parseFloat(d.latitude), longitude: parseFloat(d.longitude) }));
         setOptions('cat', new Set(raw.map(r=>r.category).filter(Boolean)));
         setOptions('country', new Set(raw.map(r=>r.country).filter(Boolean)));
         applyFilters();
       });
 
-    // UI listeners
     document.getElementById('q').addEventListener('input', ()=> applyFilters());
     document.getElementById('cat').addEventListener('change', ()=> applyFilters());
     document.getElementById('country').addEventListener('change', ()=> applyFilters());
+
+    // Floating button actions
+    document.getElementById('toTop').addEventListener('click', ()=> window.scrollTo({ top:0, behavior:'smooth' }));
+    document.getElementById('toBottom').addEventListener('click', ()=> window.scrollTo({ top:document.body.scrollHeight, behavior:'smooth' }));
+    document.getElementById('recenter').addEventListener('click', ()=> map.setView([15, 0], 2));
   </script>
 </body>
 </html>
