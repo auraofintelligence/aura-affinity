@@ -1,3 +1,7 @@
-id,name,category,country,latitude,longitude,website,email,verified
-1,Aura Spa,Health & Wellbeing,Australia,-33.8688,151.2093,https://auraspa.com,,false
-2,Aura Creative Co,Creative Industries,USA,40.7128,-74.0060,https://auracreative.co,hello@auracreative.co,true
+place_id,id,name,category,city,country,latitude,longitude,website,email,phone,social,verified
+ChIJ7a-2-8-uEmsR_gD-s-Ym_8A,1,Aura Wellness Spa,Health & Wellbeing,Melbourne,Australia,-37.8136,144.9631,https://aurawellness.com.au,info@aurawellness.com.au,+61 3 9650 5758,https://instagram.com/aurawellness,true
+ChIJVVVVVVVVVWcR_gD-s-Ym_8B,2,Aura Creative Studio,Creative Industries,London,United Kingdom,51.5072,-0.1276,https://auracreative.co.uk,hello@auracreative.co.uk,+44 20 7946 0958,https://linkedin.com/company/auracreative,false
+ChIJVVVVVVVVVWcR_gD-s-Ym_8C,3,Aura Events & Entertainment,Event Management,Dubai,United Arab Emirates,25.2048,55.2708,https://auraevents.ae,contact@auraevents.ae,+971 4 332 4010,https://facebook.com/auraevents,true
+ChIJVVVVVVVVVWcR_gD-s-Ym_8D,4,Hotel Aura,Accommodation,Prague,Czech Republic,50.0755,14.4378,https://hotelaura.cz,reception@hotelaura.cz,+420 222 532 999,,false
+ChIJVVVVVVVVVWcR_gD-s-Ym_8E,5,Aura Real Estate Developments,Cities & Developments,Toronto,Canada,43.6532,-79.3832,https://auradevelopments.ca,sales@auradevelopments.ca,+1 416-555-0125,,true
+ChIJVVVVVVVVVWcR_gD-s-Ym_8F,6,Aura Blockchain Consortium,Blockchain,Geneva,Switzerland,46.2044,6.1432,https://auraluxuryblockchain.com,,,,false
