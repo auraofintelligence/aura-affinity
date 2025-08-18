@@ -5,7 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Aura Affinity • Business Directory & Map</title>
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
   <style>
     :root { --bg:#0e0e10; --panel:#141418; --text:#e6e6ea; --muted:#9aa0a6; --gold:#f7c948; }
@@ -15,12 +18,10 @@
     h1{ margin:0; color:var(--gold); letter-spacing:.5px }
     .sub{ margin:6px 0 12px; color:var(--muted); font-size:.95rem }
 
-    /* Centering container for controls + directory */
     .container { max-width: 1200px; margin: 0 auto; }
 
     #map { height:60vh; width:100%; border-bottom:1px solid #1e1f25; position:relative }
 
-    /* Toolbar under the map */
     .toolbar { display:flex; justify-content:center; flex-wrap:wrap; gap:10px; padding:12px 16px; background:#0b0b0d; border-bottom:1px solid #1e1f25 }
     .toolbar .field { display:flex; align-items:center; gap:8px; background:var(--panel); border:1px solid #23242b; padding:8px 12px; border-radius:12px }
     .toolbar label { color:#c7c9ce; font-size:.9rem }
@@ -29,29 +30,33 @@
     .toolbar option { background:var(--panel); color:var(--text); }
     .toolbar input::placeholder { color:#7a7f87 }
 
-    /* Directory grid centred by container */
     #directory { display:grid; grid-template-columns:repeat(auto-fill, minmax(300px, 1fr)); gap:16px; padding:16px }
-    .card { background:var(--panel); border:1px solid #262832; padding:14px; border-radius:16px; transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease }
+    .card { background:var(--panel); border:1px solid #262832; padding:14px; border-radius:16px; transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease; position:relative }
     .card:hover { transform: translateY(-2px) }
     .card .name { font-weight:700; font-size:1.05rem; margin:0 0 6px }
     .meta { display:flex; flex-wrap:wrap; gap:8px; align-items:center; color:#c7c9ce; font-size:.9rem; margin-bottom:8px }
     .badge { padding:3px 8px; border-radius:999px; font-size:.75rem; border:1px solid rgba(255,255,255,.15) }
     .actions a { color:#7dcfff; text-decoration:none }
     .actions a:hover { text-decoration:underline }
+    .delete { position:absolute; top:10px; right:10px; background:#ef4444; color:#fff; border:none; border-radius:10px; padding:4px 8px; cursor:pointer; font-size:.75rem }
+    .delete:hover { filter:brightness(1.1) }
 
-    /* Neon glow per-category */
     .card { box-shadow: 0 0 0px rgba(0,0,0,0); border-color:#262832 }
     .card[style*="--glow:"] { box-shadow: 0 0 14px var(--glow); border-color: var(--glow) }
 
-    /* Floating buttons (persistent, viewport-fixed) */
     .sticky-actions { position: fixed; right: 16px; bottom: 16px; display:flex; flex-direction:column; gap:10px; z-index: 2000; }
     .fab { width:48px; height:48px; border-radius:50%; border:none; color:white; font-size:22px; cursor:pointer; display:flex; align-items:center; justify-content:center; box-shadow:0 6px 16px rgba(0,0,0,0.35); transition:transform .2s, box-shadow .2s }
     .fab:hover { transform:translateY(-2px); box-shadow:0 8px 18px rgba(0,0,0,0.45) }
     .fab.blue { background:#3b82f6 }
-    .fab.green { background:#22c55e }
 
-    /* Recenter button stays on map only */
-    .map-fab { position:absolute; right:15px; bottom:15px; z-index:1000 }
+    .map-fab { position:absolute; right:15px; bottom:15px; z-index:1000; background:#22c55e }
+
+    /* Add-entry panel */
+    .adder { background:#0b0b0d; border-top:1px solid #1e1f25; padding:14px 16px }
+    .adder .row { display:flex; flex-wrap:wrap; gap:10px; justify-content:center }
+    .adder input, .adder select { background:var(--panel); border:1px solid #23242b; color:var(--text); padding:8px 10px; border-radius:10px }
+    .adder button { background:#3b82f6; color:#fff; border:none; padding:10px 12px; border-radius:10px; cursor:pointer }
+    .adder button.secondary { background:#475569 }
   </style>
 </head>
 <body>
@@ -61,25 +66,63 @@
   </header>
 
   <div id="map" role="region" aria-label="Aura Affinity map">
-    <button class="fab green map-fab" id="recenter" title="Re-center map">🎯</button>
+    <button class="fab map-fab" id="recenter" title="Re-center map">🎯</button>
   </div>
 
-  <!-- Toolbar under the map (centered) -->
+  <!-- Toolbar (centered) -->
   <div class="toolbar">
     <div class="container" id="controls" style="display:flex; justify-content:center; flex-wrap:wrap; gap:10px;">
-      <div class="field"><label for="q">Search</label><input id="q" type="text" placeholder="Search by name…" /></div>
+      <div class="field"><label for="q">Search</label><input id="q" type="text" placeholder="Search by name or website…" /></div>
       <div class="field"><label for="cat">Category</label>
         <select id="cat"><option value="">All</option></select>
       </div>
       <div class="field"><label for="country">Country</label>
         <select id="country"><option value="">All</option></select>
       </div>
+      <div class="field"><label for="verified">Verified</label>
+        <select id="verified">
+          <option value="">All</option>
+          <option value="true">Verified</option>
+          <option value="false">Unverified</option>
+        </select>
+      </div>
+      <div class="field"><label for="sort">Sort</label>
+        <select id="sort">
+          <option value="name-asc">Name A→Z</option>
+          <option value="name-desc">Name Z→A</option>
+          <option value="category">Category A→Z</option>
+          <option value="country">Country A→Z</option>
+          <option value="verified">Verified first</option>
+        </select>
+      </div>
     </div>
   </div>
 
+  <!-- Directory -->
   <div class="container"><div id="directory" aria-live="polite"></div></div>
 
-  <!-- Persistent viewport buttons -->
+  <!-- Add / Export panel -->
+  <div class="adder">
+    <div class="container">
+      <div class="row" aria-label="Add new entry">
+        <input id="new-name" placeholder="Name" />
+        <input id="new-category" placeholder="Category" />
+        <input id="new-country" placeholder="Country" />
+        <input id="new-lat" placeholder="Latitude" />
+        <input id="new-lon" placeholder="Longitude" />
+        <input id="new-website" placeholder="Website (https://...)" />
+        <input id="new-email" placeholder="Email" />
+        <select id="new-verified">
+          <option value="false">Unverified</option>
+          <option value="true">Verified</option>
+        </select>
+        <button id="add">＋ Add to list</button>
+        <button id="download" class="secondary">⬇️ Download CSV</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Persistent page nav buttons -->
   <div class="sticky-actions" aria-label="Page navigation helpers">
     <button class="fab blue" id="toTop" title="Scroll to top">⬆</button>
     <button class="fab blue" id="toBottom" title="Scroll to bottom">⬇</button>
@@ -108,17 +151,22 @@
     const map = L.map('map').setView([15, 0], 2);
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution:'© OpenStreetMap contributors' }).addTo(map);
 
+    // Cluster group
+    const clusterGroup = L.markerClusterGroup();
+    map.addLayer(clusterGroup);
+
     let raw = [];
     let markers = [];
-    function clearMarkers(){ markers.forEach(m => map.removeLayer(m)); markers = []; }
+    function clearMarkers(){ clusterGroup.clearLayers(); markers = []; }
 
     function addMarker(entry){
       const color = markerColorName[entry.category] || 'blue';
       const icon = buildIcon(color);
-      const m = L.marker([+entry.latitude, +entry.longitude], { icon }).addTo(map);
-      const safeUrl = (entry.website||'').startsWith('http') ? entry.website : `https://${entry.website||''}`;
-      m.bindPopup(`<strong>${entry.name}</strong><br>${entry.category || '—'}<br>${entry.country || ''}<br><a href="${safeUrl}" target="_blank">Website</a>`);
+      const m = L.marker([+entry.latitude, +entry.longitude], { icon });
+      const safeUrl = (entry.website||'').startsWith('http') ? entry.website : (entry.website?`https://${entry.website}`:'');
+      m.bindPopup(`<strong>${entry.name}</strong><br>${entry.category || '—'}<br>${entry.country || ''}${safeUrl?`<br><a href="${safeUrl}" target="_blank">Website</a>`:''}`);
       m.__row = entry;
+      clusterGroup.addLayer(m);
       markers.push(m);
       return m;
     }
@@ -142,6 +190,7 @@
         const safeUrl = (r.website||'').startsWith('http') ? r.website : (r.website?`https://${r.website}`:'');
         const verified = String(r.verified||'').toLowerCase()==='true';
         return `<article class="card" style="--glow:${glow}">
+            <button class="delete" data-id="${r.id||''}" title="Delete entry">Delete</button>
             <h3 class="name">${r.name || '—'}</h3>
             <div class="meta">
               <span class="badge" style="border-color:${glow}; color:${glow}">${r.category || 'Other'}</span>
@@ -151,51 +200,116 @@
             <div class="actions">${safeUrl?`<a href="${safeUrl}" target="_blank">Visit website</a>`:''}</div>
           </article>`
       }).join('');
+
+      // card click -> flyTo marker (not when clicking delete)
       Array.from(wrap.querySelectorAll('.card')).forEach((el, idx)=>{
-        el.addEventListener('click', ()=>{
+        el.addEventListener('click', (ev)=>{
+          if(ev.target.classList.contains('delete')) return; // handled elsewhere
           const r = rows[idx];
           const m = markers.find(mm=>mm.__row===r);
           if(m){ map.flyTo(m.getLatLng(), 6, {duration:.6}); m.openPopup(); }
         });
       });
+
+      // Delete handlers
+      wrap.querySelectorAll('.delete').forEach((btn, idx)=>{
+        btn.addEventListener('click', (e)=>{
+          e.stopPropagation();
+          const r = rows[idx];
+          if(confirm(`Delete “${r.name}”?`)){
+            raw = raw.filter(x=>x!==r);
+            refreshFilters();
+            applyFilters();
+          }
+        });
+      });
+    }
+
+    function sortRows(rows){
+      const mode = document.getElementById('sort').value;
+      const by = (key) => rows.sort((a,b)=> String(a[key]||'').localeCompare(String(b[key]||'')) );
+      switch(mode){
+        case 'name-desc': return by('name').reverse();
+        case 'category': return by('category');
+        case 'country': return by('country');
+        case 'verified': return rows.sort((a,b)=> (String(b.verified).toLowerCase()==='true') - (String(a.verified).toLowerCase()==='true') || String(a.name||'').localeCompare(String(b.name||'')) );
+        case 'name-asc':
+        default: return by('name');
+      }
     }
 
     function applyFilters(){
       const q = document.getElementById('q').value.trim().toLowerCase();
       const cat = document.getElementById('cat').value;
       const country = document.getElementById('country').value;
-      const rows = raw.filter(r=>{
+      const verified = document.getElementById('verified').value; // '', 'true', 'false'
+
+      let rows = raw.filter(r=>{
         if(!r.latitude || !r.longitude) return false;
         if(cat && r.category!==cat) return false;
         if(country && r.country!==country) return false;
+        if(verified && String(r.verified).toLowerCase()!==verified) return false;
         if(q && !( (r.name||'').toLowerCase().includes(q) || (r.website||'').toLowerCase().includes(q) )) return false;
         return true;
       });
+
+      rows = sortRows(rows);
       clearMarkers();
       rows.forEach(addMarker);
       renderDirectory(rows);
+    }
+
+    function refreshFilters(){
+      setOptions('cat', new Set(raw.map(r=>r.category).filter(Boolean)));
+      setOptions('country', new Set(raw.map(r=>r.country).filter(Boolean)));
     }
 
     fetch('aura-affinity.csv')
       .then(r=>r.text())
       .then(text=>{
         raw = Papa.parse(text, { header:true, skipEmptyLines:true }).data;
-        raw = raw.map(d=>({ ...d, latitude: parseFloat(d.latitude), longitude: parseFloat(d.longitude) }));
-        setOptions('cat', new Set(raw.map(r=>r.category).filter(Boolean)));
-        setOptions('country', new Set(raw.map(r=>r.country).filter(Boolean)));
+        raw = raw.map(d=>({ id: d.id || String(Date.now()+Math.random()), ...d, latitude: parseFloat(d.latitude), longitude: parseFloat(d.longitude) }));
+        refreshFilters();
         applyFilters();
       });
 
-    document.getElementById('q').addEventListener('input', ()=> applyFilters());
-    document.getElementById('cat').addEventListener('change', ()=> applyFilters());
-    document.getElementById('country').addEventListener('change', ()=> applyFilters());
+    // UI listeners
+    document.getElementById('q').addEventListener('input', applyFilters);
+    document.getElementById('cat').addEventListener('change', applyFilters);
+    document.getElementById('country').addEventListener('change', applyFilters);
+    document.getElementById('verified').addEventListener('change', applyFilters);
+    document.getElementById('sort').addEventListener('change', applyFilters);
 
-    // Persistent page nav actions
+    // Page nav + map
     document.getElementById('toTop').addEventListener('click', ()=> window.scrollTo({ top:0, behavior:'smooth' }));
     document.getElementById('toBottom').addEventListener('click', ()=> window.scrollTo({ top:document.body.scrollHeight, behavior:'smooth' }));
-
-    // Map recenter
     document.getElementById('recenter').addEventListener('click', ()=> map.setView([15, 0], 2));
+
+    // Add entry & Download CSV
+    document.getElementById('add').addEventListener('click', ()=>{
+      const n = id => document.getElementById(id).value.trim();
+      const entry = {
+        id: String(Date.now()),
+        name: n('new-name'), category: n('new-category'), country: n('new-country'),
+        latitude: parseFloat(n('new-lat')), longitude: parseFloat(n('new-lon')),
+        website: n('new-website'), email: n('new-email'), verified: n('new-verified')
+      };
+      if(!entry.name || isNaN(entry.latitude) || isNaN(entry.longitude)) { alert('Name, latitude and longitude are required.'); return; }
+      raw.push(entry);
+      refreshFilters();
+      applyFilters();
+      ['new-name','new-category','new-country','new-lat','new-lon','new-website','new-email'].forEach(id=>document.getElementById(id).value='');
+      document.getElementById('new-verified').value='false';
+    });
+
+    document.getElementById('download').addEventListener('click', ()=>{
+      // Serialize current RAW dataset to CSV
+      const headers = ['id','name','category','country','latitude','longitude','website','email','verified'];
+      const rows = [headers.join(',')].concat(raw.map(r=> headers.map(h=> (r[h]!==undefined? String(r[h]).replaceAll('\n',' ').replaceAll(',',';') : '') ).join(',')));
+      const blob = new Blob([rows.join('\n')], {type:'text/csv;charset=utf-8;'});
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a'); a.href = url; a.download = 'aura-affinity.csv'; a.click(); URL.revokeObjectURL(url);
+    });
   </script>
 </body>
 </html>
